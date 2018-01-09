@@ -1,5 +1,5 @@
 resourcePackages:
-  - io.swagger.sample.resource
+  - it.almawave.kb.http.providers
 prettyPrint: true
 openAPI:
   info:

@@ -1,21 +1,25 @@
 package it.almawave.kb.http
 
-import org.slf4j.LoggerFactory
-import org.glassfish.jersey.server.ResourceConfig
-import io.swagger.jaxrs.listing.ApiListingResource
-import io.swagger.jaxrs.listing.SwaggerSerializers
-import org.glassfish.jersey.jackson.JacksonFeature
 import it.almawave.kb.http.providers._
-import org.eclipse.jetty.server.Server
 import java.net.InetSocketAddress
+
+import org.slf4j.LoggerFactory
+
+import org.glassfish.jersey.server.ResourceConfig
+import org.glassfish.jersey.jackson.JacksonFeature
+import org.glassfish.jersey.servlet.ServletContainer
+
+import org.eclipse.jetty.server.Server
 import org.eclipse.jetty.server.handler.HandlerList
 import org.eclipse.jetty.server.handler.DefaultHandler
-import org.glassfish.jersey.servlet.ServletContainer
 import org.eclipse.jetty.servlet.ServletHolder
 import org.eclipse.jetty.servlet.ServletContextHandler
-import io.swagger.jersey.config.JerseyJaxrsConfig
 import org.eclipse.jetty.server.handler.ResourceHandler
 import org.eclipse.jetty.server.handler.ContextHandler
+
+import io.swagger.jaxrs.listing.ApiListingResource
+import io.swagger.jaxrs.listing.SwaggerSerializers
+import io.swagger.jersey.config.JerseyJaxrsConfig
 
 object MainHTTP extends App {
 
@@ -41,45 +45,33 @@ class HTTP(host: String, port: Int, base: String) {
 
   val server = new Server(new InetSocketAddress("localhost", 7777))
 
+  //  import io.swagger.jaxrs2.integration.resources
+
   // general configurations.......................................
-  val rc = new ResourceConfig()
+  val resource_config = new ResourceConfig()
     .packages("io.swagger.jaxrs.listing")
+    .packages("io.swagger.jaxrs2.integration.resources")
     .packages("it.almawave.kb.http.endpoints")
+    .packages("it.almawave.kb.http.providers")
     .packages("it.almawave.kb.catalog.models")
-
-  rc.registerClasses(
-    classOf[ApiListingResource],
-    classOf[SwaggerSerializers],
-    classOf[JacksonFeature],
-    classOf[JacksonScalaProvider],
-    classOf[CORSFilter])
+    .registerClasses(
+      classOf[ApiListingResource],
+      classOf[SwaggerSerializers],
+      classOf[JacksonFeature],
+      classOf[JacksonScalaProvider],
+      classOf[CORSFilter])
 
   // general configurations.......................................
-
-  // TODO: TEST
-  // http://localhost:7777/
-  // http://localhost:7777/kb/api/v1/ontologies
-  // http://localhost:7777/kb/api/v1/ontologies
-  // http://localhost:7777/kb/api/v1/swagger.json
-  // TODO: swagger?
-
-  // .............................................................
 
   // jersey configuration
-  val jersey_container = new ServletContainer(rc)
+  val jersey_container = new ServletContainer(resource_config)
   val jersey_holder = new ServletHolder(jersey_container);
   val jersey_context = new ServletContextHandler(ServletContextHandler.SESSIONS)
   jersey_context.setContextPath("/kb/api/v1")
-  //  jersey_context.setAttribute("resources_path", "http://localhost:7777/static")
-  //  jersey_context.setAttribute("resources_base", "./data")
   jersey_context.addServlet(jersey_holder, "/*")
-  
-  // testing configurations
-//  jersey_context.setAttribute("configuration", "./conf/catalog.conf")
 
   // swagger ui
   val swagger_ui_handler = new ResourceHandler()
-  swagger_ui_handler.setWelcomeFiles(Array("index.html"))
   swagger_ui_handler.setResourceBase("src/main/swagger-ui")
   val swagger_ui_context = new ContextHandler()
   swagger_ui_context.setContextPath("/")
@@ -89,12 +81,16 @@ class HTTP(host: String, port: Int, base: String) {
   // swagger configuration
   val swagger_servlet_config = new JerseyJaxrsConfig
   val swagger_holder = new ServletHolder(jersey_container);
-  swagger_holder.setInitParameter("api.version", "1.0.0")
+  //  swagger_holder.setInitParameter("swagger.api.version", "1.0.0")
+  //  swagger_holder.setInitParameter("openApi.configuration.location", "conf/openapi-configuration.yaml")
   swagger_holder.setInitParameter("swagger.api.basepath", "http://localhost:7777/kb/api/v1/")
   swagger_holder.setInitOrder(2)
   swagger_holder.setServlet(swagger_servlet_config)
-  val swagger_context = new ServletContextHandler(ServletContextHandler.SESSIONS)
-  swagger_context.addServlet(swagger_holder, "/*")
+  val swagger_context = new ServletContextHandler(ServletContextHandler.NO_SESSIONS)
+  //  swagger_context.addServlet(swagger_holder, "/*")
+
+  //  swagger.api.basepath
+  //  http://localhost:7777/kb/api/v1/swagger.json
 
   val handlers = new HandlerList()
   handlers.setHandlers(Array(
@@ -116,3 +112,12 @@ class HTTP(host: String, port: Int, base: String) {
   }
 
 }
+
+// ---------------------------------------------------
+// TODO: TEST
+// http://localhost:7777/
+// http://localhost:7777/kb/api/v1/ontologies
+// http://localhost:7777/kb/api/v1/ontologies
+// http://localhost:7777/kb/api/v1/swagger.json
+// TODO: swagger?
+// ---------------------------------------------------
