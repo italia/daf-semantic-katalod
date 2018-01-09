@@ -17,7 +17,7 @@ import io.swagger.annotations.SwaggerDefinition;
 		contact = @Contact(name = "seralf", email = "al.serafini@almawave.it", url = "http://bitbucket/awave/katalod"), 
 		license = @License(name = "Apache 2.0", url = "http://bitbucket/awave/katalod")
 	),
-	host = "localhost:7777",  
+	host = "localhost:7777",
 	basePath = "/kb/api/v1"
 )
 @Provider

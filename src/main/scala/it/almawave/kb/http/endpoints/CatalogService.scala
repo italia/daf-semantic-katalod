@@ -1,0 +1,27 @@
+package it.almawave.kb.http.endpoints
+
+import javax.inject.Singleton
+import it.almawave.kb.catalog.ResourcesLoader
+import javax.ws.rs.Path
+import org.slf4j.LoggerFactory
+
+@Singleton
+@Path("conf:api-catalog-config")
+class CatalogService {
+
+  private val logger = LoggerFactory.getLogger(this.getClass)
+
+  lazy val loader = ResourcesLoader("./conf/catalog.conf")
+
+  // we pre-load all the metadata in memory at first request, 
+  // so next requests will be more efficient
+  lazy val _vocabularies = loader.fetchOntologies(false)
+  lazy val _ontologies = loader.fetchVocabularies(false)
+
+  logger.info(s"loaded ${_vocabularies.size} vocabularies")
+  logger.info(s"loaded ${_ontologies.size} ontologies")
+
+  def ontologies() = _ontologies
+  def vocabularies() = _vocabularies
+
+}

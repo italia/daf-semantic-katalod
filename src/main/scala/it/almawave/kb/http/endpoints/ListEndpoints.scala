@@ -11,22 +11,22 @@ import javax.ws.rs.core.Context
 import javax.inject.Singleton
 import io.swagger.annotations.ApiOperation
 import javax.servlet.http.HttpServletRequest
+import javax.inject.Inject
 
 @Api()
 @Path("/vocabularies")
 class VocabularyEndpoint {
 
-  // TODO: use dependency injection 
-  // CHECK: singleton service?
   // TODO: filters / indexes
 
-  lazy val loader = ResourcesLoader("./conf/catalog.conf")
+  @Inject
+  var loader: CatalogService = null
 
   @GET
   @Produces(Array(MediaType.APPLICATION_JSON))
   @ApiOperation(nickname = "listVocabularies", value = "list of all vocabularies")
   def all() = {
-    loader.fetchVocabularies(false)
+    loader.vocabularies()
   }
 
 }
@@ -35,22 +35,16 @@ class VocabularyEndpoint {
 @Path("/ontologies")
 class OntologiesEndpoint {
 
-  // TODO: use dependency injection 
-  // CHECK: singleton service?
   // TODO: filters / indexes
 
-  // CHECK: singleton
-  lazy val loader = ResourcesLoader("./conf/catalog.conf")
+  @Inject
+  var loader: CatalogService = null
 
   @GET
   @Produces(Array(MediaType.APPLICATION_JSON))
   @ApiOperation(nickname = "listOntologies", value = "list of all vocabularies")
   def all(@Context httpRequest: HttpServletRequest) = {
-
-    //    val config_path = httpRequest.getAttribute("configuration").asInstanceOf[String]
-    //    println("\n\n....config path", config_path)
-
-    loader.fetchOntologies(false)
+    loader.ontologies()
   }
 
 }
