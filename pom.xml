@@ -95,17 +95,17 @@
 		<dependency>
 			<groupId>org.eclipse.jetty</groupId>
 			<artifactId>jetty-server</artifactId>
-			<version>9.4.0.M1</version>
+			<version>8.1.10.v20130312</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.jetty</groupId>
 			<artifactId>jetty-servlet</artifactId>
-			<version>9.4.0.M1</version>
+			<version>8.1.10.v20130312</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.jetty</groupId>
 			<artifactId>jetty-util</artifactId>
-			<version>9.4.0.M1</version>
+			<version>8.1.10.v20130312</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.glassfish.jersey.media/jersey-media-moxy -->
 		<dependency>
@@ -171,19 +171,8 @@
 			<version>2.2.4</version>
 		</dependency>
 
-		<!-- CHECK: for console / endpoint web -->
-		<!-- <dependency> -->
-		<!-- <groupId>org.eclipse.rdf4j</groupId> -->
-		<!-- <artifactId>rdf4j-http-server</artifactId> -->
-		<!-- <version>2.2.4</version> -->
-		<!-- <type>war</type> -->
-		<!-- </dependency> -->
-		<!-- <dependency> -->
-		<!-- <groupId>org.eclipse.rdf4j</groupId> -->
-		<!-- <artifactId>rdf4j-http-workbench</artifactId> -->
-		<!-- <version>2.2.4</version> -->
-		<!-- <type>war</type> -->
-		<!-- </dependency> -->
+
+
 
 		<!-- https://mvnrepository.com/artifact/org.apache.solr/solr-core -->
 		<dependency>
@@ -201,7 +190,7 @@
 			<artifactId>guava</artifactId>
 			<version>16.0.1</version>
 		</dependency>
-
+		<!-- java.lang.NoClassDefFoundError: com/google/common/collect/Sets -->
 
 
 	</dependencies>
@@ -274,6 +263,43 @@
 					</execution>
 				</executions>
 			</plugin>
+
+		<!-- 
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-shade-plugin</artifactId>
+				<version>3.1.0</version>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>shade</goal>
+						</goals>
+						<configuration>
+							<transformers>
+								<transformer
+									implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+									<mainClass>it.almawave.kb.http.MainHTTP</mainClass>
+								</transformer>
+							</transformers>
+
+							<filters>
+								<filter>
+									<artifact>*:*</artifact>
+									<excludes>
+										<exclude>META-INF/*.SF</exclude>
+										<exclude>META-INF/*.DSA</exclude>
+										<exclude>META-INF/*.RSA</exclude>
+									</excludes>
+								</filter>
+							</filters>
+
+						</configuration>
+
+					</execution>
+				</executions>
+			</plugin>
+		-->
 
 		</plugins>
 

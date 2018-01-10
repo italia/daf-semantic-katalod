@@ -43,7 +43,7 @@ class RDFFileSail(urls: List[URL], contexts: String*) extends MemoryStore {
 
     urls.foreach { url =>
 
-      logger.debug("loading RDF from url: <${url}>")
+      logger.debug(s"loading RDF from url: <${url}>")
       val input = url.openStream()
 
       val format: RDFFormat = Rio.getParserFormatForFileName(url.toString()).get

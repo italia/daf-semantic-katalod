@@ -11,12 +11,12 @@ class CatalogService {
 
   private val logger = LoggerFactory.getLogger(this.getClass)
 
-  lazy val loader = ResourcesLoader("./conf/catalog.conf")
+  val loader = ResourcesLoader("./conf/catalog.conf")
 
   // we pre-load all the metadata in memory at first request, 
   // so next requests will be more efficient
-  lazy val _vocabularies = loader.fetchOntologies(false)
-  lazy val _ontologies = loader.fetchVocabularies(false)
+  val _vocabularies = loader.fetchOntologies(false)
+  val _ontologies = loader.fetchVocabularies(false)
 
   logger.info(s"loaded ${_vocabularies.size} vocabularies")
   logger.info(s"loaded ${_ontologies.size} ontologies")

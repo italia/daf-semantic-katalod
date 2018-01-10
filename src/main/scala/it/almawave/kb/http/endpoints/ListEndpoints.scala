@@ -12,6 +12,7 @@ import javax.inject.Singleton
 import io.swagger.annotations.ApiOperation
 import javax.servlet.http.HttpServletRequest
 import javax.inject.Inject
+import io.swagger.annotations.Tag
 
 @Api()
 @Path("/vocabularies")
@@ -24,6 +25,7 @@ class VocabularyEndpoint {
 
   @GET
   @Produces(Array(MediaType.APPLICATION_JSON))
+  @Tag(name = "catalog")
   @ApiOperation(nickname = "listVocabularies", value = "list of all vocabularies")
   def all() = {
     loader.vocabularies()
@@ -42,6 +44,7 @@ class OntologiesEndpoint {
 
   @GET
   @Produces(Array(MediaType.APPLICATION_JSON))
+  @Tag(name = "catalog")
   @ApiOperation(nickname = "listOntologies", value = "list of all vocabularies")
   def all(@Context httpRequest: HttpServletRequest) = {
     loader.ontologies()
