@@ -77,14 +77,12 @@
 			<version>1.2</version>
 		</dependency>
 
-
 		<!-- config -->
 		<dependency>
 			<groupId>com.typesafe</groupId>
 			<artifactId>config</artifactId>
 			<version>1.2.1</version>
 		</dependency>
-
 
 		<!-- jetty+jersey -->
 		<dependency>
@@ -118,8 +116,6 @@
 			<artifactId>jersey-media-json-jackson</artifactId>
 			<version>2.24</version>
 		</dependency>
-
-
 
 		<!-- swagger-jersey2 -->
 		<dependency>
@@ -192,6 +188,11 @@
 		</dependency>
 		<!-- java.lang.NoClassDefFoundError: com/google/common/collect/Sets -->
 
+		<dependency>
+			<groupId>it.almawave.linkeddata.kb</groupId>
+			<artifactId>kbaselib</artifactId> <!-- {artifact}-scala_2.11 -->
+			<version>0.0.1</version>
+		</dependency>
 
 	</dependencies>
 
@@ -264,42 +265,31 @@
 				</executions>
 			</plugin>
 
-		<!-- 
+			<!-- DISABLED
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-shade-plugin</artifactId>
-				<version>3.1.0</version>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>2.2-beta-5</version>
+				<configuration>
+					<descriptorRefs>
+						<descriptorRef>jar-with-dependencies</descriptorRef>
+					</descriptorRefs>
+					<archive>
+						<manifest>
+							<mainClass>it.almawave.kb.http.MainHTTP</mainClass>
+						</manifest>
+					</archive>
+				</configuration>
 				<executions>
 					<execution>
 						<phase>package</phase>
 						<goals>
-							<goal>shade</goal>
+							<goal>single</goal>
 						</goals>
-						<configuration>
-							<transformers>
-								<transformer
-									implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-									<mainClass>it.almawave.kb.http.MainHTTP</mainClass>
-								</transformer>
-							</transformers>
-
-							<filters>
-								<filter>
-									<artifact>*:*</artifact>
-									<excludes>
-										<exclude>META-INF/*.SF</exclude>
-										<exclude>META-INF/*.DSA</exclude>
-										<exclude>META-INF/*.RSA</exclude>
-									</excludes>
-								</filter>
-							</filters>
-
-						</configuration>
-
 					</execution>
 				</executions>
 			</plugin>
-		-->
+			-->
 
 		</plugins>
 
