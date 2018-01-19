@@ -11,7 +11,7 @@ class CatalogService {
 
   private val logger = LoggerFactory.getLogger(this.getClass)
 
-  val loader = ResourcesLoader("./conf/catalog.conf")
+  var loader = ResourcesLoader("./conf/catalog.conf")
 
   // we pre-load all the metadata in memory at first request, 
   // so next requests will be more efficient

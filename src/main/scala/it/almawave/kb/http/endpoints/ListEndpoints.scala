@@ -45,7 +45,7 @@ class OntologiesEndpoint {
   @GET
   @Produces(Array(MediaType.APPLICATION_JSON))
   @Tag(name = "catalog")
-  @ApiOperation(nickname = "listOntologies", value = "list of all vocabularies")
+  @ApiOperation(nickname = "listOntologies", value = "list of all ontologies")
   def all(@Context httpRequest: HttpServletRequest) = {
     loader.ontologies()
   }
