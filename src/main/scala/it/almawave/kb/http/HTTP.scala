@@ -30,7 +30,8 @@ class HTTP(host: String, port: Int, base: String) {
 
   private val logger = LoggerFactory.getLogger(this.getClass)
 
-  val server = new Server(new InetSocketAddress("localhost", 7777))
+  val address = new InetSocketAddress(host, port)
+  val server = new Server(address)
 
   //  import io.swagger.jaxrs2.integration.resources
 
@@ -57,6 +58,7 @@ class HTTP(host: String, port: Int, base: String) {
   val jersey_context = new ServletContextHandler(ServletContextHandler.SESSIONS)
   jersey_context.setInitParameter("openApi.configuration.location", "conf/openapi-configuration.yaml")
   jersey_context.setContextPath("/kb/api/v1")
+  //  jersey_context.setContextPath(base)
   jersey_context.addServlet(jersey_holder, "/*")
 
   // swagger configuration
@@ -64,6 +66,7 @@ class HTTP(host: String, port: Int, base: String) {
   val swagger_holder = new ServletHolder(jersey_container);
   swagger_holder.setInitParameter("api.version", "0.0.1")
   swagger_holder.setInitParameter("swagger.api.basepath", "http://localhost:7777/kb/api/v1")
+  //  swagger_holder.setInitParameter("swagger.api.basepath", s"http://${host}:${port}/${base}")
   swagger_holder.setInitParameter("swagger.openAPI", "conf/openapi-configuration.yaml")
   swagger_holder.setInitOrder(0)
   swagger_holder.setServlet(swagger_servlet_config)

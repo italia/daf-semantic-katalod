@@ -190,8 +190,28 @@
 		<dependency>
 			<groupId>it.almawave.linkeddata.kb</groupId>
 			<artifactId>kbaselib</artifactId> <!-- {artifact}-scala_2.11 -->
-			<version>0.0.1</version>
+			<version>0.0.2</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/lib/kbaselib-0.0.2.jar</systemPath>
 		</dependency>
+
+
+		<!-- temporary -->
+		<dependency>
+			<groupId>virtuoso</groupId>
+			<artifactId>virtuoso-rdf4j</artifactId>
+			<version>0.1</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/lib/virt_rdf4j.jar</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>virtuoso</groupId>
+			<artifactId>virtuoso-jdbc4</artifactId>
+			<version>0.1</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/lib/virtjdbc4_2.jar</systemPath>
+		</dependency>
+		<!-- temporary -->
 
 	</dependencies>
 
@@ -242,6 +262,18 @@
 				</executions>
 			</plugin>
 
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+					<archive>
+						<manifest>
+							<mainClass>it.almawave.kb.http.MainHTTP</mainClass>
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>
+
 			<!-- dependencies -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -264,31 +296,52 @@
 				</executions>
 			</plugin>
 
-			<!-- DISABLED
+			<!-- DISABLED <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-assembly-plugin</artifactId> 
+				<version>2.2-beta-5</version> <configuration> <descriptorRefs> <descriptorRef>jar-with-dependencies</descriptorRef> 
+				</descriptorRefs> <archive> <manifest> <mainClass>it.almawave.kb.http.MainHTTP</mainClass> 
+				</manifest> </archive> </configuration> <executions> <execution> <phase>package</phase> 
+				<goals> <goal>single</goal> </goals> </execution> </executions> </plugin> -->
+
+
 			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-assembly-plugin</artifactId>
-				<version>2.2-beta-5</version>
+				<groupId>com.spotify</groupId>
+				<artifactId>dockerfile-maven-plugin</artifactId>
+				<version>1.3.7</version>
+				<dependencies>
+					<dependency>
+						<groupId>org.scala-lang</groupId>
+						<artifactId>scala-library</artifactId>
+						<version>${scalaVersion}</version>
+					</dependency>
+				</dependencies>
+				<!-- <executions> -->
+				<!-- <execution> -->
+				<!-- <id>default</id> -->
+				<!-- <goals> -->
+				<!-- <goal>build</goal> -->
+				<!-- <goal>push</goal> -->
+				<!-- </goals> -->
+				<!-- </execution> -->
+				<!-- </executions> -->
 				<configuration>
-					<descriptorRefs>
-						<descriptorRef>jar-with-dependencies</descriptorRef>
-					</descriptorRefs>
-					<archive>
-						<manifest>
-							<mainClass>it.almawave.kb.http.MainHTTP</mainClass>
-						</manifest>
-					</archive>
+					<imageName>katalod</imageName>
+					<baseImage>java</baseImage>
+					<entryPoint>["java", "-jar", "/${project.build.finalName}.jar"]</entryPoint>
+					<repository>almawave/katalod</repository>
+					<tag>${project.version}</tag>
+					<buildArgs>
+						<JAR_FILE>${project.build.finalName}.jar</JAR_FILE>
+					</buildArgs>
+					<resources>
+						<resource>
+							<targetPath>/</targetPath>
+							<directory>${project.build.directory}</directory>
+							<include>${project.build.finalName}.jar</include>
+						</resource>
+					</resources>
 				</configuration>
-				<executions>
-					<execution>
-						<phase>package</phase>
-						<goals>
-							<goal>single</goal>
-						</goals>
-					</execution>
-				</executions>
 			</plugin>
-			-->
+
 
 		</plugins>
 

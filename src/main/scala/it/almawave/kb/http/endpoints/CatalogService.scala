@@ -1,9 +1,9 @@
 package it.almawave.kb.http.endpoints
 
 import javax.inject.Singleton
-import it.almawave.kb.catalog.ResourcesLoader
 import javax.ws.rs.Path
 import org.slf4j.LoggerFactory
+import it.almawave.linkeddata.kb.catalog.ResourcesLoader
 
 @Singleton
 @Path("conf:api-catalog-config")

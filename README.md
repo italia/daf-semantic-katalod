@@ -31,6 +31,8 @@ TODO: expose configuration (including port)
 ## TODO 
 + replace maven with sbt
 + check how to pass port to jetty externally
++ github import:
+	- if 
 
 **NOTE**: we could think about changing jetty with play! for the endpoints
 
