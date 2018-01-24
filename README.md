@@ -48,7 +48,7 @@ sudo docker run -p 7777:7777 katalod:0.0.1
 ## TODO
 - [ ] improve of configuration handling, using the external file
 - [ ] check: creating Dockerfile / docker image directly from maven build
-- [ ] - [ ] enable the generation of resources list (ontologies / vocabularies) directly from github (see tests)
+- [ ] enable the generation of resources list (ontologies / vocabularies) directly from github (see tests)
 - [ ] add detail API for vocabularies (with DCAT, see tests)
 - [ ] add detail API for ontologies (with VOWL, see tests)
 - [ ] enable solr for improve API performance, filtering, navigations (see tests)
