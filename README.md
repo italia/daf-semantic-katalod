@@ -8,7 +8,7 @@ For simplicity it is designed re-using jersey and swagger with jetty, using RDF4
 
 ## maven build / install
 
-```
+```bash
 mvn clean install
 ```
 
@@ -24,23 +24,38 @@ mvn clean package
 java -cp "target/kataLOD-0.0.1.jar;target/libs/*" it.almawave.kb.http.MainHTTP
 ```
 
-TODO: add dockerization of this process
-TODO: expose configuration (including port)
-
-
-## TODO 
-+ replace maven with sbt
-+ check how to pass port to jetty externally
-+ github import:
-	- if 
-
-**NOTE**: we could think about changing jetty with play! for the endpoints
+----
 
 ### dockerization
-CHECK
-https://runnable.com/docker/java/dockerize-your-java-application
+
+It's possible to create a docker image directly using the drafted `Dockefile`.
+
+```bash
+mvn clean package
+sudo docker build . -t katalod:0.0.1
+```
+
+In order to run a new container from the generated build, we can use the following command:
+```bash
+sudo docker run -p 7777:7777 katalod:0.0.1
+```
+
+**NOTE**: currently the port 7777 is used as the default port
 
 
- mvn clean package
- sudo docker build . -t katalod:0.0.1
- sudo docker run -p 8777:7777 katalod:0.0.1
+* * *
+
+## TODO
+- [ ] improve of configuration handling, using the external file
+- [ ] check: creating Dockerfile / docker image directly from maven build
+- [ ] - [ ] enable the generation of resources list (ontologies / vocabularies) directly from github (see tests)
+- [ ] add detail API for vocabularies (with DCAT, see tests)
+- [ ] add detail API for ontologies (with VOWL, see tests)
+- [ ] enable solr for improve API performance, filtering, navigations (see tests)
+- [ ] check: simple HTML pages for testing?
+- [ ] check: netty instead of jetty?
+- [ ] check: replace maven with sbt?
+- [ ] check: rewrite with play?
+- [ ] check: better handling / mapping of swagger port when using docker
+
+**NOTE**: we could think about changing jetty with play! for the endpoints
