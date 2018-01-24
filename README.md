@@ -5,6 +5,9 @@ This module is designed to offer support for parsing ontologies and vocabularies
 
 For simplicity it is designed re-using jersey and swagger with jetty, using RDF4J as the main interface to RDF.
 
+**NOTE**: the application should be considered an early (alpha) release, as it is still work-in-progress: all the endpoints and functions are still constantly evolving.
+
+
 
 ## maven build / install
 
