@@ -20,12 +20,21 @@ import org.eclipse.jetty.server.handler.ContextHandler
 import io.swagger.jaxrs.listing.ApiListingResource
 import io.swagger.jaxrs.listing.SwaggerSerializers
 import io.swagger.jersey.config.JerseyJaxrsConfig
+import com.typesafe.config.ConfigFactory
+import java.io.File
+import com.typesafe.config.ConfigValueFactory
 
+/**
+ * this is just used for starting the embedded server
+ */
 object MainHTTP extends App {
 
-  val http = HTTP(
-    "localhost", 7777,
-    "/kb/api/v1")
+  val conf = ConfigFactory
+    .parseFile(new File("conf/catalog.conf").getCanonicalFile)
+    //    .withValue("http.host", ConfigValueFactory.fromAnyRef("http://localhost"))
+    .resolve()
+
+  val http = HTTP(conf)
 
   // TODO: load configurations
 
@@ -35,13 +44,12 @@ object MainHTTP extends App {
 
 
 // ---------------------------------------------------
-// TODO: TEST
+// TODO: adding TEST
 // http://localhost:7777/
 // http://localhost:7777/kb/api/v1/ontologies
 // http://localhost:7777/kb/api/v1/ontologies
 // http://localhost:7777/kb/api/v1/swagger.json
 // TODO: swagger?
-  //  swagger.api.basepath
-  //  http://localhost:7777/kb/api/v1/swagger.json
-
+// swagger.api.basepath
+// http://localhost:7777/kb/api/v1/swagger.json
 // ---------------------------------------------------

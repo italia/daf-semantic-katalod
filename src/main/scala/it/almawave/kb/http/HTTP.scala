@@ -19,18 +19,44 @@ import io.swagger.jaxrs.listing.SwaggerSerializers
 import io.swagger.jersey.config.JerseyJaxrsConfig
 import it.almawave.kb.http.providers.CORSFilter
 import it.almawave.kb.http.providers.JacksonScalaProvider
+import java.net.InetAddress
+import com.typesafe.config.Config
+import com.typesafe.config.ConfigFactory
+import java.net.URL
 
 object HTTP {
+
+  def apply(conf: Config) = {
+
+    val DEFAULT = ConfigFactory.parseString("""
+    http {
+    	host: 0.0.0.0
+    	base: "/api"
+    	port: 8080
+    }  
+    """)
+    val _conf = conf.withFallback(DEFAULT).resolve()
+
+    val host = _conf.getString("http.host")
+    val port = _conf.getInt("http.port")
+    val base = _conf.getString("http.base")
+    new HTTP(host, port, base)
+  }
 
   def apply(host: String, port: Int, base: String) = new HTTP(host, port, base)
 
 }
 
+/**
+ * this is an object designed to simplify the creation of JAX-RS endpoints, using jetty
+ * TODO: refactoring using conf?
+ */
 class HTTP(host: String, port: Int, base: String) {
 
   private val logger = LoggerFactory.getLogger(this.getClass)
 
-  val address = new InetSocketAddress(host, port)
+  val address = parse_address(host, port)
+
   val server = new Server(address)
 
   //  import io.swagger.jaxrs2.integration.resources
@@ -51,23 +77,29 @@ class HTTP(host: String, port: Int, base: String) {
 
   // general configurations.......................................
 
+  logger.info("\n\n....start with configurations....")
+  logger.info(s"http://${host}:${port}${base}")
+
+  // general configurations.......................................
+
   // jersey configuration
   val jersey_container = new ServletContainer(resource_config)
   val jersey_holder = new ServletHolder(jersey_container);
   jersey_holder.setInitOrder(0)
-  val jersey_context = new ServletContextHandler(ServletContextHandler.SESSIONS)
+  val jersey_context = new ServletContextHandler(ServletContextHandler.NO_SESSIONS)
   jersey_context.setInitParameter("openApi.configuration.location", "conf/openapi-configuration.yaml")
-  jersey_context.setContextPath("/kb/api/v1")
-  //  jersey_context.setContextPath(base)
+  //  jersey_context.setContextPath("/kb/api/v1")
+  jersey_context.setContextPath(base)
   jersey_context.addServlet(jersey_holder, "/*")
 
   // swagger configuration
   val swagger_servlet_config = new JerseyJaxrsConfig
   val swagger_holder = new ServletHolder(jersey_container);
   swagger_holder.setInitParameter("api.version", "0.0.1")
-  swagger_holder.setInitParameter("swagger.api.basepath", "http://localhost:7777/kb/api/v1")
-  //  swagger_holder.setInitParameter("swagger.api.basepath", s"http://${host}:${port}/${base}")
-  swagger_holder.setInitParameter("swagger.openAPI", "conf/openapi-configuration.yaml")
+  swagger_holder.setInitParameter("swagger.api.basepath", s"http://localhost:${port}${base}")
+
+  // CHECK: how to configure th basic settings from static file with overrides
+  //  swagger_holder.setInitParameter("swagger.openAPI", "conf/openapi-configuration.yaml")
   swagger_holder.setInitOrder(0)
   swagger_holder.setServlet(swagger_servlet_config)
   // la servlet è caricata ma non mappata su un path!
@@ -102,6 +134,20 @@ class HTTP(host: String, port: Int, base: String) {
   def stop {
     logger.info(s"STOP HTTP")
     server.stop()
+  }
+
+  private def parse_address(host: String, port: Int): InetSocketAddress = {
+
+    val _host = if (host != null)
+      // TODO: handling this by URL instead of this hack!
+      if (host.startsWith("http")) host.replaceAll("http://", "").replaceAll("https://", "") // hack
+      else host
+    else
+      InetAddress.getLoopbackAddress.toString()
+
+    // TESTING: if a different host is provided...
+    new InetSocketAddress(_host, port)
+
   }
 
 }

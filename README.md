@@ -41,4 +41,6 @@ CHECK
 https://runnable.com/docker/java/dockerize-your-java-application
 
 
-
+ mvn clean package
+ sudo docker build . -t katalod:0.0.1
+ sudo docker run -p 8777:7777 katalod:0.0.1
