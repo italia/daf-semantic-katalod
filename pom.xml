@@ -214,7 +214,7 @@
 		<!-- temporary -->
 
 
-		<!-- https://mvnrepository.com/artifact/org.visualdataweb.vowl.owl2vowl/OWL2VOWL -->
+		<!-- OWL2VOWL -->
 		<dependency>
 			<groupId>org.visualdataweb.vowl.owl2vowl</groupId>
 			<artifactId>OWL2VOWL</artifactId>
@@ -222,6 +222,8 @@
 		</dependency>
 
 
+		<!-- TODO: prometheus etc (monitoring, stats...) <dependency> <groupId>io.prometheus</groupId> 
+			<artifactId>simpleclient</artifactId> <version>0.2.0</version> </dependency> -->
 
 	</dependencies>
 

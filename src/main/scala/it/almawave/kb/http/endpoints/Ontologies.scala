@@ -11,42 +11,42 @@ import io.swagger.annotations.ApiOperation
 import javax.servlet.http.HttpServletRequest
 import javax.inject.Inject
 import io.swagger.annotations.Tag
-
-@Api()
-@Path("/vocabularies")
-class VocabularyEndpoint {
-
-  // TODO: filters / indexes
-
-  @Inject
-  var loader: CatalogService = null
-
-  @GET
-  @Produces(Array(MediaType.APPLICATION_JSON))
-  @Tag(name = "catalog")
-  @ApiOperation(nickname = "listVocabularies", value = "list of all vocabularies")
-  def all() = {
-    loader.vocabularies()
-  }
-
-}
+import org.slf4j.LoggerFactory
+import javax.ws.rs.PathParam
 
 @Api
 @Path("/ontologies")
 class OntologiesEndpoint {
 
+  val logger = LoggerFactory.getLogger(this.getClass)
+
   // TODO: filters / indexes
+  // TODO: add tests
 
   @Inject
   var loader: CatalogService = null
 
   @GET
   @Produces(Array(MediaType.APPLICATION_JSON))
-  @Tag(name = "catalog")
+  @Tag(name = "catalog, ontologies")
   @ApiOperation(nickname = "listOntologies", value = "list of all ontologies")
   def all(@Context httpRequest: HttpServletRequest) = {
+    logger.debug("getting the list of all the ontologies")
     loader.ontologies()
   }
+
+  @GET
+  @Produces(Array(MediaType.APPLICATION_JSON))
+  @Tag(name = "catalog, ontologies")
+  @ApiOperation(nickname = "listVocabularies", value = "list of all vocabularies")
+  @Path("/{ontologyID}")
+  def details(@PathParam("ontologyID") id: String) = {
+    logger.debug(s"getting the details for ontology with id: ${id}")
+    loader.ontologies()
+      .filter { item => item.id.equalsIgnoreCase(id) }
+      .headOption
+  }
+  // TEST.EX: IoT-AP_IT
 
 }
 

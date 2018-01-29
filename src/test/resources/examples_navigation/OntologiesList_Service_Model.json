@@ -1,0 +1,64 @@
+[{
+	"id": "",
+	"titles": {
+		"ita": "",
+		"eng": ""
+	},
+	"descriptions": {
+		"ita": "",
+		"eng": ""
+	},
+	"publishedBy": "",
+	"owner": "",
+	"creators": [{
+		"name": "",
+		"uri": ""
+	}],
+	"lang": [
+		""
+	],
+	"lastEditDate": "",
+	"license": {
+		"label": "",
+		"uri": ""
+	},
+	"imports": [{
+		"label": "",
+		"uri": ""
+	}],
+	"versions": [{
+		"number": "",
+		"date": "",
+		"comment": {
+			"ita": "",
+			"eng": ""
+		},
+		"uri": ""
+	}],
+	"source": "",
+	"url": "",
+	"prefix": "",
+	"namespace": "",
+	"concepts": [
+		""
+	],
+	"provenance": [{
+		"derivedFromURI": "",
+		"uri": "",
+		"dateModified": "",
+		"definedByURI": "",
+		"licenseURI": "",
+		"dateIssued": ""
+	}],
+	"tags": [{
+		"label": "",
+		"uri": ""
+	}],
+	"categories": [{
+		"label": "",
+		"uri": ""
+	}],
+	"keywords": [
+		""
+	]
+}]

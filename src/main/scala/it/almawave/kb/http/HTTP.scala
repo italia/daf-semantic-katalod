@@ -23,6 +23,7 @@ import java.net.InetAddress
 import com.typesafe.config.Config
 import com.typesafe.config.ConfigFactory
 import java.net.URL
+import org.eclipse.jetty.server.handler.StatisticsHandler
 
 object HTTP {
 
@@ -115,6 +116,14 @@ class HTTP(host: String, port: Int, base: String) {
   swagger_ui_context.setContextPath("/")
   swagger_ui_context.setResourceBase(".")
   swagger_ui_context.setHandler(swagger_ui_handler)
+
+  // prometheus statistics
+  // SEE: https://github.com/prometheus/client_java
+  //  val stats = new StatisticsHandler()
+  //  stats.setHandler(server.getHandler())
+  //  server.setHandler(stats)
+  //  // Register collector.
+  //  new JettyStatisticsCollector(stats).register()
 
   val handlers = new HandlerList()
   handlers.setHandlers(Array(
