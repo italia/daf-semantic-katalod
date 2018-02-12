@@ -13,6 +13,7 @@ import javax.inject.Inject
 import io.swagger.annotations.Tag
 import org.slf4j.LoggerFactory
 import javax.ws.rs.PathParam
+import scala.collection.Map
 
 @Api
 @Path("/ontologies")
@@ -38,7 +39,7 @@ class OntologiesEndpoint {
   @GET
   @Produces(Array(MediaType.APPLICATION_JSON))
   @Tag(name = "catalog, ontologies")
-  @ApiOperation(nickname = "listVocabularies", value = "list of all vocabularies")
+  @ApiOperation(nickname = "ontologyDetails", value = "details of an ontology")
   @Path("/{ontologyID}")
   def details(@PathParam("ontologyID") id: String) = {
     logger.debug(s"getting the details for ontology with id: ${id}")

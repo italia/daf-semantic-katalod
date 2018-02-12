@@ -35,7 +35,7 @@ class VocabulariesEndpoint {
   @GET
   @Produces(Array(MediaType.APPLICATION_JSON))
   @Tag(name = "catalog, vocabularies")
-  @ApiOperation(nickname = "listVocabularies", value = "list of all vocabularies")
+  @ApiOperation(nickname = "vocabularyDetails", value = "details of a vocabulary")
   @Path("/{vocabularyID}")
   def details(@PathParam("vocabularyID") id: String) = {
     logger.debug(s"getting the details for vocabulary with id: ${id}")

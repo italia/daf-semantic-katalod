@@ -41,7 +41,7 @@ object HTTP {
     val host = _conf.getString("http.host")
     val port = _conf.getInt("http.port")
     val base = _conf.getString("http.base")
-    new HTTP(host, port, base)
+    new HTTP(null, port, base)
   }
 
   def apply(host: String, port: Int, base: String) = new HTTP(host, port, base)
@@ -75,6 +75,8 @@ class HTTP(host: String, port: Int, base: String) {
       classOf[JacksonFeature],
       classOf[JacksonScalaProvider],
       classOf[CORSFilter])
+
+  // CHECK: using this configuration with JerseyTest
 
   // general configurations.......................................
 
@@ -152,7 +154,9 @@ class HTTP(host: String, port: Int, base: String) {
       if (host.startsWith("http")) host.replaceAll("http://", "").replaceAll("https://", "") // hack
       else host
     else
-      InetAddress.getLoopbackAddress.toString()
+      InetAddress.getLoopbackAddress.getHostName
+
+    // SEE: InetAddress.getLocalHost.getCanonicalHostName
 
     // TESTING: if a different host is provided...
     new InetSocketAddress(_host, port)

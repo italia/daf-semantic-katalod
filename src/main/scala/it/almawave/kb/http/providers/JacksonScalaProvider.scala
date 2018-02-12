@@ -10,6 +10,11 @@ import com.fasterxml.jackson.annotation.JsonInclude
 import com.fasterxml.jackson.databind.SerializationFeature
 import com.fasterxml.jackson.databind.DeserializationFeature
 import javax.ws.rs.ext.ContextResolver
+import com.fasterxml.jackson.databind.JsonSerializer
+import com.fasterxml.jackson.core.JsonGenerator
+import com.fasterxml.jackson.databind.SerializerProvider
+import java.lang.Double
+import java.lang.Boolean
 
 @Provider
 @Produces(Array(MediaType.APPLICATION_JSON))
@@ -23,13 +28,24 @@ class JacksonScalaProvider extends JacksonJaxbJsonProvider with ContextResolver[
     .registerModule(DefaultScalaModule)
     .configure(SerializationFeature.INDENT_OUTPUT, true)
     .configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, true)
-    .setSerializationInclusion(JsonInclude.Include.NON_NULL)
-    .setSerializationInclusion(JsonInclude.Include.NON_EMPTY)
+    .setSerializationInclusion(JsonInclude.Include.ALWAYS)
     .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)
     .configure(DeserializationFeature.ACCEPT_EMPTY_ARRAY_AS_NULL_OBJECT, true)
     .configure(DeserializationFeature.ACCEPT_EMPTY_STRING_AS_NULL_OBJECT, true)
     .configure(DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY, true)
     .configure(SerializationFeature.WRITE_EMPTY_JSON_ARRAYS, true) // com.fasterxml.jackson.annotation.JsonInclude
+
+    .getSerializerProvider.setNullValueSerializer(new JsonSerializer[Object] {
+      def serialize(obj: Object, gen: JsonGenerator, provider: SerializerProvider) {
+        obj match {
+          case bool: Boolean   => gen.writeBoolean(false)
+          case number: Integer => gen.writeNumber(0)
+          case number: Double  => gen.writeNumber(0.0D)
+          case text: String    => gen.writeString("")
+          case _               => gen.writeString("")
+        }
+      }
+    })
 
   super.setMapper(mapper)
 

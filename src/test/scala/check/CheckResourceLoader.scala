@@ -9,7 +9,7 @@ object CheckresourceLoader extends App {
   val _ontologies = loader.fetchOntologies(true)
 
   _ontologies
-    .map { item => item.titles(0) }
+    .map { item => item.titles }
     .foreach { item =>
       println(item)
     }

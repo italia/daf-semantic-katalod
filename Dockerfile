@@ -4,6 +4,7 @@ FROM openjdk:8-jre-alpine
 WORKDIR application
 
 ADD conf/ conf/
+ADD ontologie-vocabolari-controllati/ ontologie-vocabolari-controllati/
 ADD src/main/swagger-ui src/main/swagger-ui
 ADD target/libs /usr/share/katalod/lib
 ADD target/kataLOD-0.0.1.jar /usr/share/katalod/kataLOD-0.0.1.jar

@@ -29,14 +29,14 @@ import com.typesafe.config.ConfigValueFactory
  */
 object MainHTTP extends App {
 
+  // TODO: load configurations
+
   val conf = ConfigFactory
-    .parseFile(new File("conf/catalog.conf").getCanonicalFile)
-    //    .withValue("http.host", ConfigValueFactory.fromAnyRef("http://localhost"))
+    .parseFile(new File("./conf/catalog.conf").getCanonicalFile)
+    // .withValue("http.host", ConfigValueFactory.fromAnyRef("http://localhost"))
     .resolve()
 
   val http = HTTP(conf)
-
-  // TODO: load configurations
 
   http.start
 
@@ -44,11 +44,14 @@ object MainHTTP extends App {
 
 
 // ---------------------------------------------------
-// TODO: adding TEST
+// TODO: add TESTs! SEE: Jersey TEST
+// 
 // http://localhost:7777/
 // http://localhost:7777/kb/api/v1/ontologies
-// http://localhost:7777/kb/api/v1/ontologies
-// http://localhost:7777/kb/api/v1/swagger.json
+// http://localhost:7777/kb/api/v1/ontologies/CLV-AP_IT
+// http://localhost:7777/kb/api/v1/vocabularies
+// http://localhost:7777/kb/api/v1/vocabularies/POICategoryClassification
+// 
 // TODO: swagger?
 // swagger.api.basepath
 // http://localhost:7777/kb/api/v1/swagger.json

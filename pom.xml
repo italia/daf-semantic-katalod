@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>it.almawave.linkeddata.kb</groupId>
 	<artifactId>kataLOD</artifactId>
-	<version>0.0.1</version>
+	<version>0.0.2</version>
 	<name>kataLOD</name>
 	<description>kataLOD</description>
 
@@ -150,6 +150,12 @@
 			<artifactId>jackson-module-scala_2.11</artifactId>
 			<version>2.8.9</version>
 		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.dataformat</groupId>
+			<artifactId>jackson-dataformat-csv</artifactId>
+			<version>2.8.9</version>
+		</dependency>
+
 		<!-- <dependency> NOTA: va in conflitto con jackson-provider!! -->
 		<!-- <groupId>com.fasterxml.jackson.jaxrs</groupId> -->
 		<!-- <artifactId>jackson-jaxrs-json-provider</artifactId> -->
@@ -190,9 +196,10 @@
 		<dependency>
 			<groupId>it.almawave.linkeddata.kb</groupId>
 			<artifactId>kbaselib</artifactId> <!-- {artifact}-scala_2.11 -->
-			<version>0.0.2</version>
-			<scope>system</scope>
-			<systemPath>${project.basedir}/lib/kbaselib-0.0.2.jar</systemPath>
+			<!-- <version>0.0.3</version> -->
+			<version>0.0.4</version>
+			<!-- <scope>system</scope> -->
+			<!-- <systemPath>${project.basedir}/lib/kbaselib-0.0.3.jar</systemPath> -->
 		</dependency>
 
 
