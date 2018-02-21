@@ -24,23 +24,26 @@ class CatalogService {
   // decide weather to use or not the RDF files copied locally
   //  private val USE_CACHE = if (_conf.hasPath("use_cache")) _conf.getBoolean("use_cache") else false
 
-  private val USE_CACHE = true
+  //  private val USE_CACHE = true
 
   // TODO: externalize configurations
 
   // first version!
   // we pre-load all the metadata in memory at first request,
   // so next requests will be more efficient
-  var loader = ResourcesLoader("./conf/catalog.conf")
-  val _vocabularies = loader.fetchVocabularies(USE_CACHE)
-  val _ontologies = loader.fetchOntologies(USE_CACHE)
+  //  var loader = ResourcesLoader("./conf/catalog.conf")
+  //  val _vocabularies = loader.fetchVocabularies(USE_CACHE)
+  //  val _ontologies = loader.fetchOntologies(USE_CACHE)
 
   //  REFACTORIZATION: NEW VERSION (v0.0.2)
-  //  val conf = ConfigFactory.parseFile(Paths.get("./conf/catalog.conf").normalize().toFile())
-  //  val catalog = new CatalogBox(conf)
-  //  catalog.start()
-  //  val _vocabularies = catalog.vocabularies
-  //  val _ontologies = catalog.ontologies
+  // we still assume a fixed `conf/catalog.conf` configuration file, here... this mau change in later versions
+  val conf = ConfigFactory.parseFile(Paths.get("./conf/catalog.conf").normalize().toFile())
+  val catalog = new CatalogBox(conf)
+  catalog.start()
+
+  // references to pre-loaded metadata for ontologies and vocabularies
+  val _ontologies = catalog.ontologies.map(_.meta)
+  val _vocabularies = catalog.vocabularies.map(_.meta)
 
   logger.info(s"loaded ${_vocabularies.size} vocabularies")
   logger.info(s"loaded ${_ontologies.size} ontologies")

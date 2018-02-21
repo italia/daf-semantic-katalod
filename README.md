@@ -24,7 +24,7 @@ in order to run the application locally after a mvan build, for easy testing, we
 ```bash
 mvn clean package
 
-java -cp "target/kataLOD-0.0.1.jar;target/libs/*" it.almawave.kb.http.MainHTTP
+java -cp "target/kataLOD-0.0.3.jar;target/libs/*" it.almawave.kb.http.MainHTTP
 ```
 
 ----
@@ -35,12 +35,12 @@ It's possible to create a docker image directly using the drafted `Dockefile`.
 
 ```bash
 mvn clean package
-sudo docker build . -t katalod:0.0.1
+sudo docker build . -t katalod:0.0.3
 ```
 
 In order to run a new container from the generated build, we can use the following command:
 ```bash
-sudo docker run -p 7777:7777 katalod:0.0.1
+sudo docker run -p 7777:7777 katalod:0.0.3
 ```
 
 **NOTE**: currently the port 7777 is used as the default port
@@ -48,8 +48,9 @@ sudo docker run -p 7777:7777 katalod:0.0.1
 
 * * *
 
-## TODO
-- [ ] improve of configuration handling, using the external file
+## TODO / CHECK
+
+- [x] improve of configuration handling, using the external file
 - [ ] check: creating Dockerfile / docker image directly from maven build
 - [ ] enable the generation of resources list (ontologies / vocabularies) directly from github (see tests)
 - [ ] add detail API for vocabularies (with DCAT, see tests)
