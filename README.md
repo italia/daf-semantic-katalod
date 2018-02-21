@@ -50,6 +50,7 @@ sudo docker run -p 7777:7777 katalod:0.0.3
 
 ## TODO / CHECK
 
+- [ ] proper test converage (with JerseyTest, JUnit, Mockito, etc.)
 - [x] improve of configuration handling, using the external file
 - [ ] check: creating Dockerfile / docker image directly from maven build
 - [ ] enable the generation of resources list (ontologies / vocabularies) directly from github (see tests)

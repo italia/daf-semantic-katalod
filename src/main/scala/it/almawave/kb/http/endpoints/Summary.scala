@@ -10,7 +10,7 @@ import javax.inject.Inject
 import javax.ws.rs.core.MediaType
 import io.swagger.annotations.ApiOperation
 
-@Api
+@Api(tags = Array("catalog"))
 @Path("/summary")
 class Summary {
 

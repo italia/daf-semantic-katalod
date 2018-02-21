@@ -9,24 +9,14 @@ import com.typesafe.config.ConfigFactory
 import java.nio.file.Paths
 import it.almawave.linkeddata.kb.catalog.ResourcesLoader
 import it.almawave.linkeddata.kb.catalog.CatalogBox
+import it.almawave.daf.standardization.StandardizationProcess
+import it.almawave.linkeddata.kb.utils.JSONHelper
 
 @Singleton
-@Path("conf:api-catalog-config")
+@Path("conf://api-catalog-config")
 class CatalogService {
 
   private val logger = LoggerFactory.getLogger(this.getClass)
-
-  // load some defualt configuration from file
-  //  val _conf = ConfigFactory
-  //    .parseFileAnySyntax(Paths.get("./conf/catalog.conf").normalize().toFile())
-  //    .resolve()
-
-  // decide weather to use or not the RDF files copied locally
-  //  private val USE_CACHE = if (_conf.hasPath("use_cache")) _conf.getBoolean("use_cache") else false
-
-  //  private val USE_CACHE = true
-
-  // TODO: externalize configurations
 
   // first version!
   // we pre-load all the metadata in memory at first request,
@@ -41,6 +31,10 @@ class CatalogService {
   val catalog = new CatalogBox(conf)
   catalog.start()
 
+  // constructing data structure from vocabularies for DAF standardization
+  val daf_std = new StandardizationProcess(catalog)
+  val _daf_std_vocabularies = daf_std.standardizeAllData()
+
   // references to pre-loaded metadata for ontologies and vocabularies
   val _ontologies = catalog.ontologies.map(_.meta)
   val _vocabularies = catalog.vocabularies.map(_.meta)
@@ -52,14 +46,6 @@ class CatalogService {
 
   def vocabularies() = _vocabularies
 
-  /* CHECK serializers for Catalog! SEE: case classes as models
-  No serializer found for class org.eclipse.rdf4j.model.impl.SimpleValueFactory
-  	and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS)
-  	(through reference chain:
-  		scala.collection.convert.Wrappers$IterableWrapper[0]->
-    		it.almawave.linkeddata.kb.catalog.VocabularyBox["repo"]->
-    		it.almawave.linkeddata.kb.file.RDFFileRepository["sail"]->
-    		it.almawave.linkeddata.kb.file.RDFFileSail["vf"]
-    )
-	*/
+  def daf_standardized_data() = _daf_std_vocabularies
+
 }

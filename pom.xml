@@ -22,7 +22,7 @@
 		<developer>
 			<name>Alfredo Serafini</name>
 			<email>seralf[AT]gmail[DOT]com</email>
-			<url>http://seralf.it/code</url>
+			<url>http://10.121.172.7:10080/opendata/daf/katalod</url>
 		</developer>
 	</developers>
 
@@ -189,9 +189,11 @@
 		<dependency>
 			<groupId>com.google.guava</groupId>
 			<artifactId>guava</artifactId>
-			<version>16.0.1</version>
+			<!-- <version>16.0.1</version> -->
+			<version>18.0</version>
 		</dependency>
 		<!-- java.lang.NoClassDefFoundError: com/google/common/collect/Sets -->
+		<!-- java.lang.NoClassDefFoundError: com/google/common/base/MoreObjects -->
 
 		<dependency>
 			<groupId>it.almawave.linkeddata.kb</groupId>

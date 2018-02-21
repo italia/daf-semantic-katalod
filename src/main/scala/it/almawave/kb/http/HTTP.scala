@@ -24,6 +24,7 @@ import com.typesafe.config.Config
 import com.typesafe.config.ConfigFactory
 import java.net.URL
 import org.eclipse.jetty.server.handler.StatisticsHandler
+import org.eclipse.jetty.server.handler.ShutdownHandler
 
 object HTTP {
 
@@ -53,6 +54,8 @@ object HTTP {
  * TODO: refactoring using conf?
  */
 class HTTP(host: String, port: Int, base: String) {
+
+  //  SEE ALSO: -Djava.net.preferIPv4Stack=true
 
   private val logger = LoggerFactory.getLogger(this.getClass)
 
@@ -127,11 +130,15 @@ class HTTP(host: String, port: Int, base: String) {
   //  // Register collector.
   //  new JettyStatisticsCollector(stats).register()
 
+  val shutdown_handler = new ShutdownHandler(server, "kill_api")
+  //  "http://localhost:7777/shutdown?token=kill_api"
+
   val handlers = new HandlerList()
   handlers.setHandlers(Array(
     jersey_context,
     //    swagger_context,
     swagger_ui_context,
+    shutdown_handler,
     new DefaultHandler()))
 
   server.setHandler(handlers)

@@ -55,4 +55,5 @@ object MainHTTP extends App {
 // TODO: swagger?
 // swagger.api.basepath
 // http://localhost:7777/kb/api/v1/swagger.json
+// http://localhost:7777/kb/api/v1/application.wadl
 // ---------------------------------------------------
