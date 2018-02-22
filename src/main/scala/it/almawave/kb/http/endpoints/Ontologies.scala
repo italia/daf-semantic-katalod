@@ -15,7 +15,7 @@ import org.slf4j.LoggerFactory
 import javax.ws.rs.PathParam
 import scala.collection.Map
 
-@Api(tags = Array("catalog", "ontologies"))
+@Api(tags = Array("catalog"))
 @Path("/ontologies")
 class OntologiesEndpoint {
 

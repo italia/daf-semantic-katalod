@@ -1,5 +1,7 @@
 
 
+package check
+
 import java.net.InetAddress
 import scala.collection.JavaConversions._
 import scala.collection.JavaConverters._

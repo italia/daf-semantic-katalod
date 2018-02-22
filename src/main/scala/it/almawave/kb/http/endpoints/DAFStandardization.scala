@@ -25,7 +25,7 @@ class DAFStandardization {
   @Produces(Array(MediaType.APPLICATION_JSON))
   @ApiOperation(nickname = "vocabulariesListForStandardization", value = "vocabulary dataset, prepared for standardization")
   @Path("/vocabularies")
-  def allFlatVocabularies(@PathParam("vocabularyID") vocabularyID: String) = {
+  def allFlatVocabularies() = {
 
     logger.debug(s"getting the standardized (and de-normalized) form for all the vocabularies")
 

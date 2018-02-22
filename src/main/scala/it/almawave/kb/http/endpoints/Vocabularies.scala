@@ -11,7 +11,7 @@ import javax.ws.rs.core.MediaType
 import javax.ws.rs.PathParam
 import org.slf4j.LoggerFactory
 
-@Api(tags = Array("catalog", "vocabularies"))
+@Api(tags = Array("catalog"))
 @Path("/vocabularies")
 class VocabulariesEndpoint {
 

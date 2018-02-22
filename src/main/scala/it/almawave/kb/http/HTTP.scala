@@ -108,7 +108,7 @@ class HTTP(host: String, port: Int, base: String) {
   //  swagger_holder.setInitParameter("swagger.openAPI", "conf/openapi-configuration.yaml")
   swagger_holder.setInitOrder(0)
   swagger_holder.setServlet(swagger_servlet_config)
-  // la servlet è caricata ma non mappata su un path!
+  // la servlet Ã¨ caricata ma non mappata su un path!
   jersey_context.addServlet(swagger_holder, null)
 
   // SEE: https://github.com/swagger-api/swagger-core/wiki/Swagger-Core-JAX-RS-Project-Setup-2.0.X#configure-swagger

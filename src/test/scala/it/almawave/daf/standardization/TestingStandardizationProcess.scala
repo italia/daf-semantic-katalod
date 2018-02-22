@@ -21,8 +21,8 @@ object TestingStandardizationProcess extends App {
   std.vocabulariesWithDependencies().foreach { vbox =>
 
     // DEBUG single
-    //    val vocID = "Licenze" //AccommodationTypology"
-    //    val vbox = std.vocabularyWithDependency(vocID).get
+    //  val vocID = "Licenze" //AccommodationTypology"
+    //  val vbox = std.vocabularyWithDependency(vocID).get
 
     vbox.start()
 
@@ -53,13 +53,6 @@ object TestingStandardizationProcess extends App {
     vbox.stop()
 
   } // ALL
-
-  // TESTING
-  std.standardizeAllData().foreach { vmap =>
-
-    println(JSONHelper.writeToString(vmap))
-
-  }
 
   catalog.stop()
 }
