@@ -162,6 +162,8 @@ class StandardizationProcess(catalog: CatalogBox) {
                   field_name,
                   field_value,
                   field_datatype,
+                  vbox.id,
+                  hierarchy.path,
                   field_meta1,
                   field_meta2)
               }
@@ -190,22 +192,26 @@ class StandardizationProcess(catalog: CatalogBox) {
   // MODELS ....................................................................
   case class Hierarchy(uri: String, path: List[String])
 
+  type StdRow = Seq[StdCell]
+
   // TODO: move elesewhere
   case class StdCell(
-    uri:         String,
-    name:        String,
-    value:       Object,
-    datatype:    Object,
-    meta_level1: String,
-    meta_level2: String)
-
-  type StdRow = Seq[StdCell]
+    uri:          String,
+    name:         String,
+    value:        Object,
+    datatype:     Object,
+    vocabularyID: String,
+    hierarchy:    Seq[String],
+    meta_level1:  String,
+    meta_level2:  String)
 
   object StdCell {
     val EMPTY = StdCell(
       "uri://unknown",
       "", "",
       "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+      "UnknownVocabulary",
+      Array[String](),
       "UnknowOntology.UnknownConcept.unkownProperty", "UnknownVocabulary.level1")
   }
 
