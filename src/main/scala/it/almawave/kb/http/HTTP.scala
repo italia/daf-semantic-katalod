@@ -42,7 +42,7 @@ object HTTP {
     val host = _conf.getString("http.host")
     val port = _conf.getInt("http.port")
     val base = _conf.getString("http.base")
-    new HTTP(null, port, base)
+    new HTTP(host, port, base)
   }
 
   def apply(host: String, port: Int, base: String) = new HTTP(host, port, base)

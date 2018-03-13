@@ -218,6 +218,15 @@
 			<version>0.3.1</version>
 		</dependency>
 
+
+		<!-- JGit -->
+		<!-- NOTE: this should be a transitive dependency for kbaselib -->
+		<dependency>
+			<groupId>org.eclipse.jgit</groupId>
+			<artifactId>org.eclipse.jgit</artifactId>
+			<version>4.10.0.201712302008-r</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>

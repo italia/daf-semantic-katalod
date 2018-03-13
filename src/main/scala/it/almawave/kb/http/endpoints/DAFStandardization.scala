@@ -11,6 +11,9 @@ import javax.ws.rs.Path
 import io.swagger.annotations.Api
 import javax.ws.rs.PathParam
 import io.swagger.annotations.Tag
+import javax.ws.rs.DefaultValue
+import javax.ws.rs.QueryParam
+import io.swagger.annotations.ApiParam
 
 @Api(tags = Array("DAF", "vocabularies"))
 @Path("/daf/standardization")
@@ -38,7 +41,9 @@ class DAFStandardization {
   @Produces(Array(MediaType.APPLICATION_JSON))
   @ApiOperation(nickname = "vocabularyForStandardization", value = "vocabulary dataset, prepared for standardization")
   @Path("/vocabularies/{vocabularyID}")
-  def flatVocabulary(@PathParam("vocabularyID") vocabularyID: String) = {
+  def flatVocabulary(
+    @PathParam("vocabularyID")@DefaultValue("licences") vocabularyID: String,
+    @ApiParam(required = false)@QueryParam("lang")@DefaultValue("it") lang:String) = {
 
     logger.debug(s"getting the standardized (and de-normalized) form of the vocabulary ${vocabularyID}")
 

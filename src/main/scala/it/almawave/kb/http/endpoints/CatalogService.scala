@@ -3,11 +3,9 @@ package it.almawave.kb.http.endpoints
 import javax.inject.Singleton
 import javax.ws.rs.Path
 import org.slf4j.LoggerFactory
-import it.almawave.linkeddata.kb.catalog.ResourcesLoader
 import it.almawave.kb.http.models.OntologyMetaModel
 import com.typesafe.config.ConfigFactory
 import java.nio.file.Paths
-import it.almawave.linkeddata.kb.catalog.ResourcesLoader
 import it.almawave.linkeddata.kb.catalog.CatalogBox
 import it.almawave.daf.standardization.StandardizationProcess
 import it.almawave.linkeddata.kb.utils.JSONHelper
@@ -17,6 +15,12 @@ import it.almawave.linkeddata.kb.utils.JSONHelper
 class CatalogService {
 
   private val logger = LoggerFactory.getLogger(this.getClass)
+
+  /*
+   * TODO: add parameters to endpoints
+   * TODO: create an instance for each lang
+   */
+  val LANG = "it"
 
   // first version!
   // we pre-load all the metadata in memory at first request,
@@ -33,7 +37,8 @@ class CatalogService {
 
   // constructing data structure from vocabularies for DAF standardization
   val daf_std = new StandardizationProcess(catalog)
-  val _daf_std_vocabularies = daf_std.standardizeAllData()
+  val _daf_std_vocabularies = daf_std.standardizeAllData(LANG)
+  // TODO: review lang
 
   // references to pre-loaded metadata for ontologies and vocabularies
   val _ontologies = catalog.ontologies.map(_.meta)

@@ -1,10 +1,13 @@
 # Ontologie e Vocabolari Controllati
 
-**DOVE DIVERSAMENTE SPECIFICATO, LE ONTOLOGIE SI INTENDONO ANCORA INSTABILI. NEL CORSO DELLE PRIME SETTIMANE DI MARZO 2018 SE NE STABILIZZERANNO ALCUNE DI SEGUITO ELENCATE**
+**TRANNE DOVE DIVERSAMENTE SPECIFICATO, LE ONTOLOGIE SI INTENDONO ANCORA INSTABILI. NEL CORSO DELLE PRIME SETTIMANE DI MARZO 2018 SE NE STABILIZZERANNO ALCUNE DI SEGUITO ELENCATE. SI NOTI INOLTRE CHE GLI URI DI TUTTE LE ONTOLOGIE E VOCABOLARI CONTROLLATI SARANNO CAMBIATI NEI PROSSIMI GIORNI PER ADOTTARE LA NUOVA POLITICA DI URI PERSISTENTI CHE SI E' SCELTA, OVVERO MEDIANTE L'USO DI W3ID.ORG**
 
 
 Questo è il repository delle ontologie e dei vocabolari controllati sviluppati nell'ambito delle azioni previste dal piano triennale e a supporto del lavoro da svolgere per l'[elenco delle basi di dati chiave](http://elenco-basi-di-dati-chiave.readthedocs.io/it/latest/).
-Le ontologie create sono tra loro collegate creando una vera e propria network chiamata **OntoPiA** - a OntoNet system. Le ontologie saranno inserite nel catalogo delle ontologie e vocabolari controllati (si veda la parte [daf-semantics](https://github.com/italia/daf-semantics) e [ontonethub](https://github.com/teamdigitale/ontonethub) per il software relativo al catalogo). )
+Le ontologie create sono tra loro collegate creando una vera e propria network chiamata **OntoPiA** - a OntoNet system. Le ontologie saranno inserite nel catalogo delle ontologie e vocabolari controllati (si veda la parte [daf-semantics](https://github.com/italia/daf-semantics) e [ontonethub](https://github.com/teamdigitale/ontonethub) per il software relativo al catalogo).
+
+
+![OntoPiA](OntoPiA.png)
 
 Il repository è suddiviso in due directory:
 
@@ -41,6 +44,7 @@ In particolare, il contenuto della directory Vocabolari Controllati è attualmen
   + **Classificazioni per le strutture ricettive (Classifications for accommodation facilities)**: La directory contiene tutti i vocabolari controllati specifici per le strutture ricettive (e.g., classificazione a stelle). Al momento la directory contiene la classificazione a stelle e quella sulle tipologie che tiene in considerazione anche alcune classificazioni disponibili a livello regionale.
   + **Classificazioni per le persone (Classifications related to people)**: La directory è strutturata in sotto directory relative al Genere delle Persone e ai Titoli di studio (o Grado di istruzione). Questi vocabolari sono stati sviluppati in collaborazione con ISTAT come emerge dai relativi metadati.
   + **Classificazioni per le organizzazioni (Classifications related to organizations)**: La directory è strutturato in sotto directory relative al momento alle Forme Giuridiche delle organizzazioni. La classificazione è stata predisposta in stretta collaborazione con ISTAT. **A breve saranno pubblicate anche le classificazioni Ateco2007 e COFOG2009**.
+  + **Classificazioni per il settore cultura (Classifications for Culture)**: La directory è strutturata in sotto directory relative, al momento, ai soli ambiti disciplinari che possono essere utilizzati nell'ambito dei luoghi ed eventi della cultura. E' stato predisposto un readme che spiega la creazione del vocabolario fatto in collaborazione con alcuni colleghi del MIBACT e la Sapienza Università di Roma.
 
 **Ontologie in fase di sviluppo e non ancora pubblicate** (**Ontologies under development**):
   + **Ontologia dei contratti pubblici (Public Contracts Ontology)**;

@@ -22,6 +22,9 @@ class StandardizationProcess(catalog: CatalogBox) {
 
   val stdQuery = new StandardizationQuery(catalog.conf.getConfig("daf.standardization"))
 
+  // guess the default ontology
+  def detect_ontology(voc_box: VocabularyBox) = stdQuery.detect_ontology(voc_box)
+
   // extracts a list of VocabularyBox
   def vocabulariesWithDependencies(): Seq[VocabularyBox] = catalog.vocabulariesWithDependencies()
 
@@ -49,9 +52,11 @@ class StandardizationProcess(catalog: CatalogBox) {
    * Extracts hierarchy for a specific VocabularyBox.
    * NOTE: at the moment we decided to use a single RDFs prp* property path query
    * for extracting a single hierarchy: this requires some kind of ordering based on
-   * level, thus a description of level/rank. This could be avoided using recursive call
-   * on a single property (the one identifying the hierarchy), but it's a bit more tricky,
-   * and not currently developed, until we will have at least 3 actual different hierarchies.
+   * level, thus a description of level/rank.
+   * This could be avoided using recursive call on a single property (the one identifying the hierarchy)
+   * at RDF4J level, but it's a bit more tricky.
+   *
+   * We decided to avoid developing it, until we will have at least 3 actual different hierarchies.
    */
   def extract_hierarchy(vbox: VocabularyBox): Try[Seq[Hierarchy]] = Try {
 
