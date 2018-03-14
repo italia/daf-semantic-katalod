@@ -21,7 +21,7 @@ object MainSingleStandardization extends App {
   val std = new StandardizationProcess(catalog)
 
   // DEBUG single
-  val vocID = "territorial-classification" // "Licenze" //AccommodationTypology"
+  val vocID = "licences" // "territorial-classification" // "Licenze" //AccommodationTypology"
   val vbox = std.vocabularyWithDependency(vocID).get
 
   vbox.start()
