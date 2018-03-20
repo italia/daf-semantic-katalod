@@ -40,7 +40,7 @@ class StandardizationProcess(catalog: CatalogBox) {
 
   // extracts the deeper level of hierarchy
   def max_levels(vbox: VocabularyBox): Try[Int] = {
-    extract_hierarchy(vbox: VocabularyBox) match {
+    extract_hierarchies(vbox: VocabularyBox) match {
       case Success(hierarchy) =>
         val max_path = (0 :: hierarchy.map(_.path.size).toList).max
         Success(max_path)
@@ -58,7 +58,7 @@ class StandardizationProcess(catalog: CatalogBox) {
    *
    * We decided to avoid developing it, until we will have at least 3 actual different hierarchies.
    */
-  def extract_hierarchy(vbox: VocabularyBox): Try[Seq[Hierarchy]] = Try {
+  def extract_hierarchies(vbox: VocabularyBox): Try[Seq[Hierarchy]] = Try {
 
     // TODO: JUNit test for hierarchy!! CHECK: orders of items in path
 
@@ -98,22 +98,26 @@ class StandardizationProcess(catalog: CatalogBox) {
     results.toStream
 
   }
+  
+  
 
-  // this method creates a de-normalized, standardized version for the vocabulary/dataset
+  /*
+   * NOTE: this method aims to create a de-normalized, standardized version for the vocabulary/dataset
+   */
+  @Deprecated
   def standardizeDataByVocabularyBox(vbox: VocabularyBox, lang: String = "it") = {
 
     // we should know the maximum levels in hierarchies, in order to fill them, if needed
     val MAX_LEVELS = this.max_levels(vbox)
 
     // 1) the vocabulary is decomposed in a list of hierarchies, each one derived from each leaf
-    val hierarchies = extract_hierarchy(vbox).getOrElse(List())
+    val hierarchies = extract_hierarchies(vbox).getOrElse(List())
+    logger.debug(s"extracted hierarchy for: ${vbox.id}\n${hierarchies.mkString("\n")}")
 
     // 2) each hierarchy is then expandend with details for each element in the path
     hierarchies.toStream.map { hierarchy =>
 
       type GROUP_CELLS = List[(String, Any)] // TODO: parse to case class!
-      // NOTE: the internal metadata (level 1, level2, type... could be saved properly)
-      // NOTE: List[(String, Any)] <-> Map[String, Any]
 
       val future_with_cells: Seq[Future[StdRow]] = hierarchy.path
         .zipWithIndex
@@ -126,15 +130,6 @@ class StandardizationProcess(catalog: CatalogBox) {
             // we use a Future here to try improving performances when collecting results from many SPARQL queries
             val fut_group: Future[List[StdCell]] = Future {
 
-              /*
-               *  TODO: we should avoid do several times the same query!
-               *  IDEA:
-               *  	1) collect all the URIs for resources
-               *  	2) launch queries
-               *  	3) using results as an in-memory cache
-               *
-               *  IDEA: Future{  SPARQL(vbox.repo).query(QUERY.details(vbox.id, level, uri, lang)) } ...
-               */
               val group_cells: GROUP_CELLS = SPARQL(vbox.repo)
                 .query(stdQuery.details(vbox, level, uri, lang))
                 .toList.flatMap(_.toList).toList
