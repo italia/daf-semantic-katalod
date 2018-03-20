@@ -21,18 +21,10 @@ object MainSingleStandardization extends App {
   val std = new StandardizationProcess(catalog)
 
   // DEBUG single
-  val vocID = "licences" // "territorial-classification" // "Licenze" //AccommodationTypology"
+  val vocID = "licences"
   val vbox = std.vocabularyWithDependency(vocID).get
 
   vbox.start()
-
-  //  val concepts = vbox.concepts
-  //  println("\n\n\n\n\nVBOX CONCEPTS?")
-  //  println(concepts.map(_._1).mkString(" | "))
-
-  //  val instances = vbox.meta.instances
-  //  println("\n\n\n\n\nVBOX INSTANCES?")
-  //  println(instances.mkString("\n"))
 
   val _try = Try {
 

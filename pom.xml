@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>it.almawave.linkeddata.kb</groupId>
 	<artifactId>kataLOD</artifactId>
-	<version>0.0.4</version>
+	<version>0.0.5</version>
 	<name>kataLOD</name>
 	<description>kataLOD</description>
 
@@ -180,16 +180,13 @@
 		<dependency>
 			<groupId>com.google.guava</groupId>
 			<artifactId>guava</artifactId>
-			<!-- <version>16.0.1</version> -->
 			<version>18.0</version>
 		</dependency>
-		<!-- java.lang.NoClassDefFoundError: com/google/common/collect/Sets -->
-		<!-- java.lang.NoClassDefFoundError: com/google/common/base/MoreObjects -->
 
 		<dependency>
 			<groupId>it.almawave.linkeddata.kb</groupId>
 			<artifactId>kbaselib</artifactId> <!-- {artifact}-scala_2.11 -->
-			<version>0.0.4</version>
+			<version>0.0.5</version>
 		</dependency>
 
 

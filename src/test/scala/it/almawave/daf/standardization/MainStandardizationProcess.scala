@@ -9,6 +9,9 @@ import it.almawave.linkeddata.kb.utils.JSONHelper
 
 /*
  * TODO: write Unit test for each task
+ *
+ * TODO: hiearchy for single element!
+ *
  */
 object MainStandardizationProcess extends App {
 

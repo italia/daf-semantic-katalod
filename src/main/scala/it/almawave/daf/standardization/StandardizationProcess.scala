@@ -168,7 +168,7 @@ class StandardizationProcess(catalog: CatalogBox) {
                   field_value,
                   field_datatype,
                   vbox.id,
-                  hierarchy.path,
+                  hierarchy.path, // REVIEW this hierarchy path!
                   field_meta1,
                   field_meta2)
               }
