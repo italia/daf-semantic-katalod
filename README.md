@@ -31,7 +31,7 @@ java -cp "target/kataLOD-0.0.4.jar;target/libs/*" it.almawave.kb.http.MainHTTP
 
 ### dockerization
 
-It's possible to create a docker image directly using the drafted `Dockefile`.
+It's possible to create a docker image directly using the drafted [`Dockefile`](http://10.121.172.7:10080/public-od/daf/katalod/blob/master/Dockerfile) .
 
 ```bash
 mvn clean package
