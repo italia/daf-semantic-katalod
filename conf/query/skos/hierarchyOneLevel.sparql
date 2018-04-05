@@ -1,0 +1,21 @@
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT *
+
+WHERE {
+
+  		?uri a skos:Concept .
+
+        OPTIONAL{ ?uri skos:broader ?parent_uri . }
+
+  		?uri skos:notation ?codice .
+
+  		?uri skos:prefLabel ?label .
+
+  		FILTER(LANG(?label) = 'it')
+
+}
+
+ORDER BY ?uri
+
+# TODO: attuare per ordinamento una replace by Alfredo
