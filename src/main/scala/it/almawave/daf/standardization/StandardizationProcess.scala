@@ -221,5 +221,4 @@ class StandardizationProcess(catalog: CatalogBox) {
     data:         Seq[StdRow])
 
   // MODELS ....................................................................
-
 }
