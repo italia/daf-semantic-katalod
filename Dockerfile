@@ -4,6 +4,8 @@ LABEL it.almawave.daf.katalod.version="0.0.5"
 LABEL vendor="Almawave"
 LABEL it.almawave.daf.katalod.date="2018-04-11"
 
+ENV kb_version 0.0.5
+
 # JAVA
 FROM openjdk:8-jre-alpine
 
