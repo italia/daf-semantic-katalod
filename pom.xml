@@ -294,11 +294,8 @@
 					<execution>
 						<id>copy-dependencies</id>
 						<phase>package</phase>
-						<!--<goals>-->
-							<!--<goal>copy-dependencies</goal>-->
-						<!--</goals>-->
 						<goals>
-							<goal>unpack-dependencies</goal>
+							<goal>copy-dependencies</goal>
 						</goals>
 						<configuration>
 							<outputDirectory>${project.build.directory}/libs</outputDirectory>
