@@ -7,7 +7,6 @@ import it.almawave.kb.http.models.OntologyMetaModel
 import com.typesafe.config.ConfigFactory
 import java.nio.file.Paths
 import it.almawave.linkeddata.kb.catalog.CatalogBox
-import it.almawave.daf.standardization.StandardizationProcess
 import it.almawave.linkeddata.kb.utils.JSONHelper
 
 @Singleton
@@ -35,11 +34,6 @@ class CatalogService {
   val catalog = new CatalogBox(conf)
   catalog.start()
 
-  // constructing data structure from vocabularies for DAF standardization
-  val daf_std = new StandardizationProcess(catalog)
-  val _daf_std_vocabularies = daf_std.standardizeAllData(LANG)
-  // TODO: review lang
-
   // references to pre-loaded metadata for ontologies and vocabularies
   val _ontologies = catalog.ontologies.map(_.meta)
   val _vocabularies = catalog.vocabularies.map(_.meta)
@@ -50,7 +44,5 @@ class CatalogService {
   def ontologies() = _ontologies
 
   def vocabularies() = _vocabularies
-
-  def daf_standardized_data() = _daf_std_vocabularies
 
 }

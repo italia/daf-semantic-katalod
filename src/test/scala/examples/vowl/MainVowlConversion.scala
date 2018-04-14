@@ -13,7 +13,7 @@ object MainVowlConversion extends App {
 
   val json = new Owl2Vowl(input).getJsonAsString()
   println(json)
-  
+
   input.close()
 
 }
