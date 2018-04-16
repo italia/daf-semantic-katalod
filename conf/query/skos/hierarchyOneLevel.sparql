@@ -1,4 +1,5 @@
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 SELECT *
 
@@ -6,16 +7,19 @@ WHERE {
 
   		?uri a skos:Concept .
 
-        OPTIONAL{ ?uri skos:broader ?parent_uri . }
-
   		?uri skos:notation ?codice .
 
   		?uri skos:prefLabel ?label .
+
+        BIND (xsd:long(REPLACE(SUBSTR(?codice,2),"\\.","")) AS ?_codice)
+
+  		OPTIONAL{ ?uri skos:broader ?parent_uri . }
 
   		FILTER(LANG(?label) = 'it')
 
 }
 
-ORDER BY ?uri
+ORDER BY ?_codice ASC(?_codice)
+#ORDER BY ?_uri ASC(?_uri)
 
 # TODO: attuare per ordinamento una replace by Alfredo

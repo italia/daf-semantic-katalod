@@ -2,13 +2,13 @@ package it.almawave.kb.http.endpoints
 
 import java.net.URL
 import java.nio.file.Paths
+
 import javax.inject.Inject
 import javax.ws.rs._
-
 import io.swagger.annotations.{Api, ApiOperation, ApiParam, Tag}
 import javax.ws.rs.core.{MediaType, Response}
-
 import com.sun.net.httpserver.Authenticator.Success
+import com.typesafe.config.ConfigFactory
 import it.almawave.kb.http.models.Hierarchy
 import it.almawave.linkeddata.kb.catalog.{SPARQL, VocabularyBox}
 import it.almawave.linkeddata.kb.utils.JSONHelper
@@ -62,17 +62,17 @@ class Vocabularies {
                      @ApiParam(required = false)@QueryParam("lang")@DefaultValue("it") lang:String) = {
 
     logger.debug(s"getting the details for vocabulary bis with id: ${vocabularyID} and lang: $lang")
-    val vboxid = loader.catalog.getVocabularyByID(vocabularyID).get
+    val vbox = loader.catalog.getVocabularyByID(vocabularyID).get
+    val vboxid = vbox.meta.source
     logger.debug("vboxid: " + vboxid)
-    logger.debug("vboxid source: " + vboxid.meta.source)
 
-    val fileRdf = Paths.get(s"C:/Users/a.mauro/IdeaProjects/katalod/ontologie-vocabolari-controllati/VocabolariControllati/${vocabularyID}/${vocabularyID}.rdf").toString
-    val fileQuerySparql = Paths.get("C:/Users/a.mauro/IdeaProjects/katalod/conf/query/skos/hierarchyOneLevel.sparql").toFile
-
+    val fileRdf = Paths.get(vboxid.toURI).toString
     val skos_url = new URL(s"file:///$fileRdf")
 
-    val lines = Source.fromFile(fileQuerySparql).getLines.toList
-
+    val conf = ConfigFactory.parseFile(Paths.get("./conf/catalog.conf").normalize().toFile()).getConfig("daf.vocabularies")
+    val config_dir = Paths.get(conf.root().origin().filename()).toFile().getParent
+    val default_query_hierarchy: java.nio.file.Path = Paths.get(config_dir, conf.getString("query.hierarchy")).normalize().toAbsolutePath()
+    val lines: List[String] = Source.fromFile(default_query_hierarchy.toUri).getLines.toList
 
     val voca = VocabularyBox.parse(skos_url)
     voca.start()
@@ -99,9 +99,13 @@ class Vocabularies {
     logger.debug("vboxid: " + vboxid)
 
     val fileRdf = Paths.get(vboxid.toURI).toString
-    val fileQuerySparql = Paths.get("C:/Users/a.mauro/IdeaProjects/katalod/conf/query/skos/hierarchyOneLevel.sparql").toFile
     val skos_url = new URL(s"file:///$fileRdf")
-    val lines = Source.fromFile(fileQuerySparql).getLines.toList
+
+    val conf = ConfigFactory.parseFile(Paths.get("./conf/catalog.conf").normalize().toFile()).getConfig("daf.vocabularies")
+    val config_dir = Paths.get(conf.root().origin().filename()).toFile().getParent
+    val default_query_hierarchy: java.nio.file.Path = Paths.get(config_dir, conf.getString("query.hierarchy")).normalize().toAbsolutePath()
+    val lines: List[String] = Source.fromFile(default_query_hierarchy.toUri).getLines.toList
+
     val voca = VocabularyBox.parse(skos_url)
 
     voca.start()
@@ -109,15 +113,11 @@ class Vocabularies {
     val concepts = SPARQL(vbox.repo).query( lines.toStream.mkString )
     val hierarchy_broader = ListBuffer[Hierarchy]()
 
-    /*concepts.toList.foreach { concept =>
-      println(concept)
-    }*/
     if(true) {
 
       concepts.toList
         .foreach { item => if(!item.contains("parent_uri")) {
-            println("PADRE: \n" + item)
-//            hierarchy_broader += read_concepts(scala.collection.mutable.Map(item.toSeq: _*), concepts, hierarchy_broader)
+            println("broader: \n" + item)
             HierarchyUtility.read_concepts(scala.collection.mutable.Map(item.toSeq: _*), concepts, hierarchy_broader)
           }
         }
@@ -126,7 +126,6 @@ class Vocabularies {
     voca.stop()
     Response.ok(hierarchy_broader).build()
   }
-
 
   object HierarchyUtility {
 
@@ -182,8 +181,6 @@ class Vocabularies {
 
       _item_hierarchy
     }
-
-
 
   }
 
