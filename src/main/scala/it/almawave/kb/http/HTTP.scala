@@ -65,7 +65,6 @@ class HTTP(host: String, port: Int, base: String) {
 
   //  import io.swagger.jaxrs2.integration.resources
 
-  // general configurations.......................................
   val resource_config = new ResourceConfig()
     .packages("io.swagger.jaxrs.listing")
     .packages("io.swagger.jaxrs2.integration.resources")
@@ -79,14 +78,8 @@ class HTTP(host: String, port: Int, base: String) {
       classOf[JacksonScalaProvider],
       classOf[CORSFilter])
 
-  // CHECK: using this configuration with JerseyTest
-
-  // general configurations.......................................
-
-  logger.info("\n\n....start with configurations....")
+  logger.info("\n\n#### HTTP START with configuration:")
   logger.info(s"http://${host}:${port}${base}")
-
-  // general configurations.......................................
 
   // jersey configuration
   val jersey_container = new ServletContainer(resource_config)
@@ -94,25 +87,25 @@ class HTTP(host: String, port: Int, base: String) {
   jersey_holder.setInitOrder(0)
   val jersey_context = new ServletContextHandler(ServletContextHandler.NO_SESSIONS)
   jersey_context.setInitParameter("openApi.configuration.location", "conf/openapi-configuration.yaml")
-  //  jersey_context.setContextPath("/kb/api/v1")
   jersey_context.setContextPath(base)
   jersey_context.addServlet(jersey_holder, "/*")
 
   // swagger configuration
   val swagger_servlet_config = new JerseyJaxrsConfig
   val swagger_holder = new ServletHolder(jersey_container);
-  swagger_holder.setInitParameter("api.version", "0.0.1")
+
+  swagger_holder.setInitParameter("swagger.api.title", "katalod") // CHECK
+  swagger_holder.setInitParameter("api.version", "0.0.2")
+  swagger_holder.setInitParameter("info.description", """
+    katalod is a microservice designed as an in-memory catalog of ontologies and controlled vocabularies
+  """) // CHECK
   swagger_holder.setInitParameter("swagger.api.basepath", s"http://localhost:${port}${base}")
 
   // CHECK: how to configure th basic settings from static file with overrides
-  //  swagger_holder.setInitParameter("swagger.openAPI", "conf/openapi-configuration.yaml")
   swagger_holder.setInitOrder(0)
   swagger_holder.setServlet(swagger_servlet_config)
-  // la servlet Ã¨ caricata ma non mappata su un path!
+  // la servlet è caricata ma non mappata su un path!
   jersey_context.addServlet(swagger_holder, null)
-
-  // SEE: https://github.com/swagger-api/swagger-core/wiki/Swagger-Core-JAX-RS-Project-Setup-2.0.X#configure-swagger
-  // CHECK: swagger_holder.setInitParameter("openApi.configuration.location", "conf/openapi-configuration.yaml")
 
   // swagger ui
   val swagger_ui_handler = new ResourceHandler()
@@ -122,7 +115,7 @@ class HTTP(host: String, port: Int, base: String) {
   swagger_ui_context.setResourceBase(".")
   swagger_ui_context.setHandler(swagger_ui_handler)
 
-  // prometheus statistics
+  // CHECK: prometheus statistics ?
   // SEE: https://github.com/prometheus/client_java
   //  val stats = new StatisticsHandler()
   //  stats.setHandler(server.getHandler())
@@ -131,7 +124,7 @@ class HTTP(host: String, port: Int, base: String) {
   //  new JettyStatisticsCollector(stats).register()
 
   val shutdown_handler = new ShutdownHandler(server, "kill_api")
-  //  "http://localhost:7777/shutdown?token=kill_api"
+  //  CHECK: "http://localhost:7777/shutdown?token=kill_api"
 
   val handlers = new HandlerList()
   handlers.setHandlers(Array(
@@ -144,13 +137,13 @@ class HTTP(host: String, port: Int, base: String) {
   server.setHandler(handlers)
 
   def start {
-    logger.info(s"START HTTP")
+    logger.info(s"#### HTTP - START")
     server.start()
     server.join()
   }
 
   def stop {
-    logger.info(s"STOP HTTP")
+    logger.info(s"#### HTTP - STOP")
     server.stop()
   }
 

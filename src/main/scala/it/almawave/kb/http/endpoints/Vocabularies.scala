@@ -59,7 +59,7 @@ class Vocabularies {
   @ApiOperation(nickname = "vocabularyFlat", value = "details of a vocabulary custom")
   @Path("/flat/{vocabularyID}")
   def detailsCustom(@PathParam("vocabularyID")@DefaultValue("licences") vocabularyID: String,
-                     @ApiParam(required = false)@QueryParam("lang")@DefaultValue("it") lang:String) = {
+                    @ApiParam(required = false)@QueryParam("lang")@DefaultValue("it") lang:String) = {
 
     logger.debug(s"getting the details for vocabulary bis with id: ${vocabularyID} and lang: $lang")
     val vbox = loader.catalog.getVocabularyByID(vocabularyID).get
@@ -90,7 +90,7 @@ class Vocabularies {
   @ApiOperation(nickname = "vocabularyHierarchy", value = "details of a vocabulary custombis")
   @Path("/hierarchy/{vocabularyID}")
   def detailsCustomBis(@PathParam("vocabularyID")@DefaultValue("licences") vocabularyID: String,
-                    @ApiParam(required = false)@QueryParam("lang")@DefaultValue("it") lang:String) = {
+                       @ApiParam(required = false)@QueryParam("lang")@DefaultValue("it") lang:String) = {
 
     logger.debug(s"getting the details for vocabulary bis with id: ${vocabularyID} and lang: $lang")
 
@@ -117,9 +117,9 @@ class Vocabularies {
 
       concepts.toList
         .foreach { item => if(!item.contains("parent_uri")) {
-            println("broader: \n" + item)
-            HierarchyUtility.read_concepts(scala.collection.mutable.Map(item.toSeq: _*), concepts, hierarchy_broader)
-          }
+          println("broader: \n" + item)
+          HierarchyUtility.read_concepts(scala.collection.mutable.Map(item.toSeq: _*), concepts, hierarchy_broader)
+        }
         }
     }
 

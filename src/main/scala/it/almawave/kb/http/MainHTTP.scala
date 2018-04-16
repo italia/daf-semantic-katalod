@@ -23,17 +23,20 @@ import io.swagger.jersey.config.JerseyJaxrsConfig
 import com.typesafe.config.ConfigFactory
 import java.io.File
 import com.typesafe.config.ConfigValueFactory
+import org.apache.log4j.PropertyConfigurator
 
 /**
  * this is just used for starting the embedded server
  */
 object MainHTTP extends App {
 
-  // TODO: load configurations
+  // TODO: load configurations checking if -Dlog4j.configuration=file is defined...
+
+  // load log configuration from a fixed path
+  PropertyConfigurator.configure("./conf/log4j.properties")
 
   val conf = ConfigFactory
     .parseFile(new File("./conf/catalog.conf").getCanonicalFile)
-    // .withValue("http.host", ConfigValueFactory.fromAnyRef("http://localhost"))
     .resolve()
 
   val http = HTTP(conf)
@@ -41,24 +44,3 @@ object MainHTTP extends App {
   http.start
 
 }
-
-
-// ---------------------------------------------------
-// TODO: add TESTs! SEE: Jersey TEST
-// 
-// SEE: https://github.com/mlex/jerseytest/blob/master/mjl-jersey-server/src/test/java/de/codecentric/mjl/jerseytest/helpers/FastJerseyTest.java
-//
-// http://localhost:7777/
-// http://localhost:7777/kb/api/v1/ontologies
-// http://localhost:7777/kb/api/v1/ontologies/CLV-AP_IT
-// http://localhost:7777/kb/api/v1/vocabularies
-// http://localhost:7777/kb/api/v1/vocabularies/POICategoryClassification
-// 
-// TODO: swagger?
-// swagger.api.basepath
-// http://localhost:7777/kb/api/v1/swagger.json
-// http://localhost:7777/kb/api/v1/application.wadl
-// ---------------------------------------------------
-
-
-

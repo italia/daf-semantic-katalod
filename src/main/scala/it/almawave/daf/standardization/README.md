@@ -1,2 +1,0 @@
-This package contains experiments for a refactorization of the logic behind the standardization POC, adding extraction to conventional metadata to it.
-NOTE: the standardization module is currrently deprecated.

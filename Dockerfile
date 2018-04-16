@@ -1,18 +1,23 @@
-# FROM java
+
+# general configurations
+LABEL it.almawave.daf.katalod.version="0.0.5"
+LABEL vendor="Almawave"
+LABEL it.almawave.daf.katalod.date="2018-04-11"
+
+ENV kb_version 0.0.5
+
+# JAVA
 FROM openjdk:8-jre-alpine
 
-# WORKDIR application
+# application
 WORKDIR katalod
 
 ADD conf/ conf/
 ADD ontologie-vocabolari-controllati/ ontologie-vocabolari-controllati/
 ADD src/main/swagger-ui src/main/swagger-ui
 ADD target/libs /usr/share/katalod/lib
-ADD target/kataLOD-0.0.4.jar /usr/share/katalod/kataLOD-0.0.4.jar
+ADD target/kataLOD-0.0.5.jar /usr/share/katalod/kataLOD-0.0.5.jar
 
-# EXAMPLE: java -cp "target/kataLOD-0.0.4.jar;target/libs/*" it.almawave.kb.http.MainHTTP
-# ENV CLASSPATH=/usr/share/katalod/lib/*:/usr/share/katalod/kataLOD-0.0.4.jar
-
-ENTRYPOINT ["/usr/bin/java", "-cp", "/usr/share/katalod/lib/*:/usr/share/katalod/kataLOD-0.0.4.jar", "it.almawave.kb.http.MainHTTP"]
+ENTRYPOINT ["/usr/bin/java", "-cp", "/usr/share/katalod/lib/*:/usr/share/katalod/kataLOD-0.0.5.jar", "it.almawave.kb.http.MainHTTP"]
 
 EXPOSE 7777
