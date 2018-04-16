@@ -24,7 +24,11 @@ in order to run the application locally after a mvan build, for easy testing, we
 ```bash
 mvn clean package
 
+# WIN
 java -cp "target/kataLOD-0.0.5.jar;target/libs/*" it.almawave.kb.http.MainHTTP
+
+# linux
+java -cp "target/kataLOD-0.0.5.jar:target/libs/*" it.almawave.kb.http.MainHTTP
 ```
 
 ----
