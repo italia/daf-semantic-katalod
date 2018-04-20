@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>it.almawave.linkeddata.kb</groupId>
 	<artifactId>kataLOD</artifactId>
-	<version>0.0.5</version>
+	<version>0.0.6</version>
 
 	<name>kataLOD</name>
 	<description>kataLOD</description>
@@ -186,7 +186,7 @@
 		<dependency>
 			<groupId>it.almawave.linkeddata.kb</groupId>
 			<artifactId>kbaselib</artifactId> <!-- {artifact}-scala_2.11 -->
-			<version>0.0.5</version>
+			<version>0.0.6</version>
 		</dependency>
 
 
