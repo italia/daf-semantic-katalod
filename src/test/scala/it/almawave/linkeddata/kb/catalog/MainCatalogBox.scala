@@ -10,12 +10,12 @@ object MainCatalogBox extends App {
   val catalog = new CatalogBox(conf)
   catalog.start()
 
-  println("\n#### ontologies")
+  /*println("\n#### ontologies")
   catalog.ontologies
     .foreach { onto =>
       if (onto.triples == 0) System.err.println(s"warning: no triples were loaded for ontology: ${onto.id}")
       println(onto)
-    }
+    }*/
 
   println("\n#### vocabularies")
   catalog.vocabularies
