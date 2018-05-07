@@ -9,7 +9,10 @@ import io.swagger.annotations.{Api, ApiOperation, ApiParam, Tag}
 import javax.ws.rs.core.{MediaType, Response}
 import com.sun.net.httpserver.Authenticator.Success
 import com.typesafe.config.ConfigFactory
-import it.almawave.kb.http.models.Hierarchy
+import it.almawave.linkeddata.kb.catalog.models
+import it.almawave.linkeddata.kb.catalog.models.Hierarchy
+//import it.almawave.kb.http.models.Hierarchy
+import it.almawave.linkeddata.kb.catalog.models.VocabularyMeta
 import it.almawave.linkeddata.kb.catalog.{SPARQL, VocabularyBox}
 import it.almawave.linkeddata.kb.utils.JSONHelper
 import org.slf4j.LoggerFactory
@@ -39,7 +42,6 @@ class Vocabularies {
     loader.vocabularies()
   }
 
-
   //TODO SERVIZIO DA CANCELLARE
   @GET
   @Produces(Array(MediaType.APPLICATION_JSON))
@@ -48,9 +50,14 @@ class Vocabularies {
   @Path("/{vocabularyID}")
   def details(@PathParam("vocabularyID") id: String) = {
     logger.debug(s"getting the details for vocabulary with id: ${id}")
-    loader.vocabularies()
+    val vMeta: VocabularyMeta = loader.vocabularies()
       .filter { item => item.id.equalsIgnoreCase(id) }
-      .headOption
+      .headOption.get
+
+    HierarchyUtility.setHierarchy(vMeta)
+
+    Response.ok(vMeta).build()
+
   }
 
   @GET
@@ -128,6 +135,46 @@ class Vocabularies {
   }
 
   object HierarchyUtility {
+
+
+    def setHierarchy(vMeta: VocabularyMeta) = {
+
+        logger.debug(s"getting the details for vocabulary bis with id: ${vMeta.id} and lang: ${vMeta.langs.headOption.get}")
+
+        val vbox = loader.catalog.getVocabularyByID(vMeta.id).get
+        val vboxid = vbox.meta.source
+        logger.debug("vboxid: " + vboxid)
+
+        val fileRdf = Paths.get(vboxid.toURI).toString
+        val skos_url = new URL(s"file:///$fileRdf")
+
+        val conf = ConfigFactory.parseFile(Paths.get("./conf/catalog.conf").normalize().toFile()).getConfig("daf.vocabularies")
+        val config_dir = Paths.get(conf.root().origin().filename()).toFile().getParent
+        val default_query_hierarchy: java.nio.file.Path = Paths.get(config_dir, conf.getString("query.hierarchy")).normalize().toAbsolutePath()
+        val lines: List[String] = Source.fromFile(default_query_hierarchy.toUri).getLines.toList
+
+        val voca = VocabularyBox.parse(skos_url)
+
+        voca.start()
+
+        val concepts = SPARQL(vbox.repo).query( lines.toStream.mkString )
+        val hierarchy_broader: ListBuffer[Hierarchy] = vMeta.hierarchies //ListBuffer[Hierarchy]()
+
+        if(true) {
+
+          concepts.toList
+            .foreach { item => if(!item.contains("parent_uri")) {
+              println("broader: \n" + item)
+              HierarchyUtility.read_concepts(scala.collection.mutable.Map(item.toSeq: _*), concepts, hierarchy_broader)
+            }
+            }
+        }
+
+        voca.stop()
+        hierarchy_broader
+    }
+
+
 
     def read_concepts(key_item : scala.collection.mutable.Map[String,Any],
                       _concepts : Seq[Map[String,Any]], hierarchy_child: ListBuffer[Hierarchy] ) : ListBuffer[Hierarchy] = {

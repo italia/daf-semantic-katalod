@@ -1,6 +1,6 @@
 package it.almawave.daf.standardization
 
-import it.almawave.kb.http.models.Hierarchy
+import it.almawave.linkeddata.kb.catalog.models.Hierarchy
 import it.almawave.linkeddata.kb.utils.JSONHelper
 
 import scala.collection.mutable.ListBuffer
