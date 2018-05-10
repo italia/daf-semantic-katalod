@@ -158,7 +158,8 @@ class Vocabularies {
         voca.start()
 
         val concepts = SPARQL(vbox.repo).query( lines.toStream.mkString )
-        val hierarchy_broader: ListBuffer[Hierarchy] = vMeta.hierarchies //ListBuffer[Hierarchy]()
+        vMeta.hierarchy.clear()
+        val hierarchy_broader: ListBuffer[Hierarchy] = vMeta.hierarchy
 
         if(true) {
 
