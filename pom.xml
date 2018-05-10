@@ -127,7 +127,6 @@
 			<version>1.0.4</version>
 		</dependency>
 
-
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-core</artifactId>
@@ -189,7 +188,6 @@
 			<version>0.1.2</version>
 		</dependency>
 
-
 		<!-- temporary -->
 		<dependency>
 			<groupId>virtuoso</groupId>
@@ -207,14 +205,12 @@
 		</dependency>
 		<!-- temporary -->
 
-
 		<!-- OWL2VOWL -->
 		<dependency>
 			<groupId>org.visualdataweb.vowl.owl2vowl</groupId>
 			<artifactId>OWL2VOWL</artifactId>
 			<version>0.3.1</version>
 		</dependency>
-
 
 		<!-- JGit -->
 		<!-- NOTE: this should be a transitive dependency for kbaselib -->
@@ -306,7 +302,6 @@
 					</execution>
 				</executions>
 			</plugin>
-
 
 			<!-- TODO: docker with maven -->
 			<plugin>
