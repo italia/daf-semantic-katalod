@@ -95,7 +95,7 @@ class HTTP(host: String, port: Int, base: String) {
   val swagger_holder = new ServletHolder(jersey_container);
 
   swagger_holder.setInitParameter("swagger.api.title", "katalod") // CHECK
-  swagger_holder.setInitParameter("api.version", "0.0.2")
+  swagger_holder.setInitParameter("api.version", "0.0.7")
   swagger_holder.setInitParameter("info.description", """
     katalod is a microservice designed as an in-memory catalog of ontologies and controlled vocabularies
   """) // CHECK
