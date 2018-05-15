@@ -1,8 +1,8 @@
 {
   "@context": {
     "adms": "http://www.w3.org/ns/adms#",
-    "clvapit": "http://w3id.org/italia/onto/clvapit#",
-    "covapit": "http://w3id.org/italia/onto/covapit#",
+    "clvapit": "https://w3id.org/italia/onto/CLV/",
+    "covapit": "https://w3id.org/italia/onto/COV/",
     "dc": "http://purl.org/dc/elements/1.1/",
     "dcat": "http://www.w3.org/ns/dcat#",
     "dcatapit": "http://dati.gov.it/onto/dcatapit#",
@@ -23,7 +23,7 @@
       "@type": "rdfs:Class"
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/13",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/13",
       "@type": [
         "skos:Concept",
         "covapit:LegalStatus"
@@ -36,23 +36,23 @@
       },
       "dct:identifier": "1.3",
       "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
       },
       "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
       "skos:narrower": [
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1320"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1320"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1330"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1310"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1340"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1330"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1310"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1340"
         }
       ],
       "skos:notation": "1.3",
@@ -72,28 +72,28 @@
       },
       "dct:description": [
         {
-          "@language": "it",
-          "@value": "Questa è la distribuzione RDF/Turtle del dataset Linked Open Data della classificazione ufficiale ISTAT delle forme giuridiche per le organizzazioni"
-        },
-        {
           "@language": "en",
           "@value": "This is the distribution in RDF/turtle of the Linked Open Dataset of ISTAT's official classification on the organizations' legal status"
+        },
+        {
+          "@language": "it",
+          "@value": "Questa è la distribuzione RDF/Turtle del dataset Linked Open Data della classificazione ufficiale ISTAT delle forme giuridiche per le organizzazioni"
         }
       ],
       "dct:format": {
         "@id": "http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE"
       },
       "dct:license": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40"
       },
       "dct:title": [
         {
-          "@language": "en",
-          "@value": "RDF/Turtle distribution of legal status classification"
-        },
-        {
           "@language": "it",
           "@value": "Distribuzione RDF/Turtle classificazione forme giuridiche"
+        },
+        {
+          "@language": "en",
+          "@value": "RDF/Turtle distribution of legal status classification"
         }
       ]
     },
@@ -110,7 +110,7 @@
       "@type": "rdfs:Property"
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1340",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1340",
       "@type": [
         "covapit:LegalStatus",
         "skos:Concept"
@@ -123,13 +123,13 @@
       },
       "dct:identifier": "1.3.40",
       "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/13"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/13"
       },
       "skos:broaderTransitive": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
       },
       "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
       "skos:notation": "1.3.40",
       "skos:prefLabel": {
@@ -146,7 +146,7 @@
       "@type": "rdfs:Property"
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2300",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2300",
       "@type": [
         "covapit:LegalStatus",
         "skos:Concept"
@@ -159,13 +159,13 @@
       },
       "dct:identifier": "2.3.00",
       "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/23"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/23"
       },
       "skos:broaderTransitive": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2"
       },
       "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
       "skos:notation": "2.3.00",
       "skos:prefLabel": {
@@ -182,10 +182,10 @@
       "@type": "rdfs:Property"
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1",
       "@type": [
-        "skos:Concept",
-        "covapit:LegalStatus"
+        "covapit:LegalStatus",
+        "skos:Concept"
       ],
       "clvapit:hasRankOrder": "1",
       "covapit:legalStatusCode": "1",
@@ -195,142 +195,142 @@
       },
       "dct:identifier": "1",
       "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
       "skos:narrower": [
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/13"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/14"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/15"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/19"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/16"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/18"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/14"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/13"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/18"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/16"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/12"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/17"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/11"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/12"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/17"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/15"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/19"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/11"
         }
       ],
       "skos:narrowerTransitive": [
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1120"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1440"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1250"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1110"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1310"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1730"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1810"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1130"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1230"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1330"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1730"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1310"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1420"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1210"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1510"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1530"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1330"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1720"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1830"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1790"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1240"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1890"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1210"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1250"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1530"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1410"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1620"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1710"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1750"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1610"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1710"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1140"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1790"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1340"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1540"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1520"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1410"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1740"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1610"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1630"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1130"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1230"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1110"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1510"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1140"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1220"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1220"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1540"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1440"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1810"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1520"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1830"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1900"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1430"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1430"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1240"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1320"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1820"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1820"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1320"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1720"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1620"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1630"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1420"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1890"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1120"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1740"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1750"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1340"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1900"
         }
       ],
       "skos:notation": "1",
@@ -340,7 +340,7 @@
       }
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2",
       "@type": [
         "covapit:LegalStatus",
         "skos:Concept"
@@ -353,109 +353,109 @@
       },
       "dct:identifier": "2",
       "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
       "skos:narrower": [
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/22"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/27"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/25"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/23"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/21"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/22"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/26"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/24"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/24"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/25"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/27"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/26"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/23"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/21"
         }
       ],
       "skos:narrowerTransitive": [
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2756"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2450"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2712"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2300"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2450"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2756"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2430"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2720"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2220"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2230"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2730"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2460"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2755"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2210"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2752"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2712"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2500"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2755"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2751"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2500"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2100"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2410"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2753"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2440"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2620"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2610"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2300"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2100"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2230"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2752"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2420"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2790"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2720"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2620"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2410"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2753"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2210"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2240"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2711"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2754"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2754"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2420"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2240"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2430"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2460"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2711"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2790"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2730"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2440"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2220"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2610"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2751"
         }
       ],
       "skos:notation": "2",
@@ -475,19 +475,19 @@
       },
       "dct:description": [
         {
-          "@language": "en",
-          "@value": "This is the distribution in XLSX of the Linked Open Dataset of ISTAT's official classification on the organizations' legal status"
-        },
-        {
           "@language": "it",
           "@value": "Questa è la distribuzione XLSX del dataset Linked Open Data della classificazione ufficiale ISTAT delle forme giuridiche per le organizzazioni"
+        },
+        {
+          "@language": "en",
+          "@value": "This is the distribution in XLSX of the Linked Open Dataset of ISTAT's official classification on the organizations' legal status"
         }
       ],
       "dct:format": {
         "@id": "http://publications.europa.eu/resource/authority/file-type/XLSX"
       },
       "dct:license": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40"
       },
       "dct:title": [
         {
@@ -501,8 +501,8 @@
       ]
     },
     {
-      "@id": "clvapit:hasRankOrder",
-      "@type": "rdfs:Property"
+      "@id": "vcard:Organization",
+      "@type": "rdfs:Class"
     },
     {
       "@id": "foaf:name",
@@ -513,38 +513,38 @@
       "@type": "rdfs:Class"
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1250",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2754",
       "@type": [
         "covapit:LegalStatus",
         "skos:Concept"
       ],
       "clvapit:hasRankOrder": "3",
-      "covapit:legalStatusCode": "1.2.50",
+      "covapit:legalStatusCode": "2.7.54",
       "covapit:legalStatusDesc": {
         "@language": "it",
-        "@value": "Società di fatto o irregolare, comunione ereditaria"
+        "@value": "Ente per il turismo"
       },
-      "dct:identifier": "1.2.50",
+      "dct:identifier": "2.7.54",
       "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/12"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/27"
       },
       "skos:broaderTransitive": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2"
       },
       "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
-      "skos:notation": "1.2.50",
+      "skos:notation": "2.7.54",
       "skos:prefLabel": {
         "@language": "it",
-        "@value": "Società di fatto o irregolare, comunione ereditaria"
+        "@value": "Ente per il turismo"
       }
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2460",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2460",
       "@type": [
-        "skos:Concept",
-        "covapit:LegalStatus"
+        "covapit:LegalStatus",
+        "skos:Concept"
       ],
       "clvapit:hasRankOrder": "3",
       "covapit:legalStatusCode": "2.4.60",
@@ -554,13 +554,13 @@
       },
       "dct:identifier": "2.4.60",
       "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/24"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/24"
       },
       "skos:broaderTransitive": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2"
       },
       "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
       "skos:notation": "2.4.60",
       "skos:prefLabel": {
@@ -581,7 +581,7 @@
       "@type": "rdfs:Property"
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2500",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2500",
       "@type": [
         "covapit:LegalStatus",
         "skos:Concept"
@@ -594,254 +594,18 @@
       },
       "dct:identifier": "2.5.00",
       "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/25"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/25"
       },
       "skos:broaderTransitive": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2"
       },
       "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
       "skos:notation": "2.5.00",
       "skos:prefLabel": {
         "@language": "it",
         "@value": "Azienda o ente del servizio sanitario nazionale"
-      }
-    },
-    {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/23",
-      "@type": [
-        "skos:Concept",
-        "covapit:LegalStatus"
-      ],
-      "clvapit:hasRankOrder": "2",
-      "covapit:legalStatusCode": "2.3",
-      "covapit:legalStatusDesc": {
-        "@language": "it",
-        "@value": "Autorità indipendente"
-      },
-      "dct:identifier": "2.3",
-      "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2"
-      },
-      "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
-      },
-      "skos:narrower": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2300"
-      },
-      "skos:notation": "2.3",
-      "skos:prefLabel": {
-        "@language": "it",
-        "@value": "Autorità indipendente"
-      }
-    },
-    {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/26",
-      "@type": [
-        "covapit:LegalStatus",
-        "skos:Concept"
-      ],
-      "clvapit:hasRankOrder": "2",
-      "covapit:legalStatusCode": "2.6",
-      "covapit:legalStatusDesc": {
-        "@language": "it",
-        "@value": "Istituto, scuola e università pubblica"
-      },
-      "dct:identifier": "2.6",
-      "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2"
-      },
-      "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
-      },
-      "skos:narrower": [
-        {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2610"
-        },
-        {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2620"
-        }
-      ],
-      "skos:notation": "2.6",
-      "skos:prefLabel": {
-        "@language": "it",
-        "@value": "Istituto, scuola e università pubblica"
-      }
-    },
-    {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/27",
-      "@type": [
-        "skos:Concept",
-        "covapit:LegalStatus"
-      ],
-      "clvapit:hasRankOrder": "2",
-      "covapit:legalStatusCode": "2.7",
-      "covapit:legalStatusDesc": {
-        "@language": "it",
-        "@value": "Ente pubblico non economico"
-      },
-      "dct:identifier": "2.7",
-      "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2"
-      },
-      "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
-      },
-      "skos:narrower": [
-        {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2756"
-        },
-        {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2720"
-        },
-        {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2740"
-        },
-        {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2711"
-        },
-        {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2754"
-        },
-        {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2751"
-        },
-        {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2753"
-        },
-        {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2752"
-        },
-        {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2755"
-        },
-        {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2790"
-        },
-        {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2730"
-        },
-        {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2712"
-        }
-      ],
-      "skos:notation": "2.7",
-      "skos:prefLabel": {
-        "@language": "it",
-        "@value": "Ente pubblico non economico"
-      }
-    },
-    {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/24",
-      "@type": [
-        "skos:Concept",
-        "covapit:LegalStatus"
-      ],
-      "clvapit:hasRankOrder": "2",
-      "covapit:legalStatusCode": "2.4",
-      "covapit:legalStatusDesc": {
-        "@language": "it",
-        "@value": "Regione e autonomia locale"
-      },
-      "dct:identifier": "2.4",
-      "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2"
-      },
-      "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
-      },
-      "skos:narrower": [
-        {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2420"
-        },
-        {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2430"
-        },
-        {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2460"
-        },
-        {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2410"
-        },
-        {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2440"
-        },
-        {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2450"
-        }
-      ],
-      "skos:notation": "2.4",
-      "skos:prefLabel": {
-        "@language": "it",
-        "@value": "Regione e autonomia locale"
-      }
-    },
-    {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/25",
-      "@type": [
-        "covapit:LegalStatus",
-        "skos:Concept"
-      ],
-      "clvapit:hasRankOrder": "2",
-      "covapit:legalStatusCode": "2.5",
-      "covapit:legalStatusDesc": {
-        "@language": "it",
-        "@value": "Azienda o ente del servizio sanitario nazionale"
-      },
-      "dct:identifier": "2.5",
-      "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2"
-      },
-      "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
-      },
-      "skos:narrower": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2500"
-      },
-      "skos:notation": "2.5",
-      "skos:prefLabel": {
-        "@language": "it",
-        "@value": "Azienda o ente del servizio sanitario nazionale"
-      }
-    },
-    {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/22",
-      "@type": [
-        "covapit:LegalStatus",
-        "skos:Concept"
-      ],
-      "clvapit:hasRankOrder": "2",
-      "covapit:legalStatusCode": "2.2",
-      "covapit:legalStatusDesc": {
-        "@language": "it",
-        "@value": "Amministrazione dello Stato"
-      },
-      "dct:identifier": "2.2",
-      "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2"
-      },
-      "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
-      },
-      "skos:narrower": [
-        {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2220"
-        },
-        {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2230"
-        },
-        {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2240"
-        },
-        {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2210"
-        }
-      ],
-      "skos:notation": "2.2",
-      "skos:prefLabel": {
-        "@language": "it",
-        "@value": "Amministrazione dello Stato"
       }
     },
     {
@@ -855,15 +619,271 @@
       "dct:title": "Simple Knowledge Organization System - SKOS"
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/26",
       "@type": [
-        "adms:Asset",
+        "covapit:LegalStatus",
+        "skos:Concept"
+      ],
+      "clvapit:hasRankOrder": "2",
+      "covapit:legalStatusCode": "2.6",
+      "covapit:legalStatusDesc": {
+        "@language": "it",
+        "@value": "Istituto, scuola e università pubblica"
+      },
+      "dct:identifier": "2.6",
+      "skos:broader": {
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2"
+      },
+      "skos:inScheme": {
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+      },
+      "skos:narrower": [
+        {
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2610"
+        },
+        {
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2620"
+        }
+      ],
+      "skos:notation": "2.6",
+      "skos:prefLabel": {
+        "@language": "it",
+        "@value": "Istituto, scuola e università pubblica"
+      }
+    },
+    {
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/27",
+      "@type": [
+        "skos:Concept",
+        "covapit:LegalStatus"
+      ],
+      "clvapit:hasRankOrder": "2",
+      "covapit:legalStatusCode": "2.7",
+      "covapit:legalStatusDesc": {
+        "@language": "it",
+        "@value": "Ente pubblico non economico"
+      },
+      "dct:identifier": "2.7",
+      "skos:broader": {
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2"
+      },
+      "skos:inScheme": {
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+      },
+      "skos:narrower": [
+        {
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2751"
+        },
+        {
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2711"
+        },
+        {
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2730"
+        },
+        {
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2712"
+        },
+        {
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2755"
+        },
+        {
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2754"
+        },
+        {
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2756"
+        },
+        {
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2720"
+        },
+        {
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2790"
+        },
+        {
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2752"
+        },
+        {
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2753"
+        },
+        {
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2740"
+        }
+      ],
+      "skos:notation": "2.7",
+      "skos:prefLabel": {
+        "@language": "it",
+        "@value": "Ente pubblico non economico"
+      }
+    },
+    {
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/24",
+      "@type": [
+        "skos:Concept",
+        "covapit:LegalStatus"
+      ],
+      "clvapit:hasRankOrder": "2",
+      "covapit:legalStatusCode": "2.4",
+      "covapit:legalStatusDesc": {
+        "@language": "it",
+        "@value": "Regione e autonomia locale"
+      },
+      "dct:identifier": "2.4",
+      "skos:broader": {
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2"
+      },
+      "skos:inScheme": {
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+      },
+      "skos:narrower": [
+        {
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2440"
+        },
+        {
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2460"
+        },
+        {
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2450"
+        },
+        {
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2430"
+        },
+        {
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2420"
+        },
+        {
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2410"
+        }
+      ],
+      "skos:notation": "2.4",
+      "skos:prefLabel": {
+        "@language": "it",
+        "@value": "Regione e autonomia locale"
+      }
+    },
+    {
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/25",
+      "@type": [
+        "skos:Concept",
+        "covapit:LegalStatus"
+      ],
+      "clvapit:hasRankOrder": "2",
+      "covapit:legalStatusCode": "2.5",
+      "covapit:legalStatusDesc": {
+        "@language": "it",
+        "@value": "Azienda o ente del servizio sanitario nazionale"
+      },
+      "dct:identifier": "2.5",
+      "skos:broader": {
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2"
+      },
+      "skos:inScheme": {
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+      },
+      "skos:narrower": {
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2500"
+      },
+      "skos:notation": "2.5",
+      "skos:prefLabel": {
+        "@language": "it",
+        "@value": "Azienda o ente del servizio sanitario nazionale"
+      }
+    },
+    {
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/22",
+      "@type": [
+        "skos:Concept",
+        "covapit:LegalStatus"
+      ],
+      "clvapit:hasRankOrder": "2",
+      "covapit:legalStatusCode": "2.2",
+      "covapit:legalStatusDesc": {
+        "@language": "it",
+        "@value": "Amministrazione dello Stato"
+      },
+      "dct:identifier": "2.2",
+      "skos:broader": {
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2"
+      },
+      "skos:inScheme": {
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+      },
+      "skos:narrower": [
+        {
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2230"
+        },
+        {
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2210"
+        },
+        {
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2220"
+        },
+        {
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2240"
+        }
+      ],
+      "skos:notation": "2.2",
+      "skos:prefLabel": {
+        "@language": "it",
+        "@value": "Amministrazione dello Stato"
+      }
+    },
+    {
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/23",
+      "@type": [
+        "covapit:LegalStatus",
+        "skos:Concept"
+      ],
+      "clvapit:hasRankOrder": "2",
+      "covapit:legalStatusCode": "2.3",
+      "covapit:legalStatusDesc": {
+        "@language": "it",
+        "@value": "Autorità indipendente"
+      },
+      "dct:identifier": "2.3",
+      "skos:broader": {
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2"
+      },
+      "skos:inScheme": {
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+      },
+      "skos:narrower": {
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2300"
+      },
+      "skos:notation": "2.3",
+      "skos:prefLabel": {
+        "@language": "it",
+        "@value": "Autorità indipendente"
+      }
+    },
+    {
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status",
+      "@type": [
         "dcatapit:Dataset",
-        "skos:ConceptScheme"
+        "skos:ConceptScheme",
+        "adms:Asset"
       ],
       "adms:representationTechnique": {
         "@id": "http://purl.org/adms/representationtechnique/SKOS"
       },
+      "dcat:contactPoint": {
+        "@id": "http://dati.gov.it/data/resource/ContactPoint/voc_AgID"
+      },
+      "dcat:distribution": [
+        {
+          "@id": "http://dati.gov.it/data/resource/Distribution/OrgLegalStatus_JSON_LD"
+        },
+        {
+          "@id": "http://dati.gov.it/data/resource/Distribution/OrgLegalStatus_RDF_XML"
+        },
+        {
+          "@id": "http://dati.gov.it/data/resource/Distribution/OrgLegalStatus_RDF_Turtle"
+        },
+        {
+          "@id": "http://dati.gov.it/data/resource/Distribution/OrgLegalStatus_XLSX"
+        },
+        {
+          "@id": "http://dati.gov.it/data/resource/Distribution/OrgLegalStatus_CSV"
+        }
+      ],
       "dcat:keyword": [
         {
           "@language": "it",
@@ -871,11 +891,15 @@
         },
         {
           "@language": "it",
+          "@value": "tipo impresa"
+        },
+        {
+          "@language": "it",
           "@value": "tipo organizzazione"
         },
         {
           "@language": "it",
-          "@value": "tipo impresa"
+          "@value": "impresa"
         }
       ],
       "dcat:theme": [
@@ -894,10 +918,10 @@
       },
       "dct:creator": [
         {
-          "@id": "http://dati.gov.it/data/resource/Amministrazione/td_PCM"
+          "@id": "http://spcdata.digitpa.gov.it/browse/page/Amministrazione/agid"
         },
         {
-          "@id": "http://spcdata.digitpa.gov.it/browse/page/Amministrazione/agid"
+          "@id": "http://dati.gov.it/data/resource/Amministrazione/td_PCM"
         }
       ],
       "dct:description": [
@@ -911,8 +935,16 @@
         }
       ],
       "dct:identifier": "ISTAT:D.3",
+      "dct:issued": {
+        "@type": "xsd:date",
+        "@value": "2018-02-13"
+      },
       "dct:language": {
         "@id": "http://publications.europa.eu/resource/authority/language/ITA"
+      },
+      "dct:modified": {
+        "@type": "xsd:date",
+        "@value": "2018-02-13"
       },
       "dct:publisher": [
         {
@@ -927,25 +959,35 @@
       },
       "dct:subject": [
         {
-          "@id": "http://eurovoc.europa.eu/100169"
+          "@id": "http://eurovoc.europa.eu/100227"
         },
         {
-          "@id": "http://eurovoc.europa.eu/100227"
+          "@id": "http://eurovoc.europa.eu/100169"
         }
       ],
       "dct:title": [
         {
-          "@language": "it",
-          "@value": "Vocabolario Controllato Forme Giuridiche"
-        },
-        {
           "@language": "en",
           "@value": "Organization Legal Status Controlled Vocabulary"
+        },
+        {
+          "@language": "it",
+          "@value": "Vocabolario Controllato Forme Giuridiche"
         }
       ],
       "dct:type": {
         "@id": "http://purl.org/adms/assettype/Taxonomy"
       },
+      "owl:versionInfo": [
+        {
+          "@language": "en",
+          "@value": "Current available version of ISTAT's official classification on legal status of organizations"
+        },
+        {
+          "@language": "it",
+          "@value": "E' l'attuale versione ISTAT della classificazione ufficiale sulle forme giuridiche"
+        }
+      ],
       "rdfs:comment": [
         {
           "@language": "en",
@@ -957,25 +999,25 @@
         }
       ],
       "rdfs:isDefinedBy": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
       "rdfs:label": [
         {
-          "@language": "en",
-          "@value": "Organization Legal Status Controlled Vocabulary"
-        },
-        {
           "@language": "it",
           "@value": "Vocabolario Controllato Forme Giuridiche"
+        },
+        {
+          "@language": "en",
+          "@value": "Organization Legal Status Controlled Vocabulary"
         }
       ],
       "xkos:numberOfLevels": "3"
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/21",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/21",
       "@type": [
-        "skos:Concept",
-        "covapit:LegalStatus"
+        "covapit:LegalStatus",
+        "skos:Concept"
       ],
       "clvapit:hasRankOrder": "2",
       "covapit:legalStatusCode": "2.1",
@@ -985,13 +1027,13 @@
       },
       "dct:identifier": "2.1",
       "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2"
       },
       "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
       "skos:narrower": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2100"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2100"
       },
       "skos:notation": "2.1",
       "skos:prefLabel": {
@@ -1004,15 +1046,11 @@
       "@type": "rdfs:Property"
     },
     {
-      "@id": "skos:narrowerTransitive",
-      "@type": "rdfs:Property"
-    },
-    {
       "@id": "dct:identifier",
       "@type": "rdfs:Property"
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1240",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1240",
       "@type": [
         "skos:Concept",
         "covapit:LegalStatus"
@@ -1025,13 +1063,13 @@
       },
       "dct:identifier": "1.2.40",
       "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/12"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/12"
       },
       "skos:broaderTransitive": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
       },
       "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
       "skos:notation": "1.2.40",
       "skos:prefLabel": {
@@ -1040,7 +1078,7 @@
       }
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2740",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2740",
       "@type": [
         "covapit:LegalStatus",
         "skos:Concept"
@@ -1053,13 +1091,13 @@
       },
       "dct:identifier": "2.7.40",
       "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/27"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/27"
       },
       "skos:broaderTransitive": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2"
       },
       "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
       "skos:notation": "2.7.40",
       "skos:prefLabel": {
@@ -1068,35 +1106,7 @@
       }
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2756",
-      "@type": [
-        "skos:Concept",
-        "covapit:LegalStatus"
-      ],
-      "clvapit:hasRankOrder": "3",
-      "covapit:legalStatusCode": "2.7.56",
-      "covapit:legalStatusDesc": {
-        "@language": "it",
-        "@value": "Ente per la ricerca e per l'aggiornamento educativo"
-      },
-      "dct:identifier": "2.7.56",
-      "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/27"
-      },
-      "skos:broaderTransitive": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2"
-      },
-      "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
-      },
-      "skos:notation": "2.7.56",
-      "skos:prefLabel": {
-        "@language": "it",
-        "@value": "Ente per la ricerca e per l'aggiornamento educativo"
-      }
-    },
-    {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1750",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1750",
       "@type": [
         "covapit:LegalStatus",
         "skos:Concept"
@@ -1109,13 +1119,13 @@
       },
       "dct:identifier": "1.7.50",
       "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/17"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/17"
       },
       "skos:broaderTransitive": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
       },
       "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
       "skos:notation": "1.7.50",
       "skos:prefLabel": {
@@ -1128,7 +1138,7 @@
       "@type": "rdfs:Property"
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1610",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1610",
       "@type": [
         "skos:Concept",
         "covapit:LegalStatus"
@@ -1141,13 +1151,13 @@
       },
       "dct:identifier": "1.6.10",
       "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/16"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/16"
       },
       "skos:broaderTransitive": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
       },
       "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
       "skos:notation": "1.6.10",
       "skos:prefLabel": {
@@ -1156,10 +1166,10 @@
       }
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1440",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1440",
       "@type": [
-        "covapit:LegalStatus",
-        "skos:Concept"
+        "skos:Concept",
+        "covapit:LegalStatus"
       ],
       "clvapit:hasRankOrder": "3",
       "covapit:legalStatusCode": "1.4.40",
@@ -1169,13 +1179,13 @@
       },
       "dct:identifier": "1.4.40",
       "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/14"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/14"
       },
       "skos:broaderTransitive": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
       },
       "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
       "skos:notation": "1.4.40",
       "skos:prefLabel": {
@@ -1188,7 +1198,7 @@
       "@type": "rdfs:Class"
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1320",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1320",
       "@type": [
         "skos:Concept",
         "covapit:LegalStatus"
@@ -1201,13 +1211,13 @@
       },
       "dct:identifier": "1.3.20",
       "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/13"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/13"
       },
       "skos:broaderTransitive": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
       },
       "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
       "skos:notation": "1.3.20",
       "skos:prefLabel": {
@@ -1226,36 +1236,36 @@
       },
       "dct:description": [
         {
-          "@language": "it",
-          "@value": "Questa è la distribuzione CSV del dataset Linked Open Data della classificazione ufficiale ISTAT delle forme giuridiche per le organizzazioni"
-        },
-        {
           "@language": "en",
           "@value": "This is the distribution in CSV of the Linked Open Dataset of ISTAT's official classification on the organizations' legal status"
+        },
+        {
+          "@language": "it",
+          "@value": "Questa è la distribuzione CSV del dataset Linked Open Data della classificazione ufficiale ISTAT delle forme giuridiche per le organizzazioni"
         }
       ],
       "dct:format": {
         "@id": "http://publications.europa.eu/resource/authority/file-type/CSV"
       },
       "dct:license": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40"
       },
       "dct:title": [
         {
-          "@language": "en",
-          "@value": "CSV distribution of legal status classification"
-        },
-        {
           "@language": "it",
           "@value": "Distribuzione CSV classificazione forme giuridiche"
+        },
+        {
+          "@language": "en",
+          "@value": "CSV distribution of legal status classification"
         }
       ]
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1520",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1520",
       "@type": [
-        "skos:Concept",
-        "covapit:LegalStatus"
+        "covapit:LegalStatus",
+        "skos:Concept"
       ],
       "clvapit:hasRankOrder": "3",
       "covapit:legalStatusCode": "1.5.20",
@@ -1265,13 +1275,13 @@
       },
       "dct:identifier": "1.5.20",
       "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/15"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/15"
       },
       "skos:broaderTransitive": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
       },
       "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
       "skos:notation": "1.5.20",
       "skos:prefLabel": {
@@ -1280,10 +1290,10 @@
       }
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2790",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2790",
       "@type": [
-        "covapit:LegalStatus",
-        "skos:Concept"
+        "skos:Concept",
+        "covapit:LegalStatus"
       ],
       "clvapit:hasRankOrder": "3",
       "covapit:legalStatusCode": "2.7.90",
@@ -1293,13 +1303,13 @@
       },
       "dct:identifier": "2.7.90",
       "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/27"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/27"
       },
       "skos:broaderTransitive": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2"
       },
       "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
       "skos:notation": "2.7.90",
       "skos:prefLabel": {
@@ -1316,10 +1326,10 @@
       "@type": "rdfs:Class"
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2410",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2410",
       "@type": [
-        "skos:Concept",
-        "covapit:LegalStatus"
+        "covapit:LegalStatus",
+        "skos:Concept"
       ],
       "clvapit:hasRankOrder": "3",
       "covapit:legalStatusCode": "2.4.10",
@@ -1329,13 +1339,13 @@
       },
       "dct:identifier": "2.4.10",
       "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/24"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/24"
       },
       "skos:broaderTransitive": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2"
       },
       "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
       "skos:notation": "2.4.10",
       "skos:prefLabel": {
@@ -1344,7 +1354,7 @@
       }
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/19",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/19",
       "@type": [
         "skos:Concept",
         "covapit:LegalStatus"
@@ -1357,13 +1367,13 @@
       },
       "dct:identifier": "1.9",
       "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
       },
       "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
       "skos:narrower": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1900"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1900"
       },
       "skos:notation": "1.9",
       "skos:prefLabel": {
@@ -1372,10 +1382,10 @@
       }
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/18",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/18",
       "@type": [
-        "covapit:LegalStatus",
-        "skos:Concept"
+        "skos:Concept",
+        "covapit:LegalStatus"
       ],
       "clvapit:hasRankOrder": "2",
       "covapit:legalStatusCode": "1.8",
@@ -1385,23 +1395,23 @@
       },
       "dct:identifier": "1.8",
       "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
       },
       "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
       "skos:narrower": [
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1820"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1890"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1890"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1820"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1810"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1830"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1830"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1810"
         }
       ],
       "skos:notation": "1.8",
@@ -1411,10 +1421,10 @@
       }
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/17",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/17",
       "@type": [
-        "skos:Concept",
-        "covapit:LegalStatus"
+        "covapit:LegalStatus",
+        "skos:Concept"
       ],
       "clvapit:hasRankOrder": "2",
       "covapit:legalStatusCode": "1.7",
@@ -1424,29 +1434,29 @@
       },
       "dct:identifier": "1.7",
       "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
       },
       "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
       "skos:narrower": [
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1740"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1740"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1730"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1710"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1790"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1790"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1720"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1720"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1750"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1750"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1710"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1730"
         }
       ],
       "skos:notation": "1.7",
@@ -1456,10 +1466,10 @@
       }
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/16",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/16",
       "@type": [
-        "skos:Concept",
-        "covapit:LegalStatus"
+        "covapit:LegalStatus",
+        "skos:Concept"
       ],
       "clvapit:hasRankOrder": "2",
       "covapit:legalStatusCode": "1.6",
@@ -1469,20 +1479,20 @@
       },
       "dct:identifier": "1.6",
       "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
       },
       "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
       "skos:narrower": [
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1620"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1630"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1610"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1610"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1630"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1620"
         }
       ],
       "skos:notation": "1.6",
@@ -1492,7 +1502,7 @@
       }
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/15",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/15",
       "@type": [
         "covapit:LegalStatus",
         "skos:Concept"
@@ -1505,23 +1515,23 @@
       },
       "dct:identifier": "1.5",
       "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
       },
       "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
       "skos:narrower": [
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1520"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1520"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1540"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1530"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1530"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1510"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1510"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1540"
         }
       ],
       "skos:notation": "1.5",
@@ -1531,10 +1541,10 @@
       }
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/14",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/14",
       "@type": [
-        "covapit:LegalStatus",
-        "skos:Concept"
+        "skos:Concept",
+        "covapit:LegalStatus"
       ],
       "clvapit:hasRankOrder": "2",
       "covapit:legalStatusCode": "1.4",
@@ -1544,23 +1554,23 @@
       },
       "dct:identifier": "1.4",
       "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
       },
       "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
       "skos:narrower": [
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1420"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1430"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1430"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1420"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1440"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1410"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1410"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1440"
         }
       ],
       "skos:notation": "1.4",
@@ -1574,10 +1584,10 @@
       "@type": "rdfs:Property"
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/12",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/12",
       "@type": [
-        "skos:Concept",
-        "covapit:LegalStatus"
+        "covapit:LegalStatus",
+        "skos:Concept"
       ],
       "clvapit:hasRankOrder": "2",
       "covapit:legalStatusCode": "1.2",
@@ -1587,26 +1597,26 @@
       },
       "dct:identifier": "1.2",
       "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
       },
       "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
       "skos:narrower": [
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1210"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1230"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1240"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1210"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1220"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1250"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1250"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1240"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1230"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1220"
         }
       ],
       "skos:notation": "1.2",
@@ -1616,10 +1626,10 @@
       }
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/11",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/11",
       "@type": [
-        "covapit:LegalStatus",
-        "skos:Concept"
+        "skos:Concept",
+        "covapit:LegalStatus"
       ],
       "clvapit:hasRankOrder": "2",
       "covapit:legalStatusCode": "1.1",
@@ -1629,23 +1639,23 @@
       },
       "dct:identifier": "1.1",
       "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
       },
       "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
       "skos:narrower": [
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1140"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1130"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1130"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1140"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1110"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1120"
         },
         {
-          "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1120"
+          "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1110"
         }
       ],
       "skos:notation": "1.1",
@@ -1655,10 +1665,10 @@
       }
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2711",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2711",
       "@type": [
-        "covapit:LegalStatus",
-        "skos:Concept"
+        "skos:Concept",
+        "covapit:LegalStatus"
       ],
       "clvapit:hasRankOrder": "3",
       "covapit:legalStatusCode": "2.7.11",
@@ -1668,13 +1678,13 @@
       },
       "dct:identifier": "2.7.11",
       "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/27"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/27"
       },
       "skos:broaderTransitive": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2"
       },
       "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
       "skos:notation": "2.7.11",
       "skos:prefLabel": {
@@ -1683,10 +1693,10 @@
       }
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2712",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2712",
       "@type": [
-        "covapit:LegalStatus",
-        "skos:Concept"
+        "skos:Concept",
+        "covapit:LegalStatus"
       ],
       "clvapit:hasRankOrder": "3",
       "covapit:legalStatusCode": "2.7.12",
@@ -1696,13 +1706,13 @@
       },
       "dct:identifier": "2.7.12",
       "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/27"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/27"
       },
       "skos:broaderTransitive": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2"
       },
       "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
       "skos:notation": "2.7.12",
       "skos:prefLabel": {
@@ -1715,7 +1725,7 @@
       "@type": "rdfs:Class"
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1110",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1110",
       "@type": [
         "covapit:LegalStatus",
         "skos:Concept"
@@ -1728,13 +1738,13 @@
       },
       "dct:identifier": "1.1.10",
       "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/11"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/11"
       },
       "skos:broaderTransitive": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
       },
       "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
       "skos:notation": "1.1.10",
       "skos:prefLabel": {
@@ -1743,11 +1753,35 @@
       }
     },
     {
-      "@id": "dcat:contactPoint",
-      "@type": "rdfs:Property"
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1830",
+      "@type": [
+        "skos:Concept",
+        "covapit:LegalStatus"
+      ],
+      "clvapit:hasRankOrder": "3",
+      "covapit:legalStatusCode": "1.8.30",
+      "covapit:legalStatusDesc": {
+        "@language": "it",
+        "@value": "Condominio"
+      },
+      "dct:identifier": "1.8.30",
+      "skos:broader": {
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/18"
+      },
+      "skos:broaderTransitive": {
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
+      },
+      "skos:inScheme": {
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+      },
+      "skos:notation": "1.8.30",
+      "skos:prefLabel": {
+        "@language": "it",
+        "@value": "Condominio"
+      }
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1740",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1740",
       "@type": [
         "skos:Concept",
         "covapit:LegalStatus"
@@ -1760,13 +1794,13 @@
       },
       "dct:identifier": "1.7.40",
       "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/17"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/17"
       },
       "skos:broaderTransitive": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
       },
       "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
       "skos:notation": "1.7.40",
       "skos:prefLabel": {
@@ -1775,10 +1809,10 @@
       }
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1210",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1210",
       "@type": [
-        "skos:Concept",
-        "covapit:LegalStatus"
+        "covapit:LegalStatus",
+        "skos:Concept"
       ],
       "clvapit:hasRankOrder": "3",
       "covapit:legalStatusCode": "1.2.10",
@@ -1788,13 +1822,13 @@
       },
       "dct:identifier": "1.2.10",
       "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/12"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/12"
       },
       "skos:broaderTransitive": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
       },
       "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
       "skos:notation": "1.2.10",
       "skos:prefLabel": {
@@ -1817,19 +1851,19 @@
       },
       "dct:description": [
         {
-          "@language": "it",
-          "@value": "Questa è la distribuzione RDF/XML del dataset Linked Open Data della classificazione ufficiale ISTAT delle forme giuridiche per le organizzazioni"
-        },
-        {
           "@language": "en",
           "@value": "This is the distribution in RDF/XML of the Linked Open Dataset of ISTAT's official classification on the organizations' legal status"
+        },
+        {
+          "@language": "it",
+          "@value": "Questa è la distribuzione RDF/XML del dataset Linked Open Data della classificazione ufficiale ISTAT delle forme giuridiche per le organizzazioni"
         }
       ],
       "dct:format": {
         "@id": "http://publications.europa.eu/resource/authority/file-type/RDF_XML"
       },
       "dct:license": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40"
       },
       "dct:title": [
         {
@@ -1855,7 +1889,7 @@
       "@type": "rdfs:Property"
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1510",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1510",
       "@type": [
         "skos:Concept",
         "covapit:LegalStatus"
@@ -1868,13 +1902,13 @@
       },
       "dct:identifier": "1.5.10",
       "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/15"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/15"
       },
       "skos:broaderTransitive": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
       },
       "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
       "skos:notation": "1.5.10",
       "skos:prefLabel": {
@@ -1883,10 +1917,10 @@
       }
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2240",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2240",
       "@type": [
-        "covapit:LegalStatus",
-        "skos:Concept"
+        "skos:Concept",
+        "covapit:LegalStatus"
       ],
       "clvapit:hasRankOrder": "3",
       "covapit:legalStatusCode": "2.2.40",
@@ -1896,13 +1930,13 @@
       },
       "dct:identifier": "2.2.40",
       "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/22"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/22"
       },
       "skos:broaderTransitive": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2"
       },
       "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
       "skos:notation": "2.2.40",
       "skos:prefLabel": {
@@ -1911,7 +1945,7 @@
       }
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1900",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1900",
       "@type": [
         "skos:Concept",
         "covapit:LegalStatus"
@@ -1924,13 +1958,13 @@
       },
       "dct:identifier": "1.9.00",
       "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/19"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/19"
       },
       "skos:broaderTransitive": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
       },
       "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
       "skos:notation": "1.9.00",
       "skos:prefLabel": {
@@ -1955,7 +1989,35 @@
       "@type": "rdfs:Property"
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1630",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2756",
+      "@type": [
+        "covapit:LegalStatus",
+        "skos:Concept"
+      ],
+      "clvapit:hasRankOrder": "3",
+      "covapit:legalStatusCode": "2.7.56",
+      "covapit:legalStatusDesc": {
+        "@language": "it",
+        "@value": "Ente per la ricerca e per l'aggiornamento educativo"
+      },
+      "dct:identifier": "2.7.56",
+      "skos:broader": {
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/27"
+      },
+      "skos:broaderTransitive": {
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2"
+      },
+      "skos:inScheme": {
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+      },
+      "skos:notation": "2.7.56",
+      "skos:prefLabel": {
+        "@language": "it",
+        "@value": "Ente per la ricerca e per l'aggiornamento educativo"
+      }
+    },
+    {
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1630",
       "@type": [
         "covapit:LegalStatus",
         "skos:Concept"
@@ -1968,13 +2030,13 @@
       },
       "dct:identifier": "1.6.30",
       "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/16"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/16"
       },
       "skos:broaderTransitive": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
       },
       "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
       "skos:notation": "1.6.30",
       "skos:prefLabel": {
@@ -1983,7 +2045,7 @@
       }
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1140",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1140",
       "@type": [
         "skos:Concept",
         "covapit:LegalStatus"
@@ -1996,13 +2058,13 @@
       },
       "dct:identifier": "1.1.40",
       "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/11"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/11"
       },
       "skos:broaderTransitive": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
       },
       "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
       "skos:notation": "1.1.40",
       "skos:prefLabel": {
@@ -2023,10 +2085,10 @@
       "@type": "rdfs:Class"
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1540",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1540",
       "@type": [
-        "covapit:LegalStatus",
-        "skos:Concept"
+        "skos:Concept",
+        "covapit:LegalStatus"
       ],
       "clvapit:hasRankOrder": "3",
       "covapit:legalStatusCode": "1.5.40",
@@ -2036,13 +2098,13 @@
       },
       "dct:identifier": "1.5.40",
       "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/15"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/15"
       },
       "skos:broaderTransitive": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
       },
       "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
       "skos:notation": "1.5.40",
       "skos:prefLabel": {
@@ -2051,7 +2113,7 @@
       }
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1730",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1730",
       "@type": [
         "skos:Concept",
         "covapit:LegalStatus"
@@ -2064,13 +2126,13 @@
       },
       "dct:identifier": "1.7.30",
       "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/17"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/17"
       },
       "skos:broaderTransitive": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
       },
       "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
       "skos:notation": "1.7.30",
       "skos:prefLabel": {
@@ -2079,7 +2141,7 @@
       }
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2230",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2230",
       "@type": [
         "skos:Concept",
         "covapit:LegalStatus"
@@ -2092,13 +2154,13 @@
       },
       "dct:identifier": "2.2.30",
       "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/22"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/22"
       },
       "skos:broaderTransitive": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2"
       },
       "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
       "skos:notation": "2.2.30",
       "skos:prefLabel": {
@@ -2107,7 +2169,7 @@
       }
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2100",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2100",
       "@type": [
         "skos:Concept",
         "covapit:LegalStatus"
@@ -2120,13 +2182,13 @@
       },
       "dct:identifier": "2.1.00",
       "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/21"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/21"
       },
       "skos:broaderTransitive": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2"
       },
       "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
       "skos:notation": "2.1.00",
       "skos:prefLabel": {
@@ -2139,10 +2201,10 @@
       "@type": "rdfs:Property"
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1420",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1420",
       "@type": [
-        "covapit:LegalStatus",
-        "skos:Concept"
+        "skos:Concept",
+        "covapit:LegalStatus"
       ],
       "clvapit:hasRankOrder": "3",
       "covapit:legalStatusCode": "1.4.20",
@@ -2152,13 +2214,13 @@
       },
       "dct:identifier": "1.4.20",
       "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/14"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/14"
       },
       "skos:broaderTransitive": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
       },
       "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
       "skos:notation": "1.4.20",
       "skos:prefLabel": {
@@ -2167,7 +2229,7 @@
       }
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2430",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2430",
       "@type": [
         "covapit:LegalStatus",
         "skos:Concept"
@@ -2180,13 +2242,13 @@
       },
       "dct:identifier": "2.4.30",
       "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/24"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/24"
       },
       "skos:broaderTransitive": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2"
       },
       "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
       "skos:notation": "2.4.30",
       "skos:prefLabel": {
@@ -2195,35 +2257,11 @@
       }
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1830",
-      "@type": [
-        "covapit:LegalStatus",
-        "skos:Concept"
-      ],
-      "clvapit:hasRankOrder": "3",
-      "covapit:legalStatusCode": "1.8.30",
-      "covapit:legalStatusDesc": {
-        "@language": "it",
-        "@value": "Condominio"
-      },
-      "dct:identifier": "1.8.30",
-      "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/18"
-      },
-      "skos:broaderTransitive": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
-      },
-      "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
-      },
-      "skos:notation": "1.8.30",
-      "skos:prefLabel": {
-        "@language": "it",
-        "@value": "Condominio"
-      }
+      "@id": "skos:narrowerTransitive",
+      "@type": "rdfs:Property"
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2730",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2730",
       "@type": [
         "covapit:LegalStatus",
         "skos:Concept"
@@ -2236,13 +2274,13 @@
       },
       "dct:identifier": "2.7.30",
       "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/27"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/27"
       },
       "skos:broaderTransitive": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2"
       },
       "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
       "skos:notation": "2.7.30",
       "skos:prefLabel": {
@@ -2257,9 +2295,9 @@
     {
       "@id": "http://dati.gov.it/data/resource/ContactPoint/voc_AgID",
       "@type": [
-        "vcard:Kind",
+        "dcatapit:Organization",
         "vcard:Organization",
-        "dcatapit:Organization"
+        "vcard:Kind"
       ],
       "vcard:fn": "banche dati e open data",
       "vcard:hasEmail": {
@@ -2267,10 +2305,10 @@
       }
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1130",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1130",
       "@type": [
-        "covapit:LegalStatus",
-        "skos:Concept"
+        "skos:Concept",
+        "covapit:LegalStatus"
       ],
       "clvapit:hasRankOrder": "3",
       "covapit:legalStatusCode": "1.1.30",
@@ -2280,13 +2318,13 @@
       },
       "dct:identifier": "1.1.30",
       "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/11"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/11"
       },
       "skos:broaderTransitive": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
       },
       "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
       "skos:notation": "1.1.30",
       "skos:prefLabel": {
@@ -2295,10 +2333,10 @@
       }
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1230",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1230",
       "@type": [
-        "covapit:LegalStatus",
-        "skos:Concept"
+        "skos:Concept",
+        "covapit:LegalStatus"
       ],
       "clvapit:hasRankOrder": "3",
       "covapit:legalStatusCode": "1.2.30",
@@ -2308,13 +2346,13 @@
       },
       "dct:identifier": "1.2.30",
       "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/12"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/12"
       },
       "skos:broaderTransitive": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
       },
       "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
       "skos:notation": "1.2.30",
       "skos:prefLabel": {
@@ -2327,11 +2365,11 @@
       "@type": "rdfs:Property"
     },
     {
-      "@id": "vcard:Organization",
-      "@type": "rdfs:Class"
+      "@id": "dcat:contactPoint",
+      "@type": "rdfs:Property"
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1330",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1330",
       "@type": [
         "covapit:LegalStatus",
         "skos:Concept"
@@ -2344,13 +2382,13 @@
       },
       "dct:identifier": "1.3.30",
       "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/13"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/13"
       },
       "skos:broaderTransitive": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
       },
       "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
       "skos:notation": "1.3.30",
       "skos:prefLabel": {
@@ -2363,10 +2401,10 @@
       "@type": "rdfs:Property"
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1720",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1720",
       "@type": [
-        "covapit:LegalStatus",
-        "skos:Concept"
+        "skos:Concept",
+        "covapit:LegalStatus"
       ],
       "clvapit:hasRankOrder": "3",
       "covapit:legalStatusCode": "1.7.20",
@@ -2376,13 +2414,13 @@
       },
       "dct:identifier": "1.7.20",
       "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/17"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/17"
       },
       "skos:broaderTransitive": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
       },
       "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
       "skos:notation": "1.7.20",
       "skos:prefLabel": {
@@ -2391,7 +2429,7 @@
       }
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1530",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1530",
       "@type": [
         "covapit:LegalStatus",
         "skos:Concept"
@@ -2404,13 +2442,13 @@
       },
       "dct:identifier": "1.5.30",
       "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/15"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/15"
       },
       "skos:broaderTransitive": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
       },
       "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
       "skos:notation": "1.5.30",
       "skos:prefLabel": {
@@ -2419,7 +2457,7 @@
       }
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2220",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2220",
       "@type": [
         "covapit:LegalStatus",
         "skos:Concept"
@@ -2432,13 +2470,13 @@
       },
       "dct:identifier": "2.2.20",
       "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/22"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/22"
       },
       "skos:broaderTransitive": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2"
       },
       "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
       "skos:notation": "2.2.20",
       "skos:prefLabel": {
@@ -2447,10 +2485,10 @@
       }
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1430",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1430",
       "@type": [
-        "skos:Concept",
-        "covapit:LegalStatus"
+        "covapit:LegalStatus",
+        "skos:Concept"
       ],
       "clvapit:hasRankOrder": "3",
       "covapit:legalStatusCode": "1.4.30",
@@ -2460,13 +2498,13 @@
       },
       "dct:identifier": "1.4.30",
       "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/14"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/14"
       },
       "skos:broaderTransitive": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
       },
       "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
       "skos:notation": "1.4.30",
       "skos:prefLabel": {
@@ -2475,10 +2513,10 @@
       }
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2420",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2420",
       "@type": [
-        "skos:Concept",
-        "covapit:LegalStatus"
+        "covapit:LegalStatus",
+        "skos:Concept"
       ],
       "clvapit:hasRankOrder": "3",
       "covapit:legalStatusCode": "2.4.20",
@@ -2488,13 +2526,13 @@
       },
       "dct:identifier": "2.4.20",
       "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/24"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/24"
       },
       "skos:broaderTransitive": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2"
       },
       "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
       "skos:notation": "2.4.20",
       "skos:prefLabel": {
@@ -2519,7 +2557,7 @@
       "@type": "rdfs:Class"
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1120",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1120",
       "@type": [
         "covapit:LegalStatus",
         "skos:Concept"
@@ -2532,13 +2570,13 @@
       },
       "dct:identifier": "1.1.20",
       "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/11"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/11"
       },
       "skos:broaderTransitive": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
       },
       "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
       "skos:notation": "1.1.20",
       "skos:prefLabel": {
@@ -2547,10 +2585,10 @@
       }
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2620",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2620",
       "@type": [
-        "covapit:LegalStatus",
-        "skos:Concept"
+        "skos:Concept",
+        "covapit:LegalStatus"
       ],
       "clvapit:hasRankOrder": "3",
       "covapit:legalStatusCode": "2.6.20",
@@ -2560,13 +2598,13 @@
       },
       "dct:identifier": "2.6.20",
       "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/26"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/26"
       },
       "skos:broaderTransitive": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2"
       },
       "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
       "skos:notation": "2.6.20",
       "skos:prefLabel": {
@@ -2585,28 +2623,28 @@
       },
       "dct:description": [
         {
-          "@language": "it",
-          "@value": "Questa è la distribuzione JSON_LD del dataset Linked Open Data della classificazione ufficiale ISTAT delle forme giuridiche per le organizzazioni"
-        },
-        {
           "@language": "en",
           "@value": "This is the distribution in JSON_LD of the Linked Open Dataset of ISTAT's official classification on the organizations' legal status"
+        },
+        {
+          "@language": "it",
+          "@value": "Questa è la distribuzione JSON_LD del dataset Linked Open Data della classificazione ufficiale ISTAT delle forme giuridiche per le organizzazioni"
         }
       ],
       "dct:format": {
         "@id": "http://publications.europa.eu/resource/authority/file-type/JSON_LD"
       },
       "dct:license": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40"
       },
       "dct:title": [
         {
-          "@language": "en",
-          "@value": "JSON_LD distribution of legal status classification"
-        },
-        {
           "@language": "it",
           "@value": "Distribuzione JSON_LD classificazione forme giuridiche"
+        },
+        {
+          "@language": "en",
+          "@value": "JSON_LD distribution of legal status classification"
         }
       ]
     },
@@ -2615,7 +2653,7 @@
       "@type": "rdfs:Property"
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1890",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1890",
       "@type": [
         "covapit:LegalStatus",
         "skos:Concept"
@@ -2628,13 +2666,13 @@
       },
       "dct:identifier": "1.8.90",
       "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/18"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/18"
       },
       "skos:broaderTransitive": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
       },
       "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
       "skos:notation": "1.8.90",
       "skos:prefLabel": {
@@ -2647,10 +2685,10 @@
       "@type": "rdfs:Class"
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1710",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1710",
       "@type": [
-        "skos:Concept",
-        "covapit:LegalStatus"
+        "covapit:LegalStatus",
+        "skos:Concept"
       ],
       "clvapit:hasRankOrder": "3",
       "covapit:legalStatusCode": "1.7.10",
@@ -2660,13 +2698,13 @@
       },
       "dct:identifier": "1.7.10",
       "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/17"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/17"
       },
       "skos:broaderTransitive": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
       },
       "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
       "skos:notation": "1.7.10",
       "skos:prefLabel": {
@@ -2693,7 +2731,7 @@
       ]
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2210",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2210",
       "@type": [
         "covapit:LegalStatus",
         "skos:Concept"
@@ -2706,13 +2744,13 @@
       },
       "dct:identifier": "2.2.10",
       "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/22"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/22"
       },
       "skos:broaderTransitive": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2"
       },
       "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
       "skos:notation": "2.2.10",
       "skos:prefLabel": {
@@ -2721,10 +2759,10 @@
       }
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2450",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2450",
       "@type": [
-        "covapit:LegalStatus",
-        "skos:Concept"
+        "skos:Concept",
+        "covapit:LegalStatus"
       ],
       "clvapit:hasRankOrder": "3",
       "covapit:legalStatusCode": "2.4.50",
@@ -2734,13 +2772,13 @@
       },
       "dct:identifier": "2.4.50",
       "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/24"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/24"
       },
       "skos:broaderTransitive": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2"
       },
       "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
       "skos:notation": "2.4.50",
       "skos:prefLabel": {
@@ -2749,7 +2787,7 @@
       }
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1810",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1810",
       "@type": [
         "covapit:LegalStatus",
         "skos:Concept"
@@ -2762,13 +2800,13 @@
       },
       "dct:identifier": "1.8.10",
       "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/18"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/18"
       },
       "skos:broaderTransitive": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
       },
       "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
       "skos:notation": "1.8.10",
       "skos:prefLabel": {
@@ -2777,10 +2815,10 @@
       }
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1790",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1790",
       "@type": [
-        "covapit:LegalStatus",
-        "skos:Concept"
+        "skos:Concept",
+        "covapit:LegalStatus"
       ],
       "clvapit:hasRankOrder": "3",
       "covapit:legalStatusCode": "1.7.90",
@@ -2790,13 +2828,13 @@
       },
       "dct:identifier": "1.7.90",
       "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/17"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/17"
       },
       "skos:broaderTransitive": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
       },
       "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
       "skos:notation": "1.7.90",
       "skos:prefLabel": {
@@ -2809,28 +2847,32 @@
       "@type": "rdfs:Property"
     },
     {
+      "@id": "clvapit:hasRankOrder",
+      "@type": "rdfs:Property"
+    },
+    {
       "@id": "http://spcdata.digitpa.gov.it/browse/page/Amministrazione/agid",
       "@type": [
-        "foaf:Agent",
-        "dcatapit:Agent"
+        "dcatapit:Agent",
+        "foaf:Agent"
       ],
       "dct:identifier": "agid",
       "foaf:name": [
         {
-          "@language": "it",
-          "@value": "Agenzia per l'Italia Digitale"
-        },
-        {
           "@language": "en",
           "@value": "Italian Digital Agency"
+        },
+        {
+          "@language": "it",
+          "@value": "Agenzia per l'Italia Digitale"
         }
       ]
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2610",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2610",
       "@type": [
-        "covapit:LegalStatus",
-        "skos:Concept"
+        "skos:Concept",
+        "covapit:LegalStatus"
       ],
       "clvapit:hasRankOrder": "3",
       "covapit:legalStatusCode": "2.6.10",
@@ -2840,13 +2882,13 @@
       },
       "dct:identifier": "2.6.10",
       "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/26"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/26"
       },
       "skos:broaderTransitive": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2"
       },
       "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
       "skos:notation": "2.6.10",
       "skos:prefLabel": {
@@ -2855,35 +2897,35 @@
       }
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2754",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1250",
       "@type": [
         "skos:Concept",
         "covapit:LegalStatus"
       ],
       "clvapit:hasRankOrder": "3",
-      "covapit:legalStatusCode": "2.7.54",
+      "covapit:legalStatusCode": "1.2.50",
       "covapit:legalStatusDesc": {
         "@language": "it",
-        "@value": "Ente per il turismo"
+        "@value": "Società di fatto o irregolare, comunione ereditaria"
       },
-      "dct:identifier": "2.7.54",
+      "dct:identifier": "1.2.50",
       "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/27"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/12"
       },
       "skos:broaderTransitive": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
       },
       "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
-      "skos:notation": "2.7.54",
+      "skos:notation": "1.2.50",
       "skos:prefLabel": {
         "@language": "it",
-        "@value": "Ente per il turismo"
+        "@value": "Società di fatto o irregolare, comunione ereditaria"
       }
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2755",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2755",
       "@type": [
         "covapit:LegalStatus",
         "skos:Concept"
@@ -2896,13 +2938,13 @@
       },
       "dct:identifier": "2.7.55",
       "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/27"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/27"
       },
       "skos:broaderTransitive": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2"
       },
       "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
       "skos:notation": "2.7.55",
       "skos:prefLabel": {
@@ -2915,7 +2957,7 @@
       "@type": "rdfs:Property"
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2751",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2751",
       "@type": [
         "skos:Concept",
         "covapit:LegalStatus"
@@ -2928,13 +2970,13 @@
       },
       "dct:identifier": "2.7.51",
       "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/27"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/27"
       },
       "skos:broaderTransitive": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2"
       },
       "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
       "skos:notation": "2.7.51",
       "skos:prefLabel": {
@@ -2943,10 +2985,10 @@
       }
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2752",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2752",
       "@type": [
-        "covapit:LegalStatus",
-        "skos:Concept"
+        "skos:Concept",
+        "covapit:LegalStatus"
       ],
       "clvapit:hasRankOrder": "3",
       "covapit:legalStatusCode": "2.7.52",
@@ -2956,13 +2998,13 @@
       },
       "dct:identifier": "2.7.52",
       "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/27"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/27"
       },
       "skos:broaderTransitive": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2"
       },
       "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
       "skos:notation": "2.7.52",
       "skos:prefLabel": {
@@ -2971,10 +3013,10 @@
       }
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2753",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2753",
       "@type": [
-        "skos:Concept",
-        "covapit:LegalStatus"
+        "covapit:LegalStatus",
+        "skos:Concept"
       ],
       "clvapit:hasRankOrder": "3",
       "covapit:legalStatusCode": "2.7.53",
@@ -2984,13 +3026,13 @@
       },
       "dct:identifier": "2.7.53",
       "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/27"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/27"
       },
       "skos:broaderTransitive": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2"
       },
       "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
       "skos:notation": "2.7.53",
       "skos:prefLabel": {
@@ -2999,10 +3041,10 @@
       }
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1620",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1620",
       "@type": [
-        "covapit:LegalStatus",
-        "skos:Concept"
+        "skos:Concept",
+        "covapit:LegalStatus"
       ],
       "clvapit:hasRankOrder": "3",
       "covapit:legalStatusCode": "1.6.20",
@@ -3012,13 +3054,13 @@
       },
       "dct:identifier": "1.6.20",
       "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/16"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/16"
       },
       "skos:broaderTransitive": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
       },
       "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
       "skos:notation": "1.6.20",
       "skos:prefLabel": {
@@ -3027,10 +3069,10 @@
       }
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1310",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1310",
       "@type": [
-        "skos:Concept",
-        "covapit:LegalStatus"
+        "covapit:LegalStatus",
+        "skos:Concept"
       ],
       "clvapit:hasRankOrder": "3",
       "covapit:legalStatusCode": "1.3.10",
@@ -3040,13 +3082,13 @@
       },
       "dct:identifier": "1.3.10",
       "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/13"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/13"
       },
       "skos:broaderTransitive": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
       },
       "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
       "skos:notation": "1.3.10",
       "skos:prefLabel": {
@@ -3055,7 +3097,7 @@
       }
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1410",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1410",
       "@type": [
         "skos:Concept",
         "covapit:LegalStatus"
@@ -3068,13 +3110,13 @@
       },
       "dct:identifier": "1.4.10",
       "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/14"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/14"
       },
       "skos:broaderTransitive": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
       },
       "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
       "skos:notation": "1.4.10",
       "skos:prefLabel": {
@@ -3083,7 +3125,7 @@
       }
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2440",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2440",
       "@type": [
         "skos:Concept",
         "covapit:LegalStatus"
@@ -3096,13 +3138,13 @@
       },
       "dct:identifier": "2.4.40",
       "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/24"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/24"
       },
       "skos:broaderTransitive": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2"
       },
       "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
       "skos:notation": "2.4.40",
       "skos:prefLabel": {
@@ -3111,7 +3153,7 @@
       }
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1820",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1820",
       "@type": [
         "skos:Concept",
         "covapit:LegalStatus"
@@ -3124,13 +3166,13 @@
       },
       "dct:identifier": "1.8.20",
       "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/18"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/18"
       },
       "skos:broaderTransitive": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
       },
       "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
       "skos:notation": "1.8.20",
       "skos:prefLabel": {
@@ -3143,10 +3185,10 @@
       "@type": "rdfs:Class"
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2720",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2720",
       "@type": [
-        "skos:Concept",
-        "covapit:LegalStatus"
+        "covapit:LegalStatus",
+        "skos:Concept"
       ],
       "clvapit:hasRankOrder": "3",
       "covapit:legalStatusCode": "2.7.20",
@@ -3156,13 +3198,13 @@
       },
       "dct:identifier": "2.7.20",
       "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/27"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/27"
       },
       "skos:broaderTransitive": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/2"
       },
       "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
       "skos:notation": "2.7.20",
       "skos:prefLabel": {
@@ -3189,10 +3231,10 @@
       ]
     },
     {
-      "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1220",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1220",
       "@type": [
-        "covapit:LegalStatus",
-        "skos:Concept"
+        "skos:Concept",
+        "covapit:LegalStatus"
       ],
       "clvapit:hasRankOrder": "3",
       "covapit:legalStatusCode": "1.2.20",
@@ -3202,13 +3244,13 @@
       },
       "dct:identifier": "1.2.20",
       "skos:broader": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/12"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/12"
       },
       "skos:broaderTransitive": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/1"
       },
       "skos:inScheme": {
-        "@id": "http://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status"
       },
       "skos:notation": "1.2.20",
       "skos:prefLabel": {

@@ -1,7 +1,7 @@
 {
   "@context": {
     "adms": "http://www.w3.org/ns/adms#",
-    "clvapit": "http://dati.gov.it/onto/clvapit#",
+    "clvapit": "https://w3id.org/italia/onto/CLV/",
     "dc": "http://purl.org/dc/elements/1.1/",
     "dcat": "http://www.w3.org/ns/dcat#",
     "dcatapit": "http://dati.gov.it/onto/dcatapit#",
@@ -9,7 +9,7 @@
     "dcterms": "http://purl.org/dc/terms/",
     "foaf": "http://xmlns.com/foaf/0.1/",
     "owl": "http://www.w3.org/2002/07/owl#",
-    "poiapit": "http://dati.gov.it/onto/poiapit#",
+    "poiapit": "https://w3id.org/italia/onto/POI/",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "skos": "http://www.w3.org/2004/02/skos/core#",
@@ -19,104 +19,14 @@
   },
   "@graph": [
     {
-      "@id": "http://dati.gov.it/onto/controlledvocabulary/POICategoryClassification/cat_7_geographical",
+<<<<<<< HEAD
+      "@id": "https://w3id.org/italia/controlled-vocabulary/poi-category-classification/cat_6_travel",
+=======
+      "@id": "https://w3id.org/italia/controlled-vocabulary/poi-category-classification/cat_3_food",
+>>>>>>> 35ac7c10c2f8fcfd1100f32ad243e7e7e4f359ad
       "@type": [
-        "skos:Concept",
-        "poiapit:PointOfInterestCategory"
-      ],
-      "clvapit:hasRankOrder": "1",
-      "dct:identifier": "cat_7",
-      "poiapit:POIcategoryIdentifier": "cat_7",
-      "poiapit:POIcategoryName": [
-        {
-          "@language": "en",
-          "@value": "Geographical"
-        },
-        {
-          "@language": "it",
-          "@value": "Settore geografico"
-        }
-      ],
-      "skos:definition": {
-        "@language": "it",
-        "@value": "Rientrano in questa categoria tutti i punti di interesse connessi al settore geografico quali incroci, strade, aree residenziali, aree industriali, isole, siti naturalistici, ecc."
-      },
-      "skos:inScheme": {
-        "@id": "http://dati.gov.it/onto/controlledvocabulary/POICategoryClassification"
-      },
-      "skos:notation": "cat_7",
-      "skos:prefLabel": [
-        {
-          "@language": "it",
-          "@value": "Settore geografico"
-        },
-        {
-          "@language": "en",
-          "@value": "Geographical"
-        }
-      ]
-    },
-    {
-      "@id": "dcatapit:Agent",
-      "@type": "rdfs:Class"
-    },
-    {
-      "@id": "skos:ConceptScheme",
-      "@type": "rdfs:Class"
-    },
-    {
-      "@id": "skos:inScheme",
-      "@type": "rdfs:Property"
-    },
-    {
-      "@id": "dct:modified",
-      "@type": "rdfs:Property"
-    },
-    {
-      "@id": "http://dati.gov.it/data/resource/Distribution/POICat_CSV",
-      "@type": "dcatapit:Distribution",
-      "dcat:accessURL": {
-        "@id": "https://github.com/italia/daf-ontologie-vocabolari-controllati/tree/master/VocabolariControllati/ClassificazioneCategoriePuntoInteresse"
-      },
-      "dcat:downloadURL": {
-        "@id": "https://github.com/italia/daf-ontologie-vocabolari-controllati/tree/master/VocabolariControllati/ClassificazioneCategoriePuntoInteresse/POICategory.csv"
-      },
-      "dct:description": [
-        {
-          "@language": "en",
-          "@value": "This is the distribution in CSV of the Linked Open Dataset of the Point Of Interest Categories controlled vocabulary "
-        },
-        {
-          "@language": "it",
-          "@value": "Questa è la distribuzione CSV del dataset Linked Open Data del vocabolario controllato sulle categorie dei punti di interesse"
-        }
-      ],
-      "dct:format": {
-        "@id": "http://publications.europa.eu/resource/authority/file-type/CSV"
-      },
-      "dct:license": {
-        "@id": "http://dati.gov.it/onto/controlledvocabulary/License/A21_CCBY40"
-      },
-      "dct:title": [
-        {
-          "@language": "en",
-          "@value": "CSV distribution of the Point of Interest Categories controlled vocabulary"
-        },
-        {
-          "@language": "it",
-          "@value": "Distribuzione CSV vocabolario controllato categorie punti di interesse "
-        }
-      ]
-    },
-    {
-      "@id": "dct:accrualPeriodicity",
-      "@type": "rdfs:Property"
-    },
-    {
-      "@id": "http://dati.gov.it/onto/controlledvocabulary/POICategoryClassification/cat_6_travel",
-      "@type": [
-        "skos:Concept",
-        "poiapit:PointOfInterestCategory"
+        "poiapit:PointOfInterestCategory",
+        "skos:Concept"
       ],
       "clvapit:hasRankOrder": "1",
       "dct:identifier": "cat_6",
@@ -136,26 +46,90 @@
         "@value": "Rientrano in questa categoria tutti i punti di interesse connessi al settore dei viaggi e del turismo quali per esempio agenzie viaggi, strutture ricettive, centri di cambio valuta, info point per turisti, luoghi della cultura, luoghi freschi, ecc."
       },
       "skos:inScheme": {
-        "@id": "http://dati.gov.it/onto/controlledvocabulary/POICategoryClassification"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/poi-category-classification"
       },
       "skos:notation": "cat_6",
       "skos:prefLabel": [
         {
-          "@language": "en",
-          "@value": "Travel/Tourism"
+          "@language": "de",
+          "@value": "Reise-/Tourismussektor"
         },
         {
           "@language": "it",
           "@value": "Settore viaggi/turismo"
+        },
+        {
+          "@language": "en",
+          "@value": "Travel/Tourism"
         }
       ]
+    },
+    {
+      "@id": "dcatapit:Agent",
+      "@type": "rdfs:Class"
+    },
+    {
+      "@id": "skos:ConceptScheme",
+      "@type": "rdfs:Class"
+    },
+    {
+      "@id": "http://dati.gov.it/data/resource/Distribution/POICat_CSV",
+      "@type": "dcatapit:Distribution",
+      "dcat:accessURL": {
+        "@id": "https://raw.githubusercontent.com/italia/daf-ontologie-vocabolari-controllati/master/VocabolariControllati/poi-category-classification"
+      },
+      "dcat:downloadURL": {
+        "@id": "https://raw.githubusercontent.com/italia/daf-ontologie-vocabolari-controllati/master/VocabolariControllati/poi-category-classification/poi-category-classification.csv"
+      },
+      "dct:description": [
+        {
+          "@language": "it",
+          "@value": "Questa è la distribuzione CSV del dataset Linked Open Data del vocabolario controllato sulle categorie dei punti di interesse"
+        },
+        {
+          "@language": "en",
+          "@value": "This is the distribution in CSV of the Linked Open Dataset of the Point Of Interest Categories controlled vocabulary "
+        }
+      ],
+      "dct:format": {
+        "@id": "http://publications.europa.eu/resource/authority/file-type/CSV"
+      },
+      "dct:license": {
+        "@id": "https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40"
+      },
+      "dct:title": [
+        {
+          "@language": "en",
+          "@value": "CSV distribution of the Point of Interest Categories controlled vocabulary"
+        },
+        {
+          "@language": "it",
+          "@value": "Distribuzione CSV vocabolario controllato categorie punti di interesse "
+        }
+      ]
+    },
+    {
+      "@id": "dct:modified",
+      "@type": "rdfs:Property"
+    },
+    {
+      "@id": "dct:Standard",
+      "@type": "rdfs:Class"
+    },
+    {
+      "@id": "dct:accrualPeriodicity",
+      "@type": "rdfs:Property"
+    },
+    {
+      "@id": "dct:license",
+      "@type": "rdfs:Property"
     },
     {
       "@id": "dct:rightsHolder",
       "@type": "rdfs:Property"
     },
     {
-      "@id": "dct:conformsTo",
+      "@id": "dcat:distribution",
       "@type": "rdfs:Property"
     },
     {
@@ -171,10 +145,6 @@
       "@type": "rdfs:Class"
     },
     {
-      "@id": "dcat:contactPoint",
-      "@type": "rdfs:Property"
-    },
-    {
       "@id": "dct:publisher",
       "@type": "rdfs:Property"
     },
@@ -187,46 +157,50 @@
       "@type": "rdfs:Property"
     },
     {
-      "@id": "skos:narrowerTransitive",
-      "@type": "rdfs:Property"
-    },
-    {
-      "@id": "http://dati.gov.it/onto/controlledvocabulary/POICategoryClassification/cat_4_shopping",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/poi-category-classification/cat_3_food",
       "@type": [
-        "poiapit:PointOfInterestCategory",
-        "skos:Concept"
+        "skos:Concept",
+        "poiapit:PointOfInterestCategory"
       ],
       "clvapit:hasRankOrder": "1",
-      "dct:identifier": "cat_4",
-      "poiapit:POIcategoryIdentifier": "cat_4",
+      "dct:identifier": "cat_3",
+      "poiapit:POIcategoryIdentifier": "cat_3",
       "poiapit:POIcategoryName": [
         {
-          "@language": "en",
-          "@value": "Shopping"
+          "@language": "it",
+          "@value": "Settore cibo"
         },
         {
-          "@language": "it",
-          "@value": "Settore shopping/acquisti"
+          "@language": "en",
+          "@value": "Food"
         }
       ],
       "skos:definition": {
         "@language": "it",
-        "@value": "Rientrano in questa categoria tutti i punti di interesse connessi allo shopping quali per esempio, grande distribuzione, piccola distribuzione, mercati,  farmacie, agenzie immobiliari, ecc."
+        "@value": "Rientrano in questa categoria tutti i punti di interesse connessi al cibo quali per esempio ristoranti, fast food, bar, caffetterie, pizzerie, ecc."
       },
       "skos:inScheme": {
-        "@id": "http://dati.gov.it/onto/controlledvocabulary/POICategoryClassification"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/poi-category-classification"
       },
-      "skos:notation": "cat_4",
+      "skos:notation": "cat_3",
       "skos:prefLabel": [
         {
-          "@language": "en",
-          "@value": "Shopping"
+          "@language": "de",
+          "@value": "Lebensmittelsektor"
         },
         {
           "@language": "it",
-          "@value": "Settore shopping/acquisti"
+          "@value": "Settore cibo"
+        },
+        {
+          "@language": "en",
+          "@value": "Food"
         }
       ]
+    },
+    {
+      "@id": "skos:narrowerTransitive",
+      "@type": "rdfs:Property"
     },
     {
       "@id": "dcatapit:Organization",
@@ -236,10 +210,10 @@
       "@id": "http://dati.gov.it/data/resource/Distribution/POICat_RDF_Turtle",
       "@type": "dcatapit:Distribution",
       "dcat:accessURL": {
-        "@id": "https://github.com/italia/daf-ontologie-vocabolari-controllati/tree/master/VocabolariControllati/ClassificazioneCategoriePuntoInteresse"
+        "@id": "https://raw.githubusercontent.com/italia/daf-ontologie-vocabolari-controllati/master/VocabolariControllati/poi-category-classification"
       },
       "dcat:downloadURL": {
-        "@id": "https://github.com/italia/daf-ontologie-vocabolari-controllati/blob/master/VocabolariControllati/ClassificazioneCategoriePuntoInteresse/POICategoryClassification.ttl"
+        "@id": "https://raw.githubusercontent.com/italia/daf-ontologie-vocabolari-controllati/master/VocabolariControllati/poi-category-classification/poi-category-classification.ttl"
       },
       "dct:description": [
         {
@@ -255,58 +229,52 @@
         "@id": "http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE"
       },
       "dct:license": {
-        "@id": "http://dati.gov.it/onto/controlledvocabulary/License/A21_CCBY40"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40"
       },
       "dct:title": [
         {
-          "@language": "it",
-          "@value": "Distribuzione RDF/Turtle vocabolario controllato categorie punti di interesse "
-        },
-        {
           "@language": "en",
           "@value": "RDF/Turtle distribution of the Point of Interest Categories controlled vocabulary"
+        },
+        {
+          "@language": "it",
+          "@value": "Distribuzione RDF/Turtle vocabolario controllato categorie punti di interesse "
         }
       ]
     },
     {
-      "@id": "dcat:distribution",
-      "@type": "rdfs:Property"
-    },
-    {
-      "@id": "http://dati.gov.it/onto/controlledvocabulary/POICategoryClassification/cat_1_entertainment",
-      "@type": [
-        "poiapit:PointOfInterestCategory",
-        "skos:Concept"
-      ],
-      "clvapit:hasRankOrder": "1",
-      "dct:identifier": "cat_1",
-      "poiapit:POIcategoryIdentifier": "cat_1",
-      "poiapit:POIcategoryName": [
+      "@id": "http://dati.gov.it/data/resource/Distribution/POICat_RDF_XML",
+      "@type": "dcatapit:Distribution",
+      "dcat:accessURL": {
+        "@id": "https://raw.githubusercontent.com/italia/daf-ontologie-vocabolari-controllati/master/VocabolariControllati/poi-category-classification"
+      },
+      "dcat:downloadURL": {
+        "@id": "https://raw.githubusercontent.com/italia/daf-ontologie-vocabolari-controllati/master/VocabolariControllati/poi-category-classification/poi-category-classification.rdf"
+      },
+      "dct:description": [
         {
           "@language": "en",
-          "@value": "Entertainment"
+          "@value": "This is the distribution in RDF/XML of the Linked Open Dataset of the Point Of Interest Categories controlled vocabulary "
         },
         {
           "@language": "it",
-          "@value": "Settore intrattenimento"
+          "@value": "Questa è la distribuzione RDF/XML del dataset Linked Open Data del vocabolario controllato sulle categorie dei punti di interesse"
         }
       ],
-      "skos:definition": {
-        "@language": "it",
-        "@value": "Rientrano in questa categoria tutti i punti di interesse connessi all'intrattenimento come zoo, discoteche, pub, teatri, acquari, stadi, casino, parchi divertimenti, ecc."
+      "dct:format": {
+        "@id": "http://publications.europa.eu/resource/authority/file-type/RDF_XML"
       },
-      "skos:inScheme": {
-        "@id": "http://dati.gov.it/onto/controlledvocabulary/POICategoryClassification"
+      "dct:license": {
+        "@id": "https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40"
       },
-      "skos:notation": "cat_1",
-      "skos:prefLabel": [
-        {
-          "@language": "it",
-          "@value": "Settore intrattenimento"
-        },
+      "dct:title": [
         {
           "@language": "en",
-          "@value": "Entertainment"
+          "@value": "RDF/XML distribution of the Point of Interest Categories controlled vocabulary"
+        },
+        {
+          "@language": "it",
+          "@value": "Distribuzione RDF/XML vocabolario controllato categorie punti di interesse "
         }
       ]
     },
@@ -315,20 +283,24 @@
       "@type": "rdfs:Property"
     },
     {
+      "@id": "skos:inScheme",
+      "@type": "rdfs:Property"
+    },
+    {
       "@id": "http://spcdata.digitpa.gov.it/browse/page/Amministrazione/agid",
       "@type": [
-        "dcatapit:Agent",
-        "foaf:Agent"
+        "foaf:Agent",
+        "dcatapit:Agent"
       ],
       "dct:identifier": "agid",
       "foaf:name": [
         {
-          "@language": "it",
-          "@value": "Agenzia per l'Italia Digitale"
-        },
-        {
           "@language": "en",
           "@value": "Italian Digital Agency"
+        },
+        {
+          "@language": "it",
+          "@value": "Agenzia per l'Italia Digitale"
         }
       ]
     },
@@ -339,9 +311,9 @@
     {
       "@id": "http://dati.gov.it/data/resource/ContactPoint/voc_AgID",
       "@type": [
+        "dcatapit:Organization",
         "vcard:Organization",
-        "vcard:Kind",
-        "dcatapit:Organization"
+        "vcard:Kind"
       ],
       "vcard:fn": "banche dati e open data",
       "vcard:hasEmail": {
@@ -369,19 +341,19 @@
       "@type": "rdfs:Property"
     },
     {
-      "@id": "dct:Standard",
-      "@type": "rdfs:Class"
-    },
-    {
       "@id": "dct:subject",
       "@type": "rdfs:Property"
     },
     {
-      "@id": "http://dati.gov.it/onto/controlledvocabulary/POICategoryClassification",
+      "@id": "dcat:contactPoint",
+      "@type": "rdfs:Property"
+    },
+    {
+      "@id": "https://w3id.org/italia/controlled-vocabulary/poi-category-classification",
       "@type": [
+        "adms:Asset",
         "dcatapit:Dataset",
-        "skos:ConceptScheme",
-        "adms:SemanticAsset"
+        "skos:ConceptScheme"
       ],
       "adms:representationTechnique": {
         "@id": "http://purl.org/adms/representationtechnique/SKOS"
@@ -390,6 +362,9 @@
         "@id": "http://dati.gov.it/data/resource/ContactPoint/voc_AgID"
       },
       "dcat:distribution": [
+        {
+          "@id": "http://dati.gov.it/data/resource/Distribution/POICat_RDF_Turtle"
+        },
         {
           "@id": "http://dati.gov.it/data/resource/Distribution/POICat_RDF_XML"
         },
@@ -401,27 +376,24 @@
         },
         {
           "@id": "http://dati.gov.it/data/resource/Distribution/POICat_XLSX"
-        },
-        {
-          "@id": "http://dati.gov.it/data/resource/Distribution/POICat_RDF_Turtle"
         }
       ],
       "dcat:keyword": [
+        {
+          "@language": "en",
+          "@value": "Sector"
+        },
+        {
+          "@language": "en",
+          "@value": "Category"
+        },
         {
           "@language": "it",
           "@value": "Settore"
         },
         {
-          "@language": "en",
-          "@value": "Point of Interest"
-        },
-        {
           "@language": "it",
           "@value": "Punti di Interesse"
-        },
-        {
-          "@language": "en",
-          "@value": "Sector"
         },
         {
           "@language": "it",
@@ -429,7 +401,7 @@
         },
         {
           "@language": "en",
-          "@value": "Category"
+          "@value": "Point of Interest"
         }
       ],
       "dcat:theme": [
@@ -456,12 +428,12 @@
       ],
       "dct:description": [
         {
-          "@language": "it",
-          "@value": "Classificazione delle categorie dei punti di interesse. La classificazione è basata su sul primo livello della classificazione proposta da Open Street Map."
+          "@language": "en",
+          "@value": "Classification of the categories of the point of interest. The classification is based on the first level of the classification proposed by Open Street Map. The translations in Germany were provided by Ivo Planoetscher of the Autonomous Province of Bolzano"
         },
         {
-          "@language": "en",
-          "@value": "Classification of the categories of the point of interest. The classification is based on the first level of the classification proposed by Open Street Map."
+          "@language": "it",
+          "@value": "Classificazione delle categorie dei punti di interesse. La classificazione è basata su sul primo livello della classificazione proposta da Open Street Map. Le traduzioni in tedesco sono state fornite da Ivo Planoetscher della Pronvicia Autonoma di Bolzano"
         }
       ],
       "dct:identifier": "agid:D.1",
@@ -474,12 +446,15 @@
           "@id": "http://publications.europa.eu/resource/authority/language/ENG"
         },
         {
+          "@id": "http://publications.europa.eu/resource/authority/language/DEU"
+        },
+        {
           "@id": "http://publications.europa.eu/resource/authority/language/ITA"
         }
       ],
       "dct:modified": {
         "@type": "xsd:date",
-        "@value": "2018-01-25"
+        "@value": "2018-03-13"
       },
       "dct:publisher": {
         "@id": "http://spcdata.digitpa.gov.it/browse/page/Amministrazione/agid"
@@ -507,15 +482,15 @@
       "rdfs:comment": [
         {
           "@language": "en",
-          "@value": "Classification of the categories of the point of interest. The classification is based on the first level of the classification proposed by Open Street Map."
+          "@value": "Classification of the categories of the point of interest. The classification is based on the first level of the classification proposed by Open Street Map. The translations in Germany were provided by Ivo Planoetscher of the Autonomous Province of Bolzano."
         },
         {
           "@language": "it",
-          "@value": "Classificazione delle categorie dei punti di interesse. La classificazione è basata su sul primo livello della classificazione proposta da Open Street Map"
+          "@value": "Classificazione delle categorie dei punti di interesse. La classificazione è basata su sul primo livello della classificazione proposta da Open Street Map. Le traduzioni in tedesco sono state fornite da Ivo Planoetscher della Pronvicia Autonoma di Bolzano"
         }
       ],
       "rdfs:isDefinedBy": {
-        "@id": "http://dati.gov.it/onto/controlledvocabulary/POICategoryClassification"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/poi-category-classification"
       },
       "rdfs:label": [
         {
@@ -534,6 +509,52 @@
       "@type": "rdfs:Class"
     },
     {
+<<<<<<< HEAD
+      "@id": "https://w3id.org/italia/controlled-vocabulary/poi-category-classification/cat_1_entertainment",
+=======
+      "@id": "https://w3id.org/italia/controlled-vocabulary/poi-category-classification/cat_7_geographical",
+>>>>>>> 35ac7c10c2f8fcfd1100f32ad243e7e7e4f359ad
+      "@type": [
+        "poiapit:PointOfInterestCategory",
+        "skos:Concept"
+      ],
+      "clvapit:hasRankOrder": "1",
+      "dct:identifier": "cat_1",
+      "poiapit:POIcategoryIdentifier": "cat_1",
+      "poiapit:POIcategoryName": [
+        {
+          "@language": "en",
+          "@value": "Entertainment"
+        },
+        {
+          "@language": "it",
+          "@value": "Settore intrattenimento"
+        }
+      ],
+      "skos:definition": {
+        "@language": "it",
+        "@value": "Rientrano in questa categoria tutti i punti di interesse connessi all'intrattenimento come zoo, discoteche, pub, teatri, acquari, stadi, casino, parchi divertimenti, ecc."
+      },
+      "skos:inScheme": {
+        "@id": "https://w3id.org/italia/controlled-vocabulary/poi-category-classification"
+      },
+      "skos:notation": "cat_1",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Entertainment"
+        },
+        {
+          "@language": "de",
+          "@value": "Unterhaltungssektor"
+        },
+        {
+          "@language": "it",
+          "@value": "Settore intrattenimento"
+        }
+      ]
+    },
+    {
       "@id": "clvapit:hasRankOrder",
       "@type": "rdfs:Property"
     },
@@ -550,32 +571,101 @@
       "@type": "rdfs:Property"
     },
     {
-      "@id": "dct:license",
-      "@type": "rdfs:Property"
-    },
-    {
-      "@id": "skos:narrower",
-      "@type": "rdfs:Property"
-    },
-    {
       "@id": "skos:broader",
       "@type": "rdfs:Property"
     },
     {
-      "@id": "http://dati.gov.it/data/resource/Amministrazione/td_PCM",
+      "@id": "https://w3id.org/italia/controlled-vocabulary/poi-category-classification/cat_7_geographical",
       "@type": [
-        "dcatapit:Agent",
-        "foaf:Agent"
+        "poiapit:PointOfInterestCategory",
+        "skos:Concept"
       ],
-      "dct:identifier": "PCM",
-      "foaf:name": [
+<<<<<<< HEAD
+      "clvapit:hasRankOrder": "1",
+      "dct:identifier": "cat_7",
+      "poiapit:POIcategoryIdentifier": "cat_7",
+      "poiapit:POIcategoryName": [
+=======
+      "dct:format": {
+        "@id": "http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE"
+      },
+      "dct:license": {
+        "@id": "https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40"
+      },
+      "dct:title": [
+>>>>>>> 35ac7c10c2f8fcfd1100f32ad243e7e7e4f359ad
         {
           "@language": "it",
-          "@value": "Team per la Trasformazione Digitale"
+          "@value": "Settore geografico"
         },
         {
           "@language": "en",
+          "@value": "Geographical"
+        }
+      ],
+      "skos:definition": {
+        "@language": "it",
+        "@value": "Rientrano in questa categoria tutti i punti di interesse connessi al settore geografico quali incroci, strade, aree residenziali, aree industriali, isole, siti naturalistici, ecc."
+      },
+<<<<<<< HEAD
+      "skos:inScheme": {
+        "@id": "https://w3id.org/italia/controlled-vocabulary/poi-category-classification"
+=======
+      "dct:license": {
+        "@id": "https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40"
+>>>>>>> 35ac7c10c2f8fcfd1100f32ad243e7e7e4f359ad
+      },
+      "skos:notation": "cat_7",
+      "skos:prefLabel": [
+        {
+          "@language": "de",
+          "@value": "Geographischer Sektor"
+        },
+        {
+          "@language": "it",
+          "@value": "Settore geografico"
+        },
+        {
+          "@language": "en",
+          "@value": "Geographical"
+        }
+      ]
+    },
+    {
+      "@id": "owl:versionInfo",
+      "@type": "rdfs:Property"
+    },
+    {
+<<<<<<< HEAD
+      "@id": "http://dati.gov.it/data/resource/Amministrazione/td_PCM",
+=======
+      "@id": "https://w3id.org/italia/controlled-vocabulary/poi-category-classification/cat_2_recreation",
+>>>>>>> 35ac7c10c2f8fcfd1100f32ad243e7e7e4f359ad
+      "@type": [
+        "foaf:Agent",
+        "dcatapit:Agent"
+      ],
+<<<<<<< HEAD
+      "dct:identifier": "PCM",
+      "foaf:name": [
+=======
+      "skos:definition": {
+        "@language": "it",
+        "@value": "Rientrano in questa categoria tutti i punti di interesse connessi allo svago quali centri sportivi, giardini, parchi, centri benessere, ecc,"
+      },
+      "skos:inScheme": {
+        "@id": "https://w3id.org/italia/controlled-vocabulary/poi-category-classification"
+      },
+      "skos:notation": "cat_2",
+      "skos:prefLabel": [
+>>>>>>> 35ac7c10c2f8fcfd1100f32ad243e7e7e4f359ad
+        {
+          "@language": "en",
           "@value": "Digital Transformation Team"
+        },
+        {
+          "@language": "it",
+          "@value": "Team per la Trasformazione Digitale"
         }
       ]
     },
@@ -584,38 +674,48 @@
       "@type": "rdfs:Property"
     },
     {
-      "@id": "http://dati.gov.it/data/resource/Distribution/POICat_RDF_XML",
-      "@type": "dcatapit:Distribution",
-      "dcat:accessURL": {
-        "@id": "https://github.com/italia/daf-ontologie-vocabolari-controllati/tree/master/VocabolariControllati/ClassificazioneCategoriePuntoInteresse"
-      },
-      "dcat:downloadURL": {
-        "@id": "https://github.com/italia/daf-ontologie-vocabolari-controllati/tree/master/VocabolariControllati/ClassificazioneCategoriePuntoInteresse/POICategoryClassification.rdf"
-      },
-      "dct:description": [
+<<<<<<< HEAD
+      "@id": "https://w3id.org/italia/controlled-vocabulary/poi-category-classification/cat_8_publicservice",
+=======
+      "@id": "https://w3id.org/italia/controlled-vocabulary/poi-category-classification/cat_1_entertainment",
+>>>>>>> 35ac7c10c2f8fcfd1100f32ad243e7e7e4f359ad
+      "@type": [
+        "poiapit:PointOfInterestCategory",
+        "skos:Concept"
+      ],
+      "clvapit:hasRankOrder": "1",
+      "dct:identifier": "cat_8",
+      "poiapit:POIcategoryIdentifier": "cat_8",
+      "poiapit:POIcategoryName": [
         {
           "@language": "en",
-          "@value": "This is the distribution in RDF/XML of the Linked Open Dataset of the Point Of Interest Categories controlled vocabulary "
+          "@value": "Other public services"
         },
         {
           "@language": "it",
-          "@value": "Questa è la distribuzione RDF/XML del dataset Linked Open Data del vocabolario controllato sulle categorie dei punti di interesse"
+          "@value": "Settore altri servizi pubblici"
         }
       ],
-      "dct:format": {
-        "@id": "http://publications.europa.eu/resource/authority/file-type/RDF_XML"
+      "skos:definition": {
+        "@language": "it",
+        "@value": "Rientrano in questa categoria tutti quei punti di interesse che sono connessi a generici servizi pubblici quali per esempio trasporti pubblici, bagni pubblici, bancomat, filiali di banche, sportelli postali, cestini della spazzatura, centri di raccolta rifiuti, ospedali, veterinari, ecc."
       },
-      "dct:license": {
-        "@id": "http://dati.gov.it/onto/controlledvocabulary/License/A21_CCBY40"
+      "skos:inScheme": {
+        "@id": "https://w3id.org/italia/controlled-vocabulary/poi-category-classification"
       },
-      "dct:title": [
+      "skos:notation": "cat_8",
+      "skos:prefLabel": [
         {
-          "@language": "it",
-          "@value": "Distribuzione RDF/XML vocabolario controllato categorie punti di interesse "
+          "@language": "de",
+          "@value": "Sonstige öffentliche Dienstleistungen"
         },
         {
           "@language": "en",
-          "@value": "RDF/XML distribution of the Point of Interest Categories controlled vocabulary"
+          "@value": "Other public services"
+        },
+        {
+          "@language": "it",
+          "@value": "Settore altri servizi pubblici"
         }
       ]
     },
@@ -624,78 +724,52 @@
       "@type": "rdfs:Property"
     },
     {
-      "@id": "http://dati.gov.it/onto/controlledvocabulary/POICategoryClassification/cat_2_recreation",
-      "@type": [
-        "poiapit:PointOfInterestCategory",
-        "skos:Concept"
-      ],
-      "clvapit:hasRankOrder": "1",
-      "dct:identifier": "cat_2",
-      "poiapit:POIcategoryIdentifier": "cat_2",
-      "poiapit:POIcategoryName": [
-        {
-          "@language": "it",
-          "@value": "Settore svago"
-        },
-        {
-          "@language": "en",
-          "@value": "Leisure"
-        }
-      ],
-      "skos:definition": {
-        "@language": "it",
-        "@value": "Rientrano in questa categoria tutti i punti di interesse connessi allo svago quali centri sportivi, giardini, parchi, centri benessere, ecc,"
-      },
-      "skos:inScheme": {
-        "@id": "http://dati.gov.it/onto/controlledvocabulary/POICategoryClassification"
-      },
-      "skos:notation": "cat_2",
-      "skos:prefLabel": [
-        {
-          "@language": "it",
-          "@value": "Settore svago"
-        },
-        {
-          "@language": "en",
-          "@value": "Leisure"
-        }
-      ]
+      "@id": "dct:conformsTo",
+      "@type": "rdfs:Property"
     },
     {
-      "@id": "http://dati.gov.it/onto/controlledvocabulary/POICategoryClassification/cat_5_automotive",
+<<<<<<< HEAD
+      "@id": "https://w3id.org/italia/controlled-vocabulary/poi-category-classification/cat_4_shopping",
+=======
+      "@id": "https://w3id.org/italia/controlled-vocabulary/poi-category-classification/cat_5_automotive",
+>>>>>>> 35ac7c10c2f8fcfd1100f32ad243e7e7e4f359ad
       "@type": [
         "skos:Concept",
         "poiapit:PointOfInterestCategory"
       ],
       "clvapit:hasRankOrder": "1",
-      "dct:identifier": "cat_5",
-      "poiapit:POIcategoryIdentifier": "cat_5",
+      "dct:identifier": "cat_4",
+      "poiapit:POIcategoryIdentifier": "cat_4",
       "poiapit:POIcategoryName": [
         {
           "@language": "it",
-          "@value": "Settore automobilistico"
+          "@value": "Settore shopping/acquisti"
         },
         {
           "@language": "en",
-          "@value": "Automotive"
+          "@value": "Shopping"
         }
       ],
       "skos:definition": {
         "@language": "it",
-        "@value": "Rientra in questa categoria tutti i punti di interesse connessi al settore automobilistico quali per esempio, saloni automobilistici, benzinai, parcheggi, centri per il lavaggio auto, stazioni per ricariche elettriche auto, ecc."
+        "@value": "Rientrano in questa categoria tutti i punti di interesse connessi allo shopping quali per esempio, grande distribuzione, piccola distribuzione, mercati,  farmacie, agenzie immobiliari, ecc."
       },
       "skos:inScheme": {
-        "@id": "http://dati.gov.it/onto/controlledvocabulary/POICategoryClassification"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/poi-category-classification"
       },
-      "skos:notation": "cat_5",
+      "skos:notation": "cat_4",
       "skos:prefLabel": [
         {
           "@language": "en",
-          "@value": "Automotive"
+          "@value": "Shopping"
         },
         {
           "@language": "it",
-          "@value": "Settore automobilistico"
+          "@value": "Settore shopping/acquisti"
+        },
+        {
+          "@language": "de",
+          "@value": "Einkaufssektor"
         }
       ]
     },
@@ -733,10 +807,10 @@
       "@id": "http://dati.gov.it/data/resource/Distribution/POICat_JSON_LD",
       "@type": "dcatapit:Distribution",
       "dcat:accessURL": {
-        "@id": "https://github.com/italia/daf-ontologie-vocabolari-controllati/tree/master/VocabolariControllati/ClassificazioneCategoriePuntoInteresse"
+        "@id": "https://raw.githubusercontent.com/italia/daf-ontologie-vocabolari-controllati/master/VocabolariControllati/poi-category-classification"
       },
       "dcat:downloadURL": {
-        "@id": "https://github.com/italia/daf-ontologie-vocabolari-controllati/tree/master/VocabolariControllati/ClassificazioneCategoriePuntoInteresse/POICategoryClassification.jsonld"
+        "@id": "https://raw.githubusercontent.com/italia/daf-ontologie-vocabolari-controllati/master/VocabolariControllati/poi-category-classification/poi-category-classification.jsonld"
       },
       "dct:description": [
         {
@@ -752,7 +826,7 @@
         "@id": "http://publications.europa.eu/resource/authority/file-type/JSON_LD"
       },
       "dct:license": {
-        "@id": "http://dati.gov.it/onto/controlledvocabulary/License/A21_CCBY40"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40"
       },
       "dct:title": [
         {
@@ -766,6 +840,7 @@
       ]
     },
     {
+<<<<<<< HEAD
       "@id": "skos:definition",
       "@type": "rdfs:Property"
     },
@@ -774,10 +849,123 @@
       "@type": "rdfs:Property"
     },
     {
-      "@id": "http://dati.gov.it/onto/controlledvocabulary/POICategoryClassification/cat_8_publicservice",
+      "@id": "dcat:accessURL",
+      "@type": "rdfs:Property"
+    },
+    {
+      "@id": "https://w3id.org/italia/controlled-vocabulary/poi-category-classification/cat_2_recreation",
+=======
+      "@id": "https://w3id.org/italia/controlled-vocabulary/poi-category-classification/cat_6_travel",
+>>>>>>> 35ac7c10c2f8fcfd1100f32ad243e7e7e4f359ad
       "@type": [
         "skos:Concept",
         "poiapit:PointOfInterestCategory"
+      ],
+      "clvapit:hasRankOrder": "1",
+      "dct:identifier": "cat_2",
+      "poiapit:POIcategoryIdentifier": "cat_2",
+      "poiapit:POIcategoryName": [
+        {
+          "@language": "it",
+          "@value": "Settore svago"
+        },
+        {
+          "@language": "en",
+          "@value": "Leisure"
+        }
+      ],
+      "skos:definition": {
+        "@language": "it",
+        "@value": "Rientrano in questa categoria tutti i punti di interesse connessi allo svago quali centri sportivi, giardini, parchi, centri benessere, ecc,"
+      },
+      "skos:inScheme": {
+        "@id": "https://w3id.org/italia/controlled-vocabulary/poi-category-classification"
+      },
+      "skos:notation": "cat_2",
+      "skos:prefLabel": [
+        {
+          "@language": "it",
+          "@value": "Settore svago"
+        },
+        {
+          "@language": "de",
+          "@value": "Freizeitssektor"
+        },
+        {
+          "@language": "en",
+          "@value": "Leisure"
+        }
+      ]
+    },
+    {
+      "@id": "dct:description",
+      "@type": "rdfs:Property"
+    },
+    {
+      "@id": "skos:narrower",
+      "@type": "rdfs:Property"
+    },
+    {
+<<<<<<< HEAD
+      "@id": "https://w3id.org/italia/controlled-vocabulary/poi-category-classification/cat_5_automotive",
+=======
+      "@id": "https://w3id.org/italia/controlled-vocabulary/poi-category-classification/cat_4_shopping",
+>>>>>>> 35ac7c10c2f8fcfd1100f32ad243e7e7e4f359ad
+      "@type": [
+        "skos:Concept",
+        "poiapit:PointOfInterestCategory"
+      ],
+      "clvapit:hasRankOrder": "1",
+      "dct:identifier": "cat_5",
+      "poiapit:POIcategoryIdentifier": "cat_5",
+      "poiapit:POIcategoryName": [
+        {
+          "@language": "en",
+          "@value": "Automotive"
+        },
+        {
+          "@language": "it",
+          "@value": "Settore automobilistico"
+        }
+      ],
+      "skos:definition": {
+        "@language": "it",
+        "@value": "Rientra in questa categoria tutti i punti di interesse connessi al settore automobilistico quali per esempio, saloni automobilistici, benzinai, parcheggi, centri per il lavaggio auto, stazioni per ricariche elettriche auto, ecc."
+      },
+      "skos:inScheme": {
+        "@id": "https://w3id.org/italia/controlled-vocabulary/poi-category-classification"
+      },
+      "skos:notation": "cat_5",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "Automotive"
+        },
+        {
+          "@language": "it",
+          "@value": "Settore automobilistico"
+        },
+        {
+          "@language": "de",
+          "@value": "Automobilsektor"
+        }
+      ]
+    },
+    {
+      "@id": "dct:identifier",
+      "@type": "rdfs:Property"
+    },
+    {
+      "@id": "skos:broaderTransitive",
+      "@type": "rdfs:Property"
+    },
+    {
+<<<<<<< HEAD
+=======
+      "@id": "https://w3id.org/italia/controlled-vocabulary/poi-category-classification/cat_8_publicservice",
+      "@type": [
+        "poiapit:PointOfInterestCategory",
+        "skos:Concept"
       ],
       "clvapit:hasRankOrder": "1",
       "dct:identifier": "cat_8",
@@ -797,86 +985,33 @@
         "@value": "Rientrano in questa categoria tutti quei punti di interesse che sono connessi a generici servizi pubblici quali per esempio trasporti pubblici, bagni pubblici, bancomat, filiali di banche, sportelli postali, cestini della spazzatura, centri di raccolta rifiuti, ospedali, veterinari, ecc."
       },
       "skos:inScheme": {
-        "@id": "http://dati.gov.it/onto/controlledvocabulary/POICategoryClassification"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/poi-category-classification"
       },
       "skos:notation": "cat_8",
       "skos:prefLabel": [
         {
-          "@language": "en",
-          "@value": "Other public services"
-        },
-        {
           "@language": "it",
           "@value": "Settore altri servizi pubblici"
+        },
+        {
+          "@language": "de",
+          "@value": "Sonstige öffentliche Dienstleistungen"
+        },
+        {
+          "@language": "en",
+          "@value": "Other public services"
         }
       ]
     },
     {
-      "@id": "dcat:accessURL",
-      "@type": "rdfs:Property"
-    },
-    {
-      "@id": "http://dati.gov.it/onto/controlledvocabulary/POICategoryClassification/cat_3_food",
-      "@type": [
-        "skos:Concept",
-        "poiapit:PointOfInterestCategory"
-      ],
-      "clvapit:hasRankOrder": "1",
-      "dct:identifier": "cat_3",
-      "poiapit:POIcategoryIdentifier": "cat_3",
-      "poiapit:POIcategoryName": [
-        {
-          "@language": "it",
-          "@value": "Settore cibo"
-        },
-        {
-          "@language": "en",
-          "@value": "Food"
-        }
-      ],
-      "skos:definition": {
-        "@language": "it",
-        "@value": "Rientrano in questa categoria tutti i punti di interesse connessi al cibo quali per esempio ristoranti, fast food, bar, caffetterie, pizzerie, ecc."
-      },
-      "skos:inScheme": {
-        "@id": "http://dati.gov.it/onto/controlledvocabulary/POICategoryClassification"
-      },
-      "skos:notation": "cat_3",
-      "skos:prefLabel": [
-        {
-          "@language": "it",
-          "@value": "Settore cibo"
-        },
-        {
-          "@language": "en",
-          "@value": "Food"
-        }
-      ]
-    },
-    {
-      "@id": "dct:description",
-      "@type": "rdfs:Property"
-    },
-    {
-      "@id": "owl:versionInfo",
-      "@type": "rdfs:Property"
-    },
-    {
-      "@id": "dct:identifier",
-      "@type": "rdfs:Property"
-    },
-    {
-      "@id": "skos:broaderTransitive",
-      "@type": "rdfs:Property"
-    },
-    {
+>>>>>>> 35ac7c10c2f8fcfd1100f32ad243e7e7e4f359ad
       "@id": "http://dati.gov.it/data/resource/Distribution/POICat_XLSX",
       "@type": "dcatapit:Distribution",
       "dcat:accessURL": {
-        "@id": "https://github.com/italia/daf-ontologie-vocabolari-controllati/tree/master/VocabolariControllati/ClassificazioneCategoriePuntoInteresse"
+        "@id": "https://raw.githubusercontent.com/italia/daf-ontologie-vocabolari-controllati/master/VocabolariControllati/poi-category-classification"
       },
       "dcat:downloadURL": {
-        "@id": "https://github.com/italia/daf-ontologie-vocabolari-controllati/tree/master/VocabolariControllati/ClassificazioneCategoriePuntoInteresse/POICategory.xlsx"
+        "@id": "https://raw.githubusercontent.com/italia/daf-ontologie-vocabolari-controllati/master/VocabolariControllati/poi-category-classification/poi-category-classification.xlsx"
       },
       "dct:description": [
         {
@@ -892,16 +1027,16 @@
         "@id": "http://publications.europa.eu/resource/authority/file-type/XLSX"
       },
       "dct:license": {
-        "@id": "http://dati.gov.it/onto/controlledvocabulary/License/A21_CCBY40"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40"
       },
       "dct:title": [
         {
-          "@language": "en",
-          "@value": "CSV distribution of the Point of Interest Categories controlled vocabulary"
-        },
-        {
           "@language": "it",
           "@value": "Distribuzione XLSX vocabolario controllato categorie punti di interesse "
+        },
+        {
+          "@language": "en",
+          "@value": "CSV distribution of the Point of Interest Categories controlled vocabulary"
         }
       ]
     },
