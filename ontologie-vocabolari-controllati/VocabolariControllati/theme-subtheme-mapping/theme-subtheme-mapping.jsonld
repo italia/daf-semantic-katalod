@@ -2,7 +2,7 @@
   "@context": {
     "adms": "http://www.w3.org/ns/adms#",
     "align": "http://knowledgeweb.semanticweb.org/heterogeneity/alignment#",
-    "clvapit": "http://dati.gov.it/onto/clvapit#",
+    "clvapit": "https://w3id.org/italia/onto/CLV/",
     "dc": "http://purl.org/dc/elements/1.1/",
     "dcat": "http://www.w3.org/ns/dcat#",
     "dcatapit": "http://dati.gov.it/onto/dcatapit#",
@@ -17,53 +17,32 @@
   },
   "@graph": [
     {
-      "@id": "http://dati.gov.it/data/resource/Distribution/mappingDTE_RDF_XML",
-      "@type": "dcatapit:Distribution",
-      "dcat:accessURL": {
-        "@id": "https://github.com/italia/daf-ontologie-vocabolari-controllati/tree/master/VocabolariControllati/MappingTema-Sottotema"
-      },
-      "dcat:downloadURL": {
-        "@id": "https://github.com/italia/daf-ontologie-vocabolari-controllati/blob/master/VocabolariControllati/MappingTema-Sottotema/MappingDataThemeEurovoc.rdf"
-      },
-      "dct:description": [
-        {
-          "@language": "it",
-          "@value": "Questa è la distribuzione RDF/XML del dataset Linked Open Data della mappatura tra i temi per i dati ed eurovoc usata nel catalogo nazionale dei dati e nel profilo di metadatazione DCAT-AP_IT"
-        },
+      "@id": "http://eurovoc.europa.eu/100188",
+      "@type": "skos:ConceptScheme",
+      "dct:identifier": "1621",
+      "skos:prefLabel": [
         {
           "@language": "en",
-          "@value": "This is the distribution in RDF/XML of the Linked Open Dataset of the mapping between the data themes and eurovoc used in the Italian national catalogue of data and in DCAT-AP_IT"
-        }
-      ],
-      "dct:format": {
-        "@id": "http://publications.europa.eu/resource/authority/file-type/RDF_XML"
-      },
-      "dct:license": {
-        "@id": "http://dati.gov.it/onto/controlledvocabulary/License/A21_CCBY40"
-      },
-      "dct:title": [
-        {
-          "@language": "en",
-          "@value": "RDF/XML distribution mapping data themes - eurovoc"
+          "@value": "1621 economic structure"
         },
         {
           "@language": "it",
-          "@value": "Distribuzione RDF/XML mappatura temi dei dati - eurovoc"
+          "@value": "1621 struttura economica"
         }
       ]
     },
     {
-      "@id": "http://eurovoc.europa.eu/100189",
+      "@id": "http://eurovoc.europa.eu/100221",
       "@type": "skos:ConceptScheme",
-      "dct:identifier": "1626",
+      "dct:identifier": "3226",
       "skos:prefLabel": [
         {
-          "@language": "it",
-          "@value": "1626 contabilità nazionale"
+          "@language": "en",
+          "@value": "3226 comunication"
         },
         {
-          "@language": "en",
-          "@value": "1626 national accounts"
+          "@language": "it",
+          "@value": "3226 comunicazionee"
         }
       ]
     },
@@ -73,12 +52,12 @@
       "dct:identifier": "3236",
       "skos:prefLabel": [
         {
-          "@language": "en",
-          "@value": "3236 information technology and data processing"
-        },
-        {
           "@language": "it",
           "@value": "3236 informatica e trattamento dei dati"
+        },
+        {
+          "@language": "en",
+          "@value": "3236 information technology and data processing"
         }
       ]
     },
@@ -133,12 +112,12 @@
       "dct:identifier": "4011",
       "skos:prefLabel": [
         {
-          "@language": "it",
-          "@value": "4011 tipo d'impresa"
-        },
-        {
           "@language": "en",
           "@value": "4011 business classification"
+        },
+        {
+          "@language": "it",
+          "@value": "4011 tipo d'impresa"
         }
       ]
     },
@@ -148,42 +127,42 @@
       "dct:identifier": "4006",
       "skos:prefLabel": [
         {
-          "@language": "en",
-          "@value": "4006 business organisation"
-        },
-        {
           "@language": "it",
           "@value": "4006 organizzazione aziendale"
+        },
+        {
+          "@language": "en",
+          "@value": "4006 business organisation"
         }
       ]
     },
     {
-      "@id": "http://eurovoc.europa.eu/100180",
+      "@id": "http://eurovoc.europa.eu/100229",
       "@type": "skos:ConceptScheme",
-      "dct:identifier": "1216",
+      "dct:identifier": "4021",
       "skos:prefLabel": [
         {
-          "@language": "it",
-          "@value": "1216 diritto penale"
+          "@language": "en",
+          "@value": "4021 management"
         },
         {
-          "@language": "en",
-          "@value": "1216 criminal law"
+          "@language": "it",
+          "@value": "4021 gestione amministrativa"
         }
       ]
     },
     {
-      "@id": "http://eurovoc.europa.eu/100181",
+      "@id": "http://eurovoc.europa.eu/100228",
       "@type": "skos:ConceptScheme",
-      "dct:identifier": "1221",
+      "dct:identifier": "4016",
       "skos:prefLabel": [
         {
-          "@language": "en",
-          "@value": "1221 justice"
+          "@language": "it",
+          "@value": "4016 forma giuridica di società"
         },
         {
-          "@language": "it",
-          "@value": "1221 giustizia"
+          "@language": "en",
+          "@value": "4016 legal form of organisations"
         }
       ]
     },
@@ -208,12 +187,12 @@
       "dct:identifier": "1231",
       "skos:prefLabel": [
         {
-          "@language": "it",
-          "@value": "1231 diritto internazionale"
-        },
-        {
           "@language": "en",
           "@value": "1231 international law"
+        },
+        {
+          "@language": "it",
+          "@value": "1231 diritto internazionale"
         }
       ]
     },
@@ -223,12 +202,12 @@
       "dct:identifier": "1236",
       "skos:prefLabel": [
         {
-          "@language": "it",
-          "@value": "1236 diritti e libertà"
-        },
-        {
           "@language": "en",
           "@value": "1236 rights and freedoms"
+        },
+        {
+          "@language": "it",
+          "@value": "1236 diritti e libertà"
         }
       ]
     },
@@ -268,33 +247,18 @@
       "dct:identifier": "1616",
       "skos:prefLabel": [
         {
-          "@language": "it",
-          "@value": "1616 regione e politica regionale"
-        },
-        {
           "@language": "en",
           "@value": "1616 regions and regional policy"
+        },
+        {
+          "@language": "it",
+          "@value": "1616 regione e politica regionale"
         }
       ]
     },
     {
       "@id": "dct:type",
       "@type": "rdfs:Property"
-    },
-    {
-      "@id": "http://eurovoc.europa.eu/100221",
-      "@type": "skos:ConceptScheme",
-      "dct:identifier": "3226",
-      "skos:prefLabel": [
-        {
-          "@language": "it",
-          "@value": "3226 comunicazionee"
-        },
-        {
-          "@language": "en",
-          "@value": "3226 comunication"
-        }
-      ]
     },
     {
       "@id": "dcat:downloadURL",
@@ -317,7 +281,19 @@
       "@type": "skos:Concept",
       "skos:narrowMatch": [
         {
+          "@id": "http://eurovoc.europa.eu/100287"
+        },
+        {
           "@id": "http://eurovoc.europa.eu/100286"
+        },
+        {
+          "@id": "http://eurovoc.europa.eu/100288"
+        },
+        {
+          "@id": "http://eurovoc.europa.eu/100285"
+        },
+        {
+          "@id": "http://eurovoc.europa.eu/100289"
         },
         {
           "@id": "http://eurovoc.europa.eu/100172"
@@ -326,22 +302,10 @@
           "@id": "http://eurovoc.europa.eu/100171"
         },
         {
-          "@id": "http://eurovoc.europa.eu/100289"
-        },
-        {
-          "@id": "http://eurovoc.europa.eu/100285"
-        },
-        {
-          "@id": "http://eurovoc.europa.eu/100170"
-        },
-        {
-          "@id": "http://eurovoc.europa.eu/100288"
-        },
-        {
           "@id": "http://eurovoc.europa.eu/100173"
         },
         {
-          "@id": "http://eurovoc.europa.eu/100287"
+          "@id": "http://eurovoc.europa.eu/100170"
         }
       ],
       "skos:prefLabel": [
@@ -363,8 +327,8 @@
       "@id": "http://dati.gov.it/data/resource/ContactPoint/voc_AgID",
       "@type": [
         "dcatapit:Organization",
-        "vcard:Organization",
-        "vcard:Kind"
+        "vcard:Kind",
+        "vcard:Organization"
       ],
       "vcard:fn": "banche dati e open data",
       "vcard:hasEmail": {
@@ -372,32 +336,165 @@
       }
     },
     {
-      "@id": "http://eurovoc.europa.eu/100229",
+      "@id": "http://eurovoc.europa.eu/100180",
       "@type": "skos:ConceptScheme",
-      "dct:identifier": "4021",
+      "dct:identifier": "1216",
       "skos:prefLabel": [
         {
-          "@language": "it",
-          "@value": "4021 gestione amministrativa"
+          "@language": "en",
+          "@value": "1216 criminal law"
         },
         {
-          "@language": "en",
-          "@value": "4021 management"
+          "@language": "it",
+          "@value": "1216 diritto penale"
         }
       ]
     },
     {
-      "@id": "http://eurovoc.europa.eu/100220",
-      "@type": "skos:ConceptScheme",
-      "dct:identifier": "3221",
-      "skos:prefLabel": [
+      "@id": "https://w3id.org/italia/controlled-vocabulary/theme-subtheme-mapping",
+      "@type": [
+        "align:Alignment",
+        "skos:ConceptScheme",
+        "dcatapit:Dataset"
+      ],
+      "adms:representationTechnique": {
+        "@id": "http://purl.org/adms/representationtechnique/SKOS"
+      },
+      "align:onto1": {
+        "@id": "http://publications.europa.eu/resource/authority/data-theme"
+      },
+      "align:onto2": {
+        "@id": "http://eurovoc.europa.eu"
+      },
+      "dcat:contactPoint": {
+        "@id": "http://dati.gov.it/data/resource/ContactPoint/voc_AgID"
+      },
+      "dcat:distribution": [
+        {
+          "@id": "http://dati.gov.it/data/resource/Distribution/mappingDTE_JSON"
+        },
+        {
+          "@id": "http://dati.gov.it/data/resource/Distribution/mappingDTE_JSON_LD"
+        },
+        {
+          "@id": "http://dati.gov.it/data/resource/Distribution/mappingDTE_RDF_Turtle"
+        },
+        {
+          "@id": "http://dati.gov.it/data/resource/Distribution/mappingDTE_RDF_XML"
+        }
+      ],
+      "dcat:keyword": [
+        {
+          "@language": "it",
+          "@value": "eurovoc"
+        },
         {
           "@language": "en",
-          "@value": "3221 documentation"
+          "@value": "data themes"
         },
         {
           "@language": "it",
-          "@value": "3221 documentazione"
+          "@value": "mapping"
+        },
+        {
+          "@language": "it",
+          "@value": "sottemi dati"
+        },
+        {
+          "@language": "en",
+          "@value": "eurovoc"
+        },
+        {
+          "@language": "en",
+          "@value": "mapping"
+        },
+        {
+          "@language": "en",
+          "@value": "suthemes"
+        },
+        {
+          "@language": "it",
+          "@value": "temi dati"
+        }
+      ],
+      "dcat:theme": [
+        {
+          "@id": "http://publications.europa.eu/resource/authority/data-theme/TECH"
+        },
+        {
+          "@id": "http://publications.europa.eu/resource/authority/data-theme/GOVE"
+        }
+      ],
+      "dct:accrualPeriodicity": {
+        "@id": "http://publications.europa.eu/resource/authority/frequency/IRREG"
+      },
+      "dct:conformsTo": {
+        "@id": "http://dati.gov.it/data/resource/Standard/SKOS"
+      },
+      "dct:creator": {
+        "@id": "http://spcdata.digitpa.gov.it/browse/page/Amministrazione/agid"
+      },
+      "dct:description": [
+        {
+          "@language": "it",
+          "@value": "Mappatura tra i vocabolari controllati europei sui Temi dei dati ed Eurovoc utile per il profilo nazionale di metadatazione DCAT-AP_IT"
+        },
+        {
+          "@language": "en",
+          "@value": "Mapping between the Data Theme and Eurovoc controlled vocabularies for the Italian Metadata profile DCAT-AP_IT"
+        }
+      ],
+      "dct:identifier": "agid:D.10",
+      "dct:issued": {
+        "@type": "xsd:date",
+        "@value": "2017-10-20"
+      },
+      "dct:language": [
+        {
+          "@id": "http://publications.europa.eu/resource/authority/language/ENG"
+        },
+        {
+          "@id": "http://publications.europa.eu/resource/authority/language/ITA"
+        }
+      ],
+      "dct:modified": {
+        "@type": "xsd:date",
+        "@value": "2018-02-12"
+      },
+      "dct:publisher": {
+        "@id": "http://spcdata.digitpa.gov.it/browse/page/Amministrazione/agid"
+      },
+      "dct:rightsHolder": {
+        "@id": "http://spcdata.digitpa.gov.it/browse/page/Amministrazione/agid"
+      },
+      "dct:subject": {
+        "@id": "http://eurovoc.europa.eu/258897"
+      },
+      "dct:title": [
+        {
+          "@language": "it",
+          "@value": "Mappatura tra Temi dei dati - Eurovoc"
+        },
+        {
+          "@language": "en",
+          "@value": "Mapping Data Theme - Eurovoc"
+        }
+      ],
+      "dct:type": {
+        "@id": "http://purl.org/adms/assettype/Mapping"
+      },
+      "owl:versionInfo": "0.1",
+      "rdfs:isDefinedBy": {
+        "@id": "https://w3id.org/italia/controlled-vocabulary/theme-subtheme-mapping"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "Alignments between the Data Theme and Eurovoc for the scope of the Italian DCAT-AP_IT metadata profile"
+        },
+        {
+          "@language": "it",
+          "@value": "Mapping tra il vocabolario Europeo sui temi per i dati e il tesauro Eurovoc. Il mapping è utile per il profilo di metadatazione nazionale DCAT-AP_IT"
         }
       ]
     },
@@ -406,17 +503,17 @@
       "@type": "rdfs:Property"
     },
     {
-      "@id": "http://eurovoc.europa.eu/100228",
+      "@id": "http://eurovoc.europa.eu/100181",
       "@type": "skos:ConceptScheme",
-      "dct:identifier": "4016",
+      "dct:identifier": "1221",
       "skos:prefLabel": [
         {
           "@language": "en",
-          "@value": "4016 legal form of organisations"
+          "@value": "1221 justice"
         },
         {
           "@language": "it",
-          "@value": "4016 forma giuridica di società"
+          "@value": "1221 giustizia"
         }
       ]
     },
@@ -441,12 +538,12 @@
       "dct:identifier": "4411",
       "skos:prefLabel": [
         {
-          "@language": "it",
-          "@value": "4411 mercato del lavoro"
-        },
-        {
           "@language": "en",
           "@value": "4411 labour market"
+        },
+        {
+          "@language": "it",
+          "@value": "4411 mercato del lavoro"
         }
       ]
     },
@@ -456,12 +553,12 @@
       "dct:identifier": "4026",
       "skos:prefLabel": [
         {
-          "@language": "en",
-          "@value": "4026 accounting"
-        },
-        {
           "@language": "it",
           "@value": "4026 gestione contabile"
+        },
+        {
+          "@language": "en",
+          "@value": "4026 accounting"
         }
       ]
     },
@@ -560,17 +657,17 @@
       ]
     },
     {
-      "@id": "http://eurovoc.europa.eu/100281",
+      "@id": "http://eurovoc.europa.eu/100168",
       "@type": "skos:ConceptScheme",
-      "dct:identifier": "7226",
+      "dct:identifier": "0431",
       "skos:prefLabel": [
         {
           "@language": "it",
-          "@value": "7226 Asia-Oceania"
+          "@value": "0431 vita politica e sicurezza pubblica"
         },
         {
           "@language": "en",
-          "@value": "7226 Asia and Oceania"
+          "@value": "0431 politics and public safety"
         }
       ]
     },
@@ -579,17 +676,17 @@
       "@type": "rdfs:Property"
     },
     {
-      "@id": "http://eurovoc.europa.eu/100169",
+      "@id": "http://eurovoc.europa.eu/100280",
       "@type": "skos:ConceptScheme",
-      "dct:identifier": "0436",
+      "dct:identifier": "7221",
       "skos:prefLabel": [
         {
           "@language": "it",
-          "@value": "0436 potere esecutivo e amministrazione pubblica"
+          "@value": "7221 Africa"
         },
         {
           "@language": "en",
-          "@value": "0436 executive power and public service"
+          "@value": "7221 Africa"
         }
       ]
     },
@@ -602,75 +699,49 @@
       "@type": "rdfs:Property"
     },
     {
-      "@id": "http://publications.europa.eu/resource/authority/data-theme/AGRI",
-      "@type": "skos:Concept",
-      "skos:narrowMatch": [
-        {
-          "@id": "http://eurovoc.europa.eu/100258"
-        },
-        {
-          "@id": "http://eurovoc.europa.eu/100246"
-        },
-        {
-          "@id": "http://eurovoc.europa.eu/100253"
-        },
-        {
-          "@id": "http://eurovoc.europa.eu/100247"
-        },
-        {
-          "@id": "http://eurovoc.europa.eu/100254"
-        },
-        {
-          "@id": "http://eurovoc.europa.eu/100248"
-        },
-        {
-          "@id": "http://eurovoc.europa.eu/100257"
-        },
-        {
-          "@id": "http://eurovoc.europa.eu/100251"
-        },
-        {
-          "@id": "http://eurovoc.europa.eu/100259"
-        },
-        {
-          "@id": "http://eurovoc.europa.eu/100252"
-        },
-        {
-          "@id": "http://eurovoc.europa.eu/100250"
-        },
-        {
-          "@id": "http://eurovoc.europa.eu/100245"
-        },
-        {
-          "@id": "http://eurovoc.europa.eu/100256"
-        },
-        {
-          "@id": "http://eurovoc.europa.eu/100255"
-        },
-        {
-          "@id": "http://eurovoc.europa.eu/100249"
-        }
-      ],
+      "@id": "http://eurovoc.europa.eu/100216",
+      "@type": "skos:ConceptScheme",
+      "dct:identifier": "2846",
       "skos:prefLabel": [
         {
-          "@language": "en",
-          "@value": "Agriculture, fisheries, forestry and food"
+          "@language": "it",
+          "@value": "2846 urbanistica ed edilizia"
         },
         {
-          "@language": "it",
-          "@value": "Agricoltura, pesca, silvicoltura e prodotti alimentari"
+          "@language": "en",
+          "@value": "2846 construction and town planning"
         }
       ]
     },
     {
-      "@id": "http://dati.gov.it/data/resource/Standard/SKOS",
-      "@type": [
-        "dct:Standard",
-        "dcatapit:Standard"
-      ],
-      "dct:description": "The Simple Knowledge Organization System (SKOS) is a common data model for sharing and linking knowledge organization systems via the Web",
-      "dct:identifier": "SKOS",
-      "dct:title": "Simple Knowledge Organization System - SKOS"
+      "@id": "http://eurovoc.europa.eu/100283",
+      "@type": "skos:ConceptScheme",
+      "dct:identifier": "7236",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "7236 political geography"
+        },
+        {
+          "@language": "it",
+          "@value": "7236 geografia politica"
+        }
+      ]
+    },
+    {
+      "@id": "http://eurovoc.europa.eu/100286",
+      "@type": "skos:ConceptScheme",
+      "dct:identifier": "7611",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "7611 European organisations"
+        },
+        {
+          "@language": "it",
+          "@value": "7611 organizzazioni europee"
+        }
+      ]
     },
     {
       "@id": "vcard:Organization",
@@ -719,26 +790,26 @@
       "@id": "http://dati.gov.it/data/resource/Distribution/mappingDTE_RDF_Turtle",
       "@type": "dcatapit:Distribution",
       "dcat:accessURL": {
-        "@id": "https://github.com/italia/daf-ontologie-vocabolari-controllati/tree/master/VocabolariControllati/MappingTema-Sottotema"
+        "@id": "https://raw.githubusercontent.com/italia/daf-ontologie-vocabolari-controllati/master/VocabolariControllati/theme-subtheme-mapping"
       },
       "dcat:downloadURL": {
-        "@id": "https://github.com/italia/daf-ontologie-vocabolari-controllati/blob/master/VocabolariControllati/MappingTema-Sottotema/MappingDataThemeEurovoc.ttl"
+        "@id": "https://raw.githubusercontent.com/italia/daf-ontologie-vocabolari-controllati/master/VocabolariControllati/theme-subtheme-mapping/theme-subtheme-mapping.ttl"
       },
       "dct:description": [
         {
-          "@language": "en",
-          "@value": "This is the distribution in RDF/Turtle of the Linked Open Dataset of the mapping between the data themes and eurovoc used in the Italian national catalogue of data and in DCAT-AP_IT"
-        },
-        {
           "@language": "it",
           "@value": "Questa è la distribuzione RDF/Turtle del dataset Linked Open Data della mappatura tra i temi per i dati ed eurovoc usata nel catalogo nazionale dei dati e nel profilo di metadatazione DCAT-AP_IT"
+        },
+        {
+          "@language": "en",
+          "@value": "This is the distribution in RDF/Turtle of the Linked Open Dataset of the mapping between the data themes and eurovoc used in the Italian national catalogue of data and in DCAT-AP_IT"
         }
       ],
       "dct:format": {
         "@id": "http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE"
       },
       "dct:license": {
-        "@id": "http://dati.gov.it/onto/controlledvocabulary/License/A21_CCBY40"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40"
       },
       "dct:title": [
         {
@@ -756,13 +827,13 @@
       "@type": "skos:Concept",
       "skos:narrowMatch": [
         {
-          "@id": "http://eurovoc.europa.eu/100260"
-        },
-        {
           "@id": "http://eurovoc.europa.eu/100224"
         },
         {
           "@id": "http://eurovoc.europa.eu/100225"
+        },
+        {
+          "@id": "http://eurovoc.europa.eu/100260"
         },
         {
           "@id": "http://eurovoc.europa.eu/100262"
@@ -803,12 +874,12 @@
       "dct:identifier": "5611",
       "skos:prefLabel": [
         {
-          "@language": "it",
-          "@value": "5611 produzione e strutture agricole"
-        },
-        {
           "@language": "en",
           "@value": "5611 agricultural structures and production"
+        },
+        {
+          "@language": "it",
+          "@value": "5611 produzione e strutture agricole"
         }
       ]
     },
@@ -818,12 +889,12 @@
       "dct:identifier": "5606",
       "skos:prefLabel": [
         {
-          "@language": "en",
-          "@value": "5606 agricultural policy"
-        },
-        {
           "@language": "it",
           "@value": "5606 politica agricola"
+        },
+        {
+          "@language": "en",
+          "@value": "5606 agricultural policy"
         }
       ]
     },
@@ -833,12 +904,12 @@
       "dct:identifier": "5216",
       "skos:prefLabel": [
         {
-          "@language": "en",
-          "@value": "5216 deterioration of the environment"
-        },
-        {
           "@language": "it",
           "@value": "5216 degrado ambientale"
+        },
+        {
+          "@language": "en",
+          "@value": "5216 deterioration of the environment"
         }
       ]
     },
@@ -863,12 +934,12 @@
       "dct:identifier": "5206",
       "skos:prefLabel": [
         {
-          "@language": "it",
-          "@value": "5206 politica dell’ambiente"
-        },
-        {
           "@language": "en",
           "@value": "5206 environmental policy"
+        },
+        {
+          "@language": "it",
+          "@value": "5206 politica dell’ambiente"
         }
       ]
     },
@@ -878,18 +949,29 @@
       "dct:identifier": "4826",
       "skos:prefLabel": [
         {
-          "@language": "it",
-          "@value": "4826 trasporti aerei e spaziali"
-        },
-        {
           "@language": "en",
           "@value": "4826 air and space transport"
+        },
+        {
+          "@language": "it",
+          "@value": "4826 trasporti aerei e spaziali"
         }
       ]
     },
     {
-      "@id": "skos:inScheme",
-      "@type": "rdfs:Property"
+      "@id": "http://eurovoc.europa.eu/100240",
+      "@type": "skos:ConceptScheme",
+      "dct:identifier": "4821",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "4821 maritime and inland waterway transport"
+        },
+        {
+          "@language": "it",
+          "@value": "4821 trasporti marittimi e fluviali"
+        }
+      ]
     },
     {
       "@id": "dct:Standard",
@@ -901,27 +983,37 @@
       "dct:identifier": "5626",
       "skos:prefLabel": [
         {
-          "@language": "it",
-          "@value": "5626 mezzo di produzione agricola"
-        },
-        {
           "@language": "en",
           "@value": "5626 means of agricultural production"
+        },
+        {
+          "@language": "it",
+          "@value": "5626 mezzo di produzione agricola"
         }
       ]
     },
     {
-      "@id": "http://eurovoc.europa.eu/100248",
-      "@type": "skos:ConceptScheme",
-      "dct:identifier": "5621",
-      "skos:prefLabel": [
+      "@id": "http://publications.europa.eu/resource/authority/data-theme/ENVI",
+      "@type": "skos:Concept",
+      "skos:narrowMatch": [
         {
-          "@language": "it",
-          "@value": "5621 coltivazione di terreni agricoli"
+          "@id": "http://eurovoc.europa.eu/100244"
         },
         {
+          "@id": "http://eurovoc.europa.eu/100243"
+        },
+        {
+          "@id": "http://eurovoc.europa.eu/100242"
+        }
+      ],
+      "skos:prefLabel": [
+        {
           "@language": "en",
-          "@value": "5621 cultivation of agricultural land"
+          "@value": "Environment"
+        },
+        {
+          "@language": "it",
+          "@value": "Ambiente"
         }
       ]
     },
@@ -942,33 +1034,48 @@
       "@type": "rdfs:Class"
     },
     {
+      "@id": "http://eurovoc.europa.eu/100191",
+      "@type": "skos:ConceptScheme",
+      "dct:identifier": "2006",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "2006 trade policy"
+        },
+        {
+          "@language": "it",
+          "@value": "2006 politica commerciale"
+        }
+      ]
+    },
+    {
       "@id": "http://publications.europa.eu/resource/authority/data-theme/ENER",
       "@type": "skos:Concept",
       "skos:narrowMatch": [
         {
-          "@id": "http://eurovoc.europa.eu/100266"
-        },
-        {
           "@id": "http://eurovoc.europa.eu/100263"
-        },
-        {
-          "@id": "http://eurovoc.europa.eu/100267"
         },
         {
           "@id": "http://eurovoc.europa.eu/100264"
         },
         {
           "@id": "http://eurovoc.europa.eu/100265"
+        },
+        {
+          "@id": "http://eurovoc.europa.eu/100267"
+        },
+        {
+          "@id": "http://eurovoc.europa.eu/100266"
         }
       ],
       "skos:prefLabel": [
         {
-          "@language": "it",
-          "@value": "Energia"
-        },
-        {
           "@language": "en",
           "@value": "Energy"
+        },
+        {
+          "@language": "it",
+          "@value": "Energia"
         }
       ]
     },
@@ -977,22 +1084,22 @@
       "@type": "skos:Concept",
       "skos:narrowMatch": [
         {
+          "@id": "http://eurovoc.europa.eu/100181"
+        },
+        {
+          "@id": "http://eurovoc.europa.eu/100183"
+        },
+        {
+          "@id": "http://eurovoc.europa.eu/100184"
+        },
+        {
           "@id": "http://eurovoc.europa.eu/100178"
         },
         {
           "@id": "http://eurovoc.europa.eu/100180"
         },
         {
-          "@id": "http://eurovoc.europa.eu/100184"
-        },
-        {
           "@id": "http://eurovoc.europa.eu/100182"
-        },
-        {
-          "@id": "http://eurovoc.europa.eu/100183"
-        },
-        {
-          "@id": "http://eurovoc.europa.eu/100181"
         }
       ],
       "skos:prefLabel": [
@@ -1009,18 +1116,18 @@
     {
       "@id": "http://spcdata.digitpa.gov.it/browse/page/Amministrazione/agid",
       "@type": [
-        "dcatapit:Agent",
-        "foaf:Agent"
+        "foaf:Agent",
+        "dcatapit:Agent"
       ],
       "dct:identifier": "agid",
       "foaf:name": [
         {
-          "@language": "it",
-          "@value": "Agenzia per l'Italia Digitale"
-        },
-        {
           "@language": "en",
           "@value": "Italian Digital Agency"
+        },
+        {
+          "@language": "it",
+          "@value": "Agenzia per l'Italia Digitale"
         }
       ]
     },
@@ -1046,12 +1153,12 @@
       "dct:identifier": "6031",
       "skos:prefLabel": [
         {
-          "@language": "en",
-          "@value": "6031 agri-foodstuffs"
-        },
-        {
           "@language": "it",
           "@value": "6031 industria agro-alimentarea"
+        },
+        {
+          "@language": "en",
+          "@value": "6031 agri-foodstuffs"
         }
       ]
     },
@@ -1061,12 +1168,12 @@
       "dct:identifier": "6036",
       "skos:prefLabel": [
         {
-          "@language": "en",
-          "@value": "6036 food technology"
-        },
-        {
           "@language": "it",
           "@value": "6036 tecnologia alimentare"
+        },
+        {
+          "@language": "en",
+          "@value": "6036 food technology"
         }
       ]
     },
@@ -1074,10 +1181,10 @@
       "@id": "http://dati.gov.it/data/resource/Distribution/mappingDTE_JSON_LD",
       "@type": "dcatapit:Distribution",
       "dcat:accessURL": {
-        "@id": "https://github.com/italia/daf-ontologie-vocabolari-controllati/tree/master/VocabolariControllati/MappingTema-Sottotema"
+        "@id": "https://raw.githubusercontent.com/italia/daf-ontologie-vocabolari-controllati/master/VocabolariControllati/theme-subtheme-mapping"
       },
       "dcat:downloadURL": {
-        "@id": "https://github.com/italia/daf-ontologie-vocabolari-controllati/blob/master/VocabolariControllati/MappingTema-Sottotema/MappingDataThemeEurovoc.jsonld"
+        "@id": "https://raw.githubusercontent.com/italia/daf-ontologie-vocabolari-controllati/master/VocabolariControllati/theme-subtheme-mapping/theme-subtheme-mapping.jsonld"
       },
       "dct:description": [
         {
@@ -1093,16 +1200,31 @@
         "@id": "http://publications.europa.eu/resource/authority/file-type/JSON_LD"
       },
       "dct:license": {
-        "@id": "http://dati.gov.it/onto/controlledvocabulary/License/A21_CCBY40"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40"
       },
       "dct:title": [
         {
+          "@language": "it",
+          "@value": "Distribuzione JSON_LD mappatura temi dei dati - eurovoc"
+        },
+        {
           "@language": "en",
           "@value": "JSON_LD distribution mapping data themes - eurovoc"
+        }
+      ]
+    },
+    {
+      "@id": "http://eurovoc.europa.eu/100220",
+      "@type": "skos:ConceptScheme",
+      "dct:identifier": "3221",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "3221 documentation"
         },
         {
           "@language": "it",
-          "@value": "Distribuzione JSON_LD mappatura temi dei dati - eurovoc"
+          "@value": "3221 documentazione"
         }
       ]
     },
@@ -1116,12 +1238,12 @@
       "dct:identifier": "5631",
       "skos:prefLabel": [
         {
-          "@language": "it",
-          "@value": "5631 attività agricola"
-        },
-        {
           "@language": "en",
           "@value": "5631 agricultural activity"
+        },
+        {
+          "@language": "it",
+          "@value": "5631 attività agricola"
         }
       ]
     },
@@ -1176,12 +1298,12 @@
       "dct:identifier": "6011",
       "skos:prefLabel": [
         {
-          "@language": "en",
-          "@value": "6011 animal product"
-        },
-        {
           "@language": "it",
           "@value": "6011 prodotto animale"
+        },
+        {
+          "@language": "en",
+          "@value": "6011 animal product"
         }
       ]
     },
@@ -1191,12 +1313,12 @@
       "dct:identifier": "6016",
       "skos:prefLabel": [
         {
-          "@language": "it",
-          "@value": "6016 prodotto agricolo trasformato"
-        },
-        {
           "@language": "en",
           "@value": "6016 processed agricultural produce"
+        },
+        {
+          "@language": "it",
+          "@value": "6016 prodotto agricolo trasformato"
         }
       ]
     },
@@ -1231,156 +1353,23 @@
       ]
     },
     {
-      "@id": "http://dati.gov.it/onto/mapping-data_theme-eurovoc",
-      "@type": [
-        "skos:ConceptScheme",
-        "align:Alignment",
-        "dcatapit:Dataset"
-      ],
-      "adms:representationTechnique": {
-        "@id": "http://purl.org/adms/representationtechnique/SKOS"
-      },
-      "align:onto1": {
-        "@id": "http://publications.europa.eu/resource/authority/data-theme"
-      },
-      "align:onto2": {
-        "@id": "http://eurovoc.europa.eu"
-      },
-      "dcat:contactPoint": {
-        "@id": "http://dati.gov.it/data/resource/ContactPoint/voc_AgID"
-      },
-      "dcat:distribution": [
-        {
-          "@id": "http://dati.gov.it/data/resource/Distribution/mappingDTE_JSON_LD"
-        },
-        {
-          "@id": "http://dati.gov.it/data/resource/Distribution/mappingDTE_RDF_Turtle"
-        },
-        {
-          "@id": "http://dati.gov.it/data/resource/Distribution/mappingDTE_RDF_XML"
-        },
-        {
-          "@id": "http://dati.gov.it/data/resource/Distribution/mappingDTE_JSON"
-        }
-      ],
-      "dcat:keyword": [
-        {
-          "@language": "it",
-          "@value": "eurovoc"
-        },
-        {
-          "@language": "en",
-          "@value": "eurovoc"
-        },
-        {
-          "@language": "en",
-          "@value": "mapping"
-        },
-        {
-          "@language": "it",
-          "@value": "sottemi dati"
-        },
-        {
-          "@language": "it",
-          "@value": "mapping"
-        },
-        {
-          "@language": "en",
-          "@value": "data themes"
-        },
-        {
-          "@language": "it",
-          "@value": "temi dati"
-        },
-        {
-          "@language": "en",
-          "@value": "suthemes"
-        }
-      ],
-      "dcat:theme": [
-        {
-          "@id": "http://publications.europa.eu/resource/authority/data-theme/TECH"
-        },
-        {
-          "@id": "http://publications.europa.eu/resource/authority/data-theme/GOVE"
-        }
-      ],
-      "dct:accrualPeriodicity": {
-        "@id": "http://publications.europa.eu/resource/authority/frequency/IRREG"
-      },
-      "dct:conformsTo": {
-        "@id": "http://dati.gov.it/data/resource/Standard/SKOS"
-      },
-      "dct:creator": {
-        "@id": "http://spcdata.digitpa.gov.it/browse/page/Amministrazione/agid"
-      },
-      "dct:description": [
-        {
-          "@language": "en",
-          "@value": "Mapping between the Data Theme and Eurovoc controlled vocabularies for the Italian Metadata profile DCAT-AP_IT"
-        },
-        {
-          "@language": "it",
-          "@value": "Mappatura tra i vocabolari controllati europei sui Temi dei dati ed Eurovoc utile per il profilo nazionale di metadatazione DCAT-AP_IT"
-        }
-      ],
-      "dct:identifier": "agid:D.10",
-      "dct:issued": {
-        "@type": "xsd:date",
-        "@value": "2017-10-20"
-      },
-      "dct:language": [
-        {
-          "@id": "http://publications.europa.eu/resource/authority/language/ENG"
-        },
-        {
-          "@id": "http://publications.europa.eu/resource/authority/language/ITA"
-        }
-      ],
-      "dct:modified": {
-        "@type": "xsd:date",
-        "@value": "2018-02-12"
-      },
-      "dct:publisher": {
-        "@id": "http://spcdata.digitpa.gov.it/browse/page/Amministrazione/agid"
-      },
-      "dct:rightsHolder": {
-        "@id": "http://spcdata.digitpa.gov.it/browse/page/Amministrazione/agid"
-      },
-      "dct:subject": {
-        "@id": "http://eurovoc.europa.eu/258897"
-      },
-      "dct:title": [
-        {
-          "@language": "en",
-          "@value": "Mapping Data Theme - Eurovoc"
-        },
-        {
-          "@language": "it",
-          "@value": "Mappatura tra Temi dei dati - Eurovoc"
-        }
-      ],
-      "dct:type": {
-        "@id": "http://purl.org/adms/assettype/Mapping"
-      },
-      "owl:versionInfo": "0.1",
-      "rdfs:isDefinedBy": {
-        "@id": "http://dati.gov.it/onto/mapping-data_theme-eurovoc"
-      },
-      "rdfs:label": [
-        {
-          "@language": "it",
-          "@value": "Mapping tra il vocabolario Europeo sui temi per i dati e il tesauro Eurovoc. Il mapping è utile per il profilo di metadatazione nazionale DCAT-AP_IT"
-        },
-        {
-          "@language": "en",
-          "@value": "Alignments between the Data Theme and Eurovoc for the scope of the Italian DCAT-AP_IT metadata profile"
-        }
-      ]
-    },
-    {
       "@id": "skos:notation",
       "@type": "rdfs:Property"
+    },
+    {
+      "@id": "http://eurovoc.europa.eu/100202",
+      "@type": "skos:ConceptScheme",
+      "dct:identifier": "2426",
+      "skos:prefLabel": [
+        {
+          "@language": "it",
+          "@value": "2426 investimenti e finanziamenti"
+        },
+        {
+          "@language": "en",
+          "@value": "2426 financing and investment"
+        }
+      ]
     },
     {
       "@id": "dct:creator",
@@ -1395,38 +1384,8 @@
       "@type": "rdfs:Property"
     },
     {
-      "@id": "http://eurovoc.europa.eu/100283",
-      "@type": "skos:ConceptScheme",
-      "dct:identifier": "7236",
-      "skos:prefLabel": [
-        {
-          "@language": "en",
-          "@value": "7236 political geography"
-        },
-        {
-          "@language": "it",
-          "@value": "7236 geografia politica"
-        }
-      ]
-    },
-    {
       "@id": "dct:description",
       "@type": "rdfs:Property"
-    },
-    {
-      "@id": "http://eurovoc.europa.eu/100278",
-      "@type": "skos:ConceptScheme",
-      "dct:identifier": "7211",
-      "skos:prefLabel": [
-        {
-          "@language": "en",
-          "@value": "7211 regions of EU Member States"
-        },
-        {
-          "@language": "it",
-          "@value": "7211 regioni degli Stati membri dell’Unione europea"
-        }
-      ]
     },
     {
       "@id": "dct:format",
@@ -1437,13 +1396,19 @@
       "@type": "skos:Concept",
       "skos:narrowMatch": [
         {
+          "@id": "http://eurovoc.europa.eu/100234"
+        },
+        {
           "@id": "http://eurovoc.europa.eu/100208"
         },
         {
-          "@id": "http://eurovoc.europa.eu/100214"
+          "@id": "http://eurovoc.europa.eu/100210"
         },
         {
-          "@id": "http://eurovoc.europa.eu/100210"
+          "@id": "http://eurovoc.europa.eu/100209"
+        },
+        {
+          "@id": "http://eurovoc.europa.eu/100233"
         },
         {
           "@id": "http://eurovoc.europa.eu/100211"
@@ -1452,32 +1417,26 @@
           "@id": "http://eurovoc.europa.eu/100212"
         },
         {
-          "@id": "http://eurovoc.europa.eu/100236"
+          "@id": "http://eurovoc.europa.eu/100214"
         },
         {
           "@id": "http://eurovoc.europa.eu/100232"
         },
         {
-          "@id": "http://eurovoc.europa.eu/100209"
-        },
-        {
-          "@id": "http://eurovoc.europa.eu/100234"
+          "@id": "http://eurovoc.europa.eu/100236"
         },
         {
           "@id": "http://eurovoc.europa.eu/100235"
-        },
-        {
-          "@id": "http://eurovoc.europa.eu/100233"
         }
       ],
       "skos:prefLabel": [
         {
-          "@language": "it",
-          "@value": "Popolazione e società"
-        },
-        {
           "@language": "en",
           "@value": "Population and society"
+        },
+        {
+          "@language": "it",
+          "@value": "Popolazione e società"
         }
       ]
     },
@@ -1502,12 +1461,12 @@
       "dct:identifier": "6806",
       "skos:prefLabel": [
         {
-          "@language": "it",
-          "@value": "6806 politiche e strutture industriali"
-        },
-        {
           "@language": "en",
           "@value": "6806 industrial structures and policy"
+        },
+        {
+          "@language": "it",
+          "@value": "6806 politiche e strutture industriali"
         }
       ]
     },
@@ -1547,12 +1506,12 @@
       "dct:identifier": "6626",
       "skos:prefLabel": [
         {
-          "@language": "it",
-          "@value": "6626 energia dolce"
-        },
-        {
           "@language": "en",
           "@value": "6626 soft energy"
+        },
+        {
+          "@language": "it",
+          "@value": "6626 energia dolce"
         }
       ]
     },
@@ -1611,12 +1570,12 @@
       "dct:identifier": "6416",
       "skos:prefLabel": [
         {
-          "@language": "en",
-          "@value": "6416 research and intellectual property"
-        },
-        {
           "@language": "it",
           "@value": "6416 ricerca e proprietà intellettuale"
+        },
+        {
+          "@language": "en",
+          "@value": "6416 research and intellectual property"
         }
       ]
     },
@@ -1625,17 +1584,45 @@
       "@type": "rdfs:Property"
     },
     {
+<<<<<<< HEAD
       "@id": "http://eurovoc.europa.eu/100179",
       "@type": "skos:ConceptScheme",
       "dct:identifier": "1211",
       "skos:prefLabel": [
+=======
+      "@id": "http://dati.gov.it/data/resource/Distribution/mappingDTE_JSON",
+      "@type": "dcatapit:Distribution",
+      "dcat:accessURL": {
+        "@id": "https://raw.githubusercontent.com/italia/daf-ontologie-vocabolari-controllati/master/VocabolariControllati/theme-subtheme-mapping"
+      },
+      "dcat:downloadURL": {
+        "@id": "https://raw.githubusercontent.com/italia/daf-ontologie-vocabolari-controllati/master/VocabolariControllati/theme-subtheme-mapping/theme-subtheme-mapping.json"
+      },
+      "dct:description": [
         {
           "@language": "en",
-          "@value": "1211 civil law"
+          "@value": "This is the distribution in JSON of the Linked Open Dataset of the mapping between the data themes and eurovoc used in the Italian national catalogue of data and in DCAT-AP_IT"
         },
         {
           "@language": "it",
+          "@value": "Questa è la distribuzione JSON del dataset Linked Open Data della mappatura tra i temi per i dati ed eurovoc usata nel catalogo nazionale dei dati e nel profilo di metadatazione DCAT-AP_IT"
+        }
+      ],
+      "dct:format": {
+        "@id": "http://publications.europa.eu/resource/authority/file-type/JSON"
+      },
+      "dct:license": {
+        "@id": "https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40"
+      },
+      "dct:title": [
+>>>>>>> 35ac7c10c2f8fcfd1100f32ad243e7e7e4f359ad
+        {
+          "@language": "it",
           "@value": "1211 diritto civile"
+        },
+        {
+          "@language": "en",
+          "@value": "1211 civil law"
         }
       ]
     },
@@ -1645,12 +1632,12 @@
       "dct:identifier": "1206",
       "skos:prefLabel": [
         {
-          "@language": "en",
-          "@value": "1206 sources and branches of the law"
-        },
-        {
           "@language": "it",
           "@value": "1206 fonti e branche del diritto"
+        },
+        {
+          "@language": "en",
+          "@value": "1206 sources and branches of the law"
         }
       ]
     },
@@ -1660,12 +1647,12 @@
       "dct:identifier": "0811",
       "skos:prefLabel": [
         {
-          "@language": "it",
-          "@value": "0811 politica di cooperazione"
-        },
-        {
           "@language": "en",
           "@value": "0811 cooperation policy"
+        },
+        {
+          "@language": "it",
+          "@value": "0811 politica di cooperazione"
         }
       ]
     },
@@ -1690,29 +1677,18 @@
       "dct:identifier": "0821",
       "skos:prefLabel": [
         {
-          "@language": "en",
-          "@value": "0821 defence"
-        },
-        {
           "@language": "it",
           "@value": "0821 difesa"
+        },
+        {
+          "@language": "en",
+          "@value": "0821 defence"
         }
       ]
     },
     {
-      "@id": "http://eurovoc.europa.eu/100240",
-      "@type": "skos:ConceptScheme",
-      "dct:identifier": "4821",
-      "skos:prefLabel": [
-        {
-          "@language": "en",
-          "@value": "4821 maritime and inland waterway transport"
-        },
-        {
-          "@language": "it",
-          "@value": "4821 trasporti marittimi e fluviali"
-        }
-      ]
+      "@id": "skos:inScheme",
+      "@type": "rdfs:Property"
     },
     {
       "@id": "http://eurovoc.europa.eu/100175",
@@ -1720,12 +1696,12 @@
       "dct:identifier": "1011",
       "skos:prefLabel": [
         {
-          "@language": "it",
-          "@value": "1011 diritto dell’Unione Europea"
-        },
-        {
           "@language": "en",
           "@value": "1011 European Union law"
+        },
+        {
+          "@language": "it",
+          "@value": "1011 diritto dell’Unione Europea"
         }
       ]
     },
@@ -1735,12 +1711,12 @@
       "dct:identifier": "1006",
       "skos:prefLabel": [
         {
-          "@language": "it",
-          "@value": "1006 istituzioni dell’Unione europea e funzione pubblica"
-        },
-        {
           "@language": "en",
           "@value": "1006 EU institutions and European civil service"
+        },
+        {
+          "@language": "it",
+          "@value": "1006 istituzioni dell’Unione europea e funzione pubblica"
         }
       ]
     },
@@ -1750,12 +1726,12 @@
       "dct:identifier": "1021",
       "skos:prefLabel": [
         {
-          "@language": "it",
-          "@value": "1021 finanze dell’Unione europea"
-        },
-        {
           "@language": "en",
           "@value": "1021 EU finance"
+        },
+        {
+          "@language": "it",
+          "@value": "1021 finanze dell’Unione europea"
         }
       ]
     },
@@ -1782,26 +1758,26 @@
           "@id": "http://eurovoc.europa.eu/100238"
         },
         {
-          "@id": "http://eurovoc.europa.eu/100240"
+          "@id": "http://eurovoc.europa.eu/100241"
         },
         {
-          "@id": "http://eurovoc.europa.eu/100241"
+          "@id": "http://eurovoc.europa.eu/100237"
         },
         {
           "@id": "http://eurovoc.europa.eu/100239"
         },
         {
-          "@id": "http://eurovoc.europa.eu/100237"
+          "@id": "http://eurovoc.europa.eu/100240"
         }
       ],
       "skos:prefLabel": [
         {
-          "@language": "en",
-          "@value": "Transport"
-        },
-        {
           "@language": "it",
           "@value": "Transporti"
+        },
+        {
+          "@language": "en",
+          "@value": "Transport"
         }
       ]
     },
@@ -1810,129 +1786,32 @@
       "@type": "rdfs:Property"
     },
     {
-      "@id": "http://publications.europa.eu/resource/authority/data-theme/ECON",
-      "@type": "skos:Concept",
-      "skos:narrowMatch": [
-        {
-          "@id": "http://eurovoc.europa.eu/100204"
-        },
-        {
-          "@id": "http://eurovoc.europa.eu/100200"
-        },
-        {
-          "@id": "http://eurovoc.europa.eu/100203"
-        },
-        {
-          "@id": "http://eurovoc.europa.eu/100205"
-        },
-        {
-          "@id": "http://eurovoc.europa.eu/100201"
-        },
-        {
-          "@id": "http://eurovoc.europa.eu/100230"
-        },
-        {
-          "@id": "http://eurovoc.europa.eu/100189"
-        },
-        {
-          "@id": "http://eurovoc.europa.eu/100206"
-        },
-        {
-          "@id": "http://eurovoc.europa.eu/100191"
-        },
-        {
-          "@id": "http://eurovoc.europa.eu/100190"
-        },
-        {
-          "@id": "http://eurovoc.europa.eu/100229"
-        },
-        {
-          "@id": "http://eurovoc.europa.eu/100195"
-        },
-        {
-          "@id": "http://eurovoc.europa.eu/100275"
-        },
-        {
-          "@id": "http://eurovoc.europa.eu/100192"
-        },
-        {
-          "@id": "http://eurovoc.europa.eu/100186"
-        },
-        {
-          "@id": "http://eurovoc.europa.eu/100185"
-        },
-        {
-          "@id": "http://eurovoc.europa.eu/100228"
-        },
-        {
-          "@id": "http://eurovoc.europa.eu/100199"
-        },
-        {
-          "@id": "http://eurovoc.europa.eu/100268"
-        },
-        {
-          "@id": "http://eurovoc.europa.eu/100272"
-        },
-        {
-          "@id": "http://eurovoc.europa.eu/100271"
-        },
-        {
-          "@id": "http://eurovoc.europa.eu/100188"
-        },
-        {
-          "@id": "http://eurovoc.europa.eu/100227"
-        },
-        {
-          "@id": "http://eurovoc.europa.eu/100202"
-        },
-        {
-          "@id": "http://eurovoc.europa.eu/100198"
-        },
-        {
-          "@id": "http://eurovoc.europa.eu/100187"
-        },
-        {
-          "@id": "http://eurovoc.europa.eu/100276"
-        },
-        {
-          "@id": "http://eurovoc.europa.eu/100273"
-        },
-        {
-          "@id": "http://eurovoc.europa.eu/100274"
-        },
-        {
-          "@id": "http://eurovoc.europa.eu/100270"
-        },
-        {
-          "@id": "http://eurovoc.europa.eu/100194"
-        },
-        {
-          "@id": "http://eurovoc.europa.eu/100196"
-        },
-        {
-          "@id": "http://eurovoc.europa.eu/100197"
-        },
-        {
-          "@id": "http://eurovoc.europa.eu/100193"
-        },
-        {
-          "@id": "http://eurovoc.europa.eu/100226"
-        },
-        {
-          "@id": "http://eurovoc.europa.eu/100269"
-        },
-        {
-          "@id": "http://eurovoc.europa.eu/100231"
-        }
-      ],
+      "@id": "http://eurovoc.europa.eu/100189",
+      "@type": "skos:ConceptScheme",
+      "dct:identifier": "1626",
       "skos:prefLabel": [
         {
           "@language": "en",
-          "@value": "Economy and finance"
+          "@value": "1626 national accounts"
         },
         {
           "@language": "it",
-          "@value": "Economia e finanze"
+          "@value": "1626 contabilità nazionale"
+        }
+      ]
+    },
+    {
+      "@id": "http://eurovoc.europa.eu/100278",
+      "@type": "skos:ConceptScheme",
+      "dct:identifier": "7211",
+      "skos:prefLabel": [
+        {
+          "@language": "it",
+          "@value": "7211 regioni degli Stati membri dell’Unione europea"
+        },
+        {
+          "@language": "en",
+          "@value": "7211 regions of EU Member States"
         }
       ]
     },
@@ -1957,12 +1836,12 @@
       "dct:identifier": "6846",
       "skos:prefLabel": [
         {
-          "@language": "en",
-          "@value": "6846 miscellaneous industries"
-        },
-        {
           "@language": "it",
           "@value": "6846 industrie varie"
+        },
+        {
+          "@language": "en",
+          "@value": "6846 miscellaneous industries"
         }
       ]
     },
@@ -2002,12 +1881,12 @@
       "dct:identifier": "6841",
       "skos:prefLabel": [
         {
-          "@language": "en",
-          "@value": "6841 leather and textile industries"
-        },
-        {
           "@language": "it",
           "@value": "6841 industria del cuoio e dei prodotti tessili"
+        },
+        {
+          "@language": "en",
+          "@value": "6841 leather and textile industries"
         }
       ]
     },
@@ -2062,12 +1941,12 @@
       "dct:identifier": "6821",
       "skos:prefLabel": [
         {
-          "@language": "en",
-          "@value": "6821 mechanical engineering"
-        },
-        {
           "@language": "it",
           "@value": "6821 industria meccanica"
+        },
+        {
+          "@language": "en",
+          "@value": "6821 mechanical engineering"
         }
       ]
     },
@@ -2083,7 +1962,10 @@
           "@id": "http://eurovoc.europa.eu/100223"
         },
         {
-          "@id": "http://eurovoc.europa.eu/100222"
+          "@id": "http://eurovoc.europa.eu/100220"
+        },
+        {
+          "@id": "http://eurovoc.europa.eu/100218"
         },
         {
           "@id": "http://eurovoc.europa.eu/100219"
@@ -2092,54 +1974,41 @@
           "@id": "http://eurovoc.europa.eu/100217"
         },
         {
-          "@id": "http://eurovoc.europa.eu/100220"
-        },
-        {
           "@id": "http://eurovoc.europa.eu/100213"
-        },
-        {
-          "@id": "http://eurovoc.europa.eu/100218"
         },
         {
           "@id": "http://eurovoc.europa.eu/100221"
         },
         {
           "@id": "http://eurovoc.europa.eu/100212"
+        },
+        {
+          "@id": "http://eurovoc.europa.eu/100222"
         }
       ],
       "skos:prefLabel": [
         {
-          "@language": "en",
-          "@value": "Education, culture and spor"
-        },
-        {
           "@language": "it",
           "@value": "Istruzione, cultura e sport"
+        },
+        {
+          "@language": "en",
+          "@value": "Education, culture and spor"
         }
       ]
     },
     {
-      "@id": "http://publications.europa.eu/resource/authority/data-theme/ENVI",
-      "@type": "skos:Concept",
-      "skos:narrowMatch": [
-        {
-          "@id": "http://eurovoc.europa.eu/100244"
-        },
-        {
-          "@id": "http://eurovoc.europa.eu/100243"
-        },
-        {
-          "@id": "http://eurovoc.europa.eu/100242"
-        }
-      ],
+      "@id": "http://eurovoc.europa.eu/100248",
+      "@type": "skos:ConceptScheme",
+      "dct:identifier": "5621",
       "skos:prefLabel": [
         {
-          "@language": "it",
-          "@value": "Ambiente"
+          "@language": "en",
+          "@value": "5621 cultivation of agricultural land"
         },
         {
-          "@language": "en",
-          "@value": "Environment"
+          "@language": "it",
+          "@value": "5621 coltivazione di terreni agricoli"
         }
       ]
     },
@@ -2153,42 +2022,42 @@
       "dct:identifier": "7231",
       "skos:prefLabel": [
         {
-          "@language": "it",
-          "@value": "7231 geografia economica"
-        },
-        {
           "@language": "en",
           "@value": "7231 economic geography"
+        },
+        {
+          "@language": "it",
+          "@value": "7231 geografia economica"
         }
       ]
     },
     {
-      "@id": "http://eurovoc.europa.eu/100168",
+      "@id": "http://eurovoc.europa.eu/100281",
       "@type": "skos:ConceptScheme",
-      "dct:identifier": "0431",
+      "dct:identifier": "7226",
       "skos:prefLabel": [
         {
           "@language": "it",
-          "@value": "0431 vita politica e sicurezza pubblica"
+          "@value": "7226 Asia-Oceania"
         },
         {
           "@language": "en",
-          "@value": "0431 politics and public safety"
+          "@value": "7226 Asia and Oceania"
         }
       ]
     },
     {
-      "@id": "http://eurovoc.europa.eu/100280",
+      "@id": "http://eurovoc.europa.eu/100169",
       "@type": "skos:ConceptScheme",
-      "dct:identifier": "7221",
+      "dct:identifier": "0436",
       "skos:prefLabel": [
         {
-          "@language": "en",
-          "@value": "7221 Africa"
+          "@language": "it",
+          "@value": "0436 potere esecutivo e amministrazione pubblica"
         },
         {
-          "@language": "it",
-          "@value": "7221 Africa"
+          "@language": "en",
+          "@value": "0436 executive power and public service"
         }
       ]
     },
@@ -2208,19 +2077,14 @@
       ]
     },
     {
-      "@id": "http://eurovoc.europa.eu/100286",
-      "@type": "skos:ConceptScheme",
-      "dct:identifier": "7611",
-      "skos:prefLabel": [
-        {
-          "@language": "en",
-          "@value": "7611 European organisations"
-        },
-        {
-          "@language": "it",
-          "@value": "7611 organizzazioni europee"
-        }
-      ]
+      "@id": "http://dati.gov.it/data/resource/Standard/SKOS",
+      "@type": [
+        "dct:Standard",
+        "dcatapit:Standard"
+      ],
+      "dct:description": "The Simple Knowledge Organization System (SKOS) is a common data model for sharing and linking knowledge organization systems via the Web",
+      "dct:identifier": "SKOS",
+      "dct:title": "Simple Knowledge Organization System - SKOS"
     },
     {
       "@id": "http://eurovoc.europa.eu/100285",
@@ -2253,17 +2117,32 @@
       ]
     },
     {
+      "@id": "http://eurovoc.europa.eu/100266",
+      "@type": "skos:ConceptScheme",
+      "dct:identifier": "6621",
+      "skos:prefLabel": [
+        {
+          "@language": "en",
+          "@value": "6621 electrical and nuclear industries"
+        },
+        {
+          "@language": "it",
+          "@value": "6621 industria nucleare ed elettrica"
+        }
+      ]
+    },
+    {
       "@id": "http://eurovoc.europa.eu/100163",
       "@type": "skos:ConceptScheme",
       "dct:identifier": "0406",
       "skos:prefLabel": [
         {
-          "@language": "it",
-          "@value": "0406 quadro politico"
-        },
-        {
           "@language": "en",
           "@value": "0406 political framework"
+        },
+        {
+          "@language": "it",
+          "@value": "0406 quadro politico"
         }
       ]
     },
@@ -2273,12 +2152,12 @@
       "dct:identifier": "7626",
       "skos:prefLabel": [
         {
-          "@language": "it",
-          "@value": "7626 organizzazioni non governative"
-        },
-        {
           "@language": "en",
           "@value": "7626 non-governamental organisations"
+        },
+        {
+          "@language": "it",
+          "@value": "7626 organizzazioni non governative"
         }
       ]
     },
@@ -2288,12 +2167,12 @@
       "dct:identifier": "7621",
       "skos:prefLabel": [
         {
-          "@language": "it",
-          "@value": "7621 organizzazioni mondiali"
-        },
-        {
           "@language": "en",
           "@value": "7621 world organisations"
+        },
+        {
+          "@language": "it",
+          "@value": "7621 organizzazioni mondiali"
         }
       ]
     },
@@ -2318,12 +2197,12 @@
       "dct:identifier": "0426",
       "skos:prefLabel": [
         {
-          "@language": "en",
-          "@value": "0426 parliamentary proceedings"
-        },
-        {
           "@language": "it",
           "@value": "0426 lavori parlamentari"
+        },
+        {
+          "@language": "en",
+          "@value": "0426 parliamentary proceedings"
         }
       ]
     },
@@ -2333,12 +2212,12 @@
       "dct:identifier": "0411",
       "skos:prefLabel": [
         {
-          "@language": "en",
-          "@value": "0411 political party"
-        },
-        {
           "@language": "it",
           "@value": "0411 partito politico"
+        },
+        {
+          "@language": "en",
+          "@value": "0411 political party"
         }
       ]
     },
@@ -2348,12 +2227,12 @@
       "dct:identifier": "0416",
       "skos:prefLabel": [
         {
-          "@language": "it",
-          "@value": "0416 procedura elettorale e voto"
-        },
-        {
           "@language": "en",
           "@value": "0416 electoral procedure and voting"
+        },
+        {
+          "@language": "it",
+          "@value": "0416 procedura elettorale e voto"
         }
       ]
     },
@@ -2378,30 +2257,77 @@
       "dct:identifier": "2806",
       "skos:prefLabel": [
         {
-          "@language": "en",
-          "@value": "2806 family"
-        },
-        {
           "@language": "it",
           "@value": "2806 famiglia"
+        },
+        {
+          "@language": "en",
+          "@value": "2806 family"
         }
       ]
     },
     {
+<<<<<<< HEAD
       "@id": "http://publications.europa.eu/resource/authority/data-theme/GOVE",
       "@type": "skos:Concept",
       "skos:narrowMatch": [
+=======
+      "@id": "dct:publisher",
+      "@type": "rdfs:Property"
+    },
+    {
+      "@id": "https://w3id.org/italia/controlled-vocabulary/theme-subtheme-mapping",
+      "@type": [
+        "skos:ConceptScheme",
+        "align:Alignment",
+        "dcatapit:Dataset"
+      ],
+      "adms:representationTechnique": {
+        "@id": "http://purl.org/adms/representationtechnique/SKOS"
+      },
+      "align:onto1": {
+        "@id": "http://publications.europa.eu/resource/authority/data-theme"
+      },
+      "align:onto2": {
+        "@id": "http://eurovoc.europa.eu"
+      },
+      "dcat:contactPoint": {
+        "@id": "http://dati.gov.it/data/resource/ContactPoint/voc_AgID"
+      },
+      "dcat:distribution": [
         {
-          "@id": "http://eurovoc.europa.eu/100166"
+          "@id": "http://dati.gov.it/data/resource/Distribution/mappingDTE_JSON_LD"
         },
         {
-          "@id": "http://eurovoc.europa.eu/100167"
+          "@id": "http://dati.gov.it/data/resource/Distribution/mappingDTE_JSON"
         },
+        {
+          "@id": "http://dati.gov.it/data/resource/Distribution/mappingDTE_RDF_Turtle"
+        },
+        {
+          "@id": "http://dati.gov.it/data/resource/Distribution/mappingDTE_RDF_XML"
+        }
+      ],
+      "dcat:keyword": [
+        {
+          "@language": "en",
+          "@value": "mapping"
+        },
+>>>>>>> 35ac7c10c2f8fcfd1100f32ad243e7e7e4f359ad
         {
           "@id": "http://eurovoc.europa.eu/100177"
         },
         {
+          "@id": "http://eurovoc.europa.eu/100175"
+        },
+        {
+          "@id": "http://eurovoc.europa.eu/100168"
+        },
+        {
           "@id": "http://eurovoc.europa.eu/100164"
+        },
+        {
+          "@id": "http://eurovoc.europa.eu/100166"
         },
         {
           "@id": "http://eurovoc.europa.eu/100169"
@@ -2413,19 +2339,27 @@
           "@id": "http://eurovoc.europa.eu/100165"
         },
         {
-          "@id": "http://eurovoc.europa.eu/100176"
-        },
-        {
-          "@id": "http://eurovoc.europa.eu/100175"
-        },
-        {
-          "@id": "http://eurovoc.europa.eu/100168"
-        },
-        {
           "@id": "http://eurovoc.europa.eu/100174"
+        },
+        {
+          "@id": "http://eurovoc.europa.eu/100167"
+        },
+        {
+          "@id": "http://eurovoc.europa.eu/100176"
         }
       ],
+<<<<<<< HEAD
       "skos:prefLabel": [
+=======
+      "dct:type": {
+        "@id": "http://purl.org/adms/assettype/Mapping"
+      },
+      "owl:versionInfo": "0.1",
+      "rdfs:isDefinedBy": {
+        "@id": "https://w3id.org/italia/controlled-vocabulary/theme-subtheme-mapping"
+      },
+      "rdfs:label": [
+>>>>>>> 35ac7c10c2f8fcfd1100f32ad243e7e7e4f359ad
         {
           "@language": "it",
           "@value": "Governo e settore pubblico"
@@ -2442,27 +2376,27 @@
       "dct:identifier": "2431",
       "skos:prefLabel": [
         {
-          "@language": "it",
-          "@value": "2431 assicurazioni"
-        },
-        {
           "@language": "en",
           "@value": "2431 insurance"
+        },
+        {
+          "@language": "it",
+          "@value": "2431 assicurazioni"
         }
       ]
     },
     {
-      "@id": "http://eurovoc.europa.eu/100202",
+      "@id": "http://eurovoc.europa.eu/100172",
       "@type": "skos:ConceptScheme",
-      "dct:identifier": "2426",
+      "dct:identifier": "0816",
       "skos:prefLabel": [
         {
           "@language": "en",
-          "@value": "2426 financing and investment"
+          "@value": "0816 international balance"
         },
         {
           "@language": "it",
-          "@value": "2426 investimenti e finanziamenti"
+          "@value": "0816 equilibrio internazionale"
         }
       ]
     },
@@ -2472,12 +2406,12 @@
       "dct:identifier": "2421",
       "skos:prefLabel": [
         {
-          "@language": "en",
-          "@value": "2421 free movement of capital"
-        },
-        {
           "@language": "it",
           "@value": "2421 libera circolazione dei capitali"
+        },
+        {
+          "@language": "en",
+          "@value": "2421 free movement of capital"
         }
       ]
     },
@@ -2502,12 +2436,12 @@
       "dct:identifier": "2451",
       "skos:prefLabel": [
         {
-          "@language": "it",
-          "@value": "2451 prezzi"
-        },
-        {
           "@language": "en",
           "@value": "2451 prices"
+        },
+        {
+          "@language": "it",
+          "@value": "2451 prezzi"
         }
       ]
     },
@@ -2568,12 +2502,12 @@
       },
       "skos:prefLabel": [
         {
-          "@language": "it",
-          "@value": "Salute"
-        },
-        {
           "@language": "en",
           "@value": "Health"
+        },
+        {
+          "@language": "it",
+          "@value": "Salute"
         }
       ]
     },
@@ -2581,10 +2515,10 @@
       "@id": "http://dati.gov.it/data/resource/Distribution/mappingDTE_JSON",
       "@type": "dcatapit:Distribution",
       "dcat:accessURL": {
-        "@id": "https://github.com/italia/daf-ontologie-vocabolari-controllati/tree/master/VocabolariControllati/MappingTema-Sottotema"
+        "@id": "https://raw.githubusercontent.com/italia/daf-ontologie-vocabolari-controllati/master/VocabolariControllati/theme-subtheme-mapping"
       },
       "dcat:downloadURL": {
-        "@id": "https://github.com/italia/daf-ontologie-vocabolari-controllati/blob/master/VocabolariControllati/MappingTema-Sottotema/MappingDataThemeEurovoc.json"
+        "@id": "https://raw.githubusercontent.com/italia/daf-ontologie-vocabolari-controllati/master/VocabolariControllati/theme-subtheme-mapping/theme-subtheme-mapping.json"
       },
       "dct:description": [
         {
@@ -2600,7 +2534,7 @@
         "@id": "http://publications.europa.eu/resource/authority/file-type/JSON"
       },
       "dct:license": {
-        "@id": "http://dati.gov.it/onto/controlledvocabulary/License/A21_CCBY40"
+        "@id": "https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40"
       },
       "dct:title": [
         {
@@ -2614,17 +2548,143 @@
       ]
     },
     {
-      "@id": "http://eurovoc.europa.eu/100188",
-      "@type": "skos:ConceptScheme",
-      "dct:identifier": "1621",
+      "@id": "http://publications.europa.eu/resource/authority/data-theme/ECON",
+      "@type": "skos:Concept",
+      "skos:narrowMatch": [
+        {
+          "@id": "http://eurovoc.europa.eu/100189"
+        },
+        {
+          "@id": "http://eurovoc.europa.eu/100205"
+        },
+        {
+          "@id": "http://eurovoc.europa.eu/100229"
+        },
+        {
+          "@id": "http://eurovoc.europa.eu/100230"
+        },
+        {
+          "@id": "http://eurovoc.europa.eu/100192"
+        },
+        {
+          "@id": "http://eurovoc.europa.eu/100271"
+        },
+        {
+          "@id": "http://eurovoc.europa.eu/100199"
+        },
+        {
+          "@id": "http://eurovoc.europa.eu/100200"
+        },
+        {
+          "@id": "http://eurovoc.europa.eu/100191"
+        },
+        {
+          "@id": "http://eurovoc.europa.eu/100185"
+        },
+        {
+          "@id": "http://eurovoc.europa.eu/100195"
+        },
+        {
+          "@id": "http://eurovoc.europa.eu/100196"
+        },
+        {
+          "@id": "http://eurovoc.europa.eu/100228"
+        },
+        {
+          "@id": "http://eurovoc.europa.eu/100190"
+        },
+        {
+          "@id": "http://eurovoc.europa.eu/100227"
+        },
+        {
+          "@id": "http://eurovoc.europa.eu/100269"
+        },
+        {
+          "@id": "http://eurovoc.europa.eu/100193"
+        },
+        {
+          "@id": "http://eurovoc.europa.eu/100186"
+        },
+        {
+          "@id": "http://eurovoc.europa.eu/100198"
+        },
+        {
+<<<<<<< HEAD
+          "@id": "http://eurovoc.europa.eu/100274"
+        },
+=======
+          "@language": "en",
+          "@value": "This is the distribution in RDF/Turtle of the Linked Open Dataset of the mapping between the data themes and eurovoc used in the Italian national catalogue of data and in DCAT-AP_IT"
+        }
+      ],
+      "dct:format": {
+        "@id": "http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE"
+      },
+      "dct:license": {
+        "@id": "https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40"
+      },
+      "dct:title": [
+>>>>>>> 35ac7c10c2f8fcfd1100f32ad243e7e7e4f359ad
+        {
+          "@id": "http://eurovoc.europa.eu/100272"
+        },
+        {
+          "@id": "http://eurovoc.europa.eu/100273"
+        },
+        {
+          "@id": "http://eurovoc.europa.eu/100268"
+        },
+        {
+          "@id": "http://eurovoc.europa.eu/100202"
+        },
+        {
+          "@id": "http://eurovoc.europa.eu/100275"
+        },
+        {
+          "@id": "http://eurovoc.europa.eu/100203"
+        },
+        {
+          "@id": "http://eurovoc.europa.eu/100197"
+        },
+        {
+          "@id": "http://eurovoc.europa.eu/100226"
+        },
+        {
+          "@id": "http://eurovoc.europa.eu/100188"
+        },
+        {
+          "@id": "http://eurovoc.europa.eu/100204"
+        },
+        {
+          "@id": "http://eurovoc.europa.eu/100231"
+        },
+        {
+          "@id": "http://eurovoc.europa.eu/100194"
+        },
+        {
+          "@id": "http://eurovoc.europa.eu/100187"
+        },
+        {
+          "@id": "http://eurovoc.europa.eu/100201"
+        },
+        {
+          "@id": "http://eurovoc.europa.eu/100270"
+        },
+        {
+          "@id": "http://eurovoc.europa.eu/100206"
+        },
+        {
+          "@id": "http://eurovoc.europa.eu/100276"
+        }
+      ],
       "skos:prefLabel": [
         {
           "@language": "it",
-          "@value": "1621 struttura economica"
+          "@value": "Economia e finanze"
         },
         {
           "@language": "en",
-          "@value": "1621 economic structure"
+          "@value": "Economy and finance"
         }
       ]
     },
@@ -2642,12 +2702,12 @@
       "dct:identifier": "3211",
       "skos:prefLabel": [
         {
-          "@language": "en",
-          "@value": "3211 teaching"
-        },
-        {
           "@language": "it",
           "@value": "3211 insegnamento"
+        },
+        {
+          "@language": "en",
+          "@value": "3211 teaching"
         }
       ]
     },
@@ -2657,12 +2717,48 @@
       "dct:identifier": "3216",
       "skos:prefLabel": [
         {
+          "@language": "en",
+          "@value": "3216 organisation of teaching"
+        },
+        {
           "@language": "it",
           "@value": "3216 organizzazione scolastica"
+        }
+      ]
+    },
+    {
+      "@id": "http://dati.gov.it/data/resource/Distribution/mappingDTE_RDF_XML",
+      "@type": "dcatapit:Distribution",
+      "dcat:accessURL": {
+        "@id": "https://raw.githubusercontent.com/italia/daf-ontologie-vocabolari-controllati/master/VocabolariControllati/theme-subtheme-mapping"
+      },
+      "dcat:downloadURL": {
+        "@id": "https://raw.githubusercontent.com/italia/daf-ontologie-vocabolari-controllati/master/VocabolariControllati/theme-subtheme-mapping/theme-subtheme-mapping.rdf"
+      },
+      "dct:description": [
+        {
+          "@language": "en",
+          "@value": "This is the distribution in RDF/XML of the Linked Open Dataset of the mapping between the data themes and eurovoc used in the Italian national catalogue of data and in DCAT-AP_IT"
+        },
+        {
+          "@language": "it",
+          "@value": "Questa è la distribuzione RDF/XML del dataset Linked Open Data della mappatura tra i temi per i dati ed eurovoc usata nel catalogo nazionale dei dati e nel profilo di metadatazione DCAT-AP_IT"
+        }
+      ],
+      "dct:format": {
+        "@id": "http://publications.europa.eu/resource/authority/file-type/RDF_XML"
+      },
+      "dct:license": {
+        "@id": "https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40"
+      },
+      "dct:title": [
+        {
+          "@language": "it",
+          "@value": "Distribuzione RDF/XML mappatura temi dei dati - eurovoc"
         },
         {
           "@language": "en",
-          "@value": "3216 organisation of teaching"
+          "@value": "RDF/XML distribution mapping data themes - eurovoc"
         }
       ]
     },
@@ -2721,12 +2817,12 @@
       "dct:identifier": "2816",
       "skos:prefLabel": [
         {
-          "@language": "en",
-          "@value": "2816 demography and population"
-        },
-        {
           "@language": "it",
           "@value": "2816 demografia e popolazione"
+        },
+        {
+          "@language": "en",
+          "@value": "2816 demography and population"
         }
       ]
     },
@@ -2751,12 +2847,12 @@
       "dct:identifier": "2826",
       "skos:prefLabel": [
         {
-          "@language": "it",
-          "@value": "2826 vita sociale"
-        },
-        {
           "@language": "en",
           "@value": "2826 social affairs"
+        },
+        {
+          "@language": "it",
+          "@value": "2826 vita sociale"
         }
       ]
     },
@@ -2786,7 +2882,27 @@
         },
         {
           "@language": "en",
+<<<<<<< HEAD
           "@value": "2036 distributive trades"
+=======
+          "@value": "This is the distribution in JSON_LD of the Linked Open Dataset of the mapping between the data themes and eurovoc used in the Italian national catalogue of data and in DCAT-AP_IT"
+        }
+      ],
+      "dct:format": {
+        "@id": "http://publications.europa.eu/resource/authority/file-type/JSON_LD"
+      },
+      "dct:license": {
+        "@id": "https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40"
+      },
+      "dct:title": [
+        {
+          "@language": "en",
+          "@value": "JSON_LD distribution mapping data themes - eurovoc"
+        },
+        {
+          "@language": "it",
+          "@value": "Distribuzione JSON_LD mappatura temi dei dati - eurovoc"
+>>>>>>> 35ac7c10c2f8fcfd1100f32ad243e7e7e4f359ad
         }
       ]
     },
@@ -2796,12 +2912,12 @@
       "dct:identifier": "2031",
       "skos:prefLabel": [
         {
-          "@language": "it",
-          "@value": "2031 commercializzazione"
-        },
-        {
           "@language": "en",
           "@value": "2031 marketing"
+        },
+        {
+          "@language": "it",
+          "@value": "2031 commercializzazione"
         }
       ]
     },
@@ -2811,12 +2927,12 @@
       "dct:identifier": "2026",
       "skos:prefLabel": [
         {
-          "@language": "en",
-          "@value": "2026 consumption"
-        },
-        {
           "@language": "it",
           "@value": "2026 consumo"
+        },
+        {
+          "@language": "en",
+          "@value": "2026 consumption"
         }
       ]
     },
@@ -2856,27 +2972,73 @@
       "dct:identifier": "2011",
       "skos:prefLabel": [
         {
-          "@language": "it",
-          "@value": "2011 politica tariffaria"
-        },
-        {
           "@language": "en",
           "@value": "2011 tariff policy"
+        },
+        {
+          "@language": "it",
+          "@value": "2011 politica tariffaria"
         }
       ]
     },
     {
-      "@id": "http://eurovoc.europa.eu/100191",
-      "@type": "skos:ConceptScheme",
-      "dct:identifier": "2006",
+      "@id": "http://publications.europa.eu/resource/authority/data-theme/AGRI",
+      "@type": "skos:Concept",
+      "skos:narrowMatch": [
+        {
+          "@id": "http://eurovoc.europa.eu/100257"
+        },
+        {
+          "@id": "http://eurovoc.europa.eu/100256"
+        },
+        {
+          "@id": "http://eurovoc.europa.eu/100251"
+        },
+        {
+          "@id": "http://eurovoc.europa.eu/100258"
+        },
+        {
+          "@id": "http://eurovoc.europa.eu/100245"
+        },
+        {
+          "@id": "http://eurovoc.europa.eu/100259"
+        },
+        {
+          "@id": "http://eurovoc.europa.eu/100255"
+        },
+        {
+          "@id": "http://eurovoc.europa.eu/100252"
+        },
+        {
+          "@id": "http://eurovoc.europa.eu/100247"
+        },
+        {
+          "@id": "http://eurovoc.europa.eu/100246"
+        },
+        {
+          "@id": "http://eurovoc.europa.eu/100248"
+        },
+        {
+          "@id": "http://eurovoc.europa.eu/100254"
+        },
+        {
+          "@id": "http://eurovoc.europa.eu/100253"
+        },
+        {
+          "@id": "http://eurovoc.europa.eu/100250"
+        },
+        {
+          "@id": "http://eurovoc.europa.eu/100249"
+        }
+      ],
       "skos:prefLabel": [
         {
           "@language": "it",
-          "@value": "2006 politica commerciale"
+          "@value": "Agricoltura, pesca, silvicoltura e prodotti alimentari"
         },
         {
           "@language": "en",
-          "@value": "2006 trade policy"
+          "@value": "Agriculture, fisheries, forestry and food"
         }
       ]
     },
@@ -2916,12 +3078,12 @@
       "dct:identifier": "2406",
       "skos:prefLabel": [
         {
-          "@language": "it",
-          "@value": "2406 relazioni monetarie"
-        },
-        {
           "@language": "en",
           "@value": "2406 monetary relations"
+        },
+        {
+          "@language": "it",
+          "@value": "2406 relazioni monetarie"
         }
       ]
     },
@@ -2930,83 +3092,38 @@
       "@type": "skos:Concept",
       "skos:narrowMatch": [
         {
-          "@id": "http://eurovoc.europa.eu/100279"
-        },
-        {
-          "@id": "http://eurovoc.europa.eu/100280"
-        },
-        {
-          "@id": "http://eurovoc.europa.eu/100281"
-        },
-        {
-          "@id": "http://eurovoc.europa.eu/100283"
+          "@id": "http://eurovoc.europa.eu/100278"
         },
         {
           "@id": "http://eurovoc.europa.eu/100284"
-        },
-        {
-          "@id": "http://eurovoc.europa.eu/100278"
         },
         {
           "@id": "http://eurovoc.europa.eu/100282"
         },
         {
           "@id": "http://eurovoc.europa.eu/100277"
+        },
+        {
+          "@id": "http://eurovoc.europa.eu/100281"
+        },
+        {
+          "@id": "http://eurovoc.europa.eu/100280"
+        },
+        {
+          "@id": "http://eurovoc.europa.eu/100283"
+        },
+        {
+          "@id": "http://eurovoc.europa.eu/100279"
         }
       ],
       "skos:prefLabel": [
         {
-          "@language": "it",
-          "@value": "Regioni e città"
-        },
-        {
           "@language": "en",
           "@value": "Regions and cities"
-        }
-      ]
-    },
-    {
-      "@id": "http://eurovoc.europa.eu/100216",
-      "@type": "skos:ConceptScheme",
-      "dct:identifier": "2846",
-      "skos:prefLabel": [
-        {
-          "@language": "it",
-          "@value": "2846 urbanistica ed edilizia"
-        },
-        {
-          "@language": "en",
-          "@value": "2846 construction and town planning"
-        }
-      ]
-    },
-    {
-      "@id": "http://eurovoc.europa.eu/100172",
-      "@type": "skos:ConceptScheme",
-      "dct:identifier": "0816",
-      "skos:prefLabel": [
-        {
-          "@language": "it",
-          "@value": "0816 equilibrio internazionale"
-        },
-        {
-          "@language": "en",
-          "@value": "0816 international balance"
-        }
-      ]
-    },
-    {
-      "@id": "http://eurovoc.europa.eu/100266",
-      "@type": "skos:ConceptScheme",
-      "dct:identifier": "6621",
-      "skos:prefLabel": [
-        {
-          "@language": "en",
-          "@value": "6621 electrical and nuclear industries"
         },
         {
           "@language": "it",
-          "@value": "6621 industria nucleare ed elettrica"
+          "@value": "Regioni e città"
         }
       ]
     }
