@@ -9,7 +9,7 @@ WORKDIR katalod
 # LABEL it.almawave.daf.katalod.version="0.0.7"
 # LABEL vendor="Almawave"
 # LABEL it.almawave.daf.katalod.date="2018-05-10"
-# ENV kb_version 0.1.3
+# ENV kb_version 0.1.4
 
 ADD conf/ conf/
 ADD ontologie-vocabolari-controllati/ ontologie-vocabolari-controllati/
