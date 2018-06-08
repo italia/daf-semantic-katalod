@@ -38,10 +38,15 @@ class CatalogService {
   val _ontologies = catalog.ontologies.map(_.meta)
   val _vocabularies = catalog.vocabularies.map(_.meta)
 
+  val _ontologies_aligns = catalog.ontologies_aligns.map(_.meta)
+
   logger.info(s"loaded ${_vocabularies.size} vocabularies")
   logger.info(s"loaded ${_ontologies.size} ontologies")
+  logger.info(s"loaded ${_ontologies_aligns.size} ontologies_aligns")
 
   def ontologies() = _ontologies
+
+  def ontologies_aligns() = _ontologies_aligns
 
   def vocabularies() = _vocabularies
 

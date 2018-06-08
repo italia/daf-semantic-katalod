@@ -43,7 +43,7 @@ class OntologiesEndpoint {
   @Path("/{ontologyID}")
   def details(@PathParam("ontologyID") id: String) = {
     logger.debug(s"getting the details for ontology with id: ${id}")
-    loader.ontologies()
+    loader.ontologies_aligns()
       .filter { item => item.id.equalsIgnoreCase(id) }
       .headOption
   }
