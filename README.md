@@ -7,7 +7,7 @@ For simplicity it is designed re-using jersey and swagger with jetty, using RDF4
 
 **NOTE**: the application should be considered an early (alpha) release, as it is still work-in-progress: all the endpoints and functions are still constantly evolving.
 
-
+[last update: 2018-08-06]
 
 ## maven build / install
 
@@ -35,16 +35,23 @@ java -cp "target/kataLOD-0.0.5.jar:target/libs/*" it.almawave.kb.http.MainHTTP
 
 ### dockerization
 
-It's possible to create a docker image directly using the drafted [`Dockefile`](http://10.121.172.7:10080/public-od/daf/katalod/blob/master/Dockerfile) .
-
+<s>
+After the maven artifact was built:
 ```bash
 mvn clean package
-sudo docker build . -t katalod:0.0.5
 ```
+</s>
+
+It's possible to create a docker image directly using the drafted [`Dockefile`](http://10.121.172.7:10080/public-od/daf/katalod/blob/master/Dockerfile) .
+```bash
+sudo docker build . -t katalod:0.0.9
+```
+
+
 
 In order to run a new container from the generated build, we can use the following command:
 ```bash
-sudo docker run -p 7777:7777 katalod:0.0.5
+sudo docker run -p 7777:7777 katalod:0.0.9
 ```
 
 **NOTE**: currently the port `7777` is used as the default port
@@ -64,7 +71,7 @@ sudo docker run -p 7777:7777 katalod:0.0.5
 - [ ] check: simple HTML pages for testing?
 - [ ] check: netty instead of jetty?
 - [ ] check: replace maven with sbt?
-- [ ] check: rewrite with play?
+~~- [ ] check: rewrite with play?~~
 - [ ] check: better handling / mapping of swagger port when using docker
 
 **NOTE**: we could think about changing jetty with play! for the endpoints
