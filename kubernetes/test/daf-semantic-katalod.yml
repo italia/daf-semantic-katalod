@@ -23,8 +23,8 @@ spec:
     spec:
       containers:
         - name: daf-semantic-katalod
-          image: nexus.teamdigitale.test/daf-semantic-katalod:0.0.8
-          ports: 
+          image: nexus.teamdigitale.test/daf-semantic-katalod:0.0.9
+          ports:
             - containerPort: 7777
           volumeMounts:
             - name: glusterfsvol
