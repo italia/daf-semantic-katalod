@@ -1,32 +1,23 @@
 package it.almawave.kb.http
 
-import java.net.InetSocketAddress
+import java.net.{InetAddress, InetSocketAddress}
 
+import com.typesafe.config.{Config, ConfigFactory}
+import io.swagger.jaxrs.listing.{ApiListingResource, SwaggerSerializers}
+import io.swagger.jersey.config.JerseyJaxrsConfig
+import it.almawave.kb.http.HTTP._conf
+import it.almawave.kb.http.providers.{CORSFilter, JacksonScalaProvider}
 import org.eclipse.jetty.server.Server
-import org.eclipse.jetty.server.handler.ContextHandler
-import org.eclipse.jetty.server.handler.DefaultHandler
-import org.eclipse.jetty.server.handler.HandlerList
-import org.eclipse.jetty.server.handler.ResourceHandler
-import org.eclipse.jetty.servlet.ServletContextHandler
-import org.eclipse.jetty.servlet.ServletHolder
+import org.eclipse.jetty.server.handler._
+import org.eclipse.jetty.servlet.{ServletContextHandler, ServletHolder}
 import org.glassfish.jersey.jackson.JacksonFeature
 import org.glassfish.jersey.server.ResourceConfig
 import org.glassfish.jersey.servlet.ServletContainer
 import org.slf4j.LoggerFactory
 
-import io.swagger.jaxrs.listing.ApiListingResource
-import io.swagger.jaxrs.listing.SwaggerSerializers
-import io.swagger.jersey.config.JerseyJaxrsConfig
-import it.almawave.kb.http.providers.CORSFilter
-import it.almawave.kb.http.providers.JacksonScalaProvider
-import java.net.InetAddress
-import com.typesafe.config.Config
-import com.typesafe.config.ConfigFactory
-import java.net.URL
-import org.eclipse.jetty.server.handler.StatisticsHandler
-import org.eclipse.jetty.server.handler.ShutdownHandler
-
 object HTTP {
+
+  var _conf: Config = null
 
   def apply(conf: Config) = {
 
@@ -37,7 +28,7 @@ object HTTP {
     	port: 8080
     }  
     """)
-    val _conf = conf.withFallback(DEFAULT).resolve()
+    _conf = conf.withFallback(DEFAULT).resolve()
 
     val host = _conf.getString("http.host")
     val port = _conf.getInt("http.port")
@@ -86,7 +77,7 @@ class HTTP(host: String, port: Int, base: String) {
   val jersey_holder = new ServletHolder(jersey_container);
   jersey_holder.setInitOrder(0)
   val jersey_context = new ServletContextHandler(ServletContextHandler.NO_SESSIONS)
-  jersey_context.setInitParameter("openApi.configuration.location", "conf/openapi-configuration.yaml")
+  //jersey_context.setInitParameter("openApi.configuration.location", "conf/openapi-configuration.yaml")
   jersey_context.setContextPath(base)
   jersey_context.addServlet(jersey_holder, "/*")
 
@@ -94,12 +85,10 @@ class HTTP(host: String, port: Int, base: String) {
   val swagger_servlet_config = new JerseyJaxrsConfig
   val swagger_holder = new ServletHolder(jersey_container);
 
-  swagger_holder.setInitParameter("swagger.api.title", "katalod") // CHECK
-  swagger_holder.setInitParameter("api.version", "0.0.8")
-  swagger_holder.setInitParameter("info.description", """
-    katalod is a microservice designed as an in-memory catalog of ontologies and controlled vocabularies
-  """) // CHECK
-  swagger_holder.setInitParameter("swagger.api.basepath", s"http://localhost:${port}${base}")
+  swagger_holder.setInitParameter("swagger.api.title", _conf.getString("swagger.api.title"))
+  swagger_holder.setInitParameter("api.version", _conf.getString("swagger.api.version"))
+  swagger_holder.setInitParameter("info.description", _conf.getString("swagger.info.description"))
+  swagger_holder.setInitParameter("swagger.api.basepath", _conf.getString("swagger.api.basepath"))
 
   // CHECK: how to configure th basic settings from static file with overrides
   swagger_holder.setInitOrder(0)
