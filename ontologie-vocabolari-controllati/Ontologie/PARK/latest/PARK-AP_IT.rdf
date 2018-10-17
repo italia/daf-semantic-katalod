@@ -4,60 +4,93 @@
 <!DOCTYPE rdf:RDF [
     <!ENTITY dct "http://purl.org/dc/terms/" >
     <!ENTITY prov "http://www.w3.org/ns/prov#" >
+    <!ENTITY dcat "http://www.w3.org/ns/dcat#" >
+    <!ENTITY foaf "http://xmlns.com/foaf/0.1/" >
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
-    <!ENTITY smapit "https://w3id.org/italia/onto/SM/" >
+    <!ENTITY vcard "http://www.w3.org/2006/vcard/ns#" >
     <!ENTITY l0 "https://w3id.org/italia/onto/l0/" >
-    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
-    <!ENTITY ti "https://w3id.org/italia/onto/TI/" >
-    <!ENTITY potapit "https://w3id.org/italia/onto/POT/" >
-    <!ENTITY poiapit "https://w3id.org/italia/onto/POI/" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
-    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY admsapit "https://w3id.org/italia/onto/ADMS/" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
 ]>
 
 
 <rdf:RDF xmlns="https://w3id.org/italia/onto/PARK/"
-     xml:base="https://w3id.org/italia/onto/PARK/"
+     xml:base="https://w3id.org/italia/onto/PARK"
+     xmlns:admsapit="https://w3id.org/italia/onto/ADMS/"
+     xmlns:dct="http://purl.org/dc/terms/"
      xmlns:l0="https://w3id.org/italia/onto/l0/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:dct="http://purl.org/dc/terms/"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:ti="https://w3id.org/italia/onto/TI/"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:potapit="https://w3id.org/italia/onto/POT/"
-     xmlns:poiapit="https://w3id.org/italia/onto/POI/"
+     xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
+     xmlns:dcat="http://www.w3.org/ns/dcat#"
      xmlns:prov="http://www.w3.org/ns/prov#"
-     xmlns:smapit="https://w3id.org/italia/onto/SM/"
-     xmlns:dc="http://purl.org/dc/elements/1.1/">
+     xmlns:foaf="http://xmlns.com/foaf/0.1/">
     <owl:Ontology rdf:about="https://w3id.org/italia/onto/PARK">
         <rdfs:label xml:lang="en">Parking ontology</rdfs:label>
         <rdfs:label xml:lang="it">Ontologia dei Parcheggi</rdfs:label>
         <dct:issued rdf:datatype="&xsd;date">2017-12-19</dct:issued>
-        <dct:modified rdf:datatype="&xsd;date">2018-13-03</dct:modified>
-        <dc:creator xml:lang="en">Agency for Digital Italy - AgID</dc:creator>
-        <dc:creator xml:lang="en">Institute of Cognitive Sciences and Technologies of the Italian Research Council (CNR) - Semantic Technology Laboratory (STLab)</dc:creator>
-        <dc:creator xml:lang="en">Italian Digital Transformation Team</dc:creator>
-        <rdfs:comment xml:lang="en">Questa è l&apos;ontologia del profilo applicativo italiano per i dati sui parcheggi)</rdfs:comment>
+        <dct:modified rdf:datatype="&xsd;date">2018-06-25</dct:modified>
+        <admsapit:officialURI rdf:datatype="&xsd;anyURI">https://w3id.org/italia/onto/PARK/</admsapit:officialURI>
+        <admsapit:target>Imprese</admsapit:target>
+        <dcat:keyword xml:lang="it">Car Sharing</dcat:keyword>
+        <admsapit:target>Pubbliche Amministrazioni</admsapit:target>
+        <admsapit:acronym>PARK-AP_IT</admsapit:acronym>
+        <admsapit:target>Cittadini</admsapit:target>
         <rdfs:comment xml:lang="en">This is the ontology of the Italian application profile for Parking data</rdfs:comment>
         <owl:versionInfo xml:lang="en">Version 0.2 - 13 March 2018 - Migration to the namespace w3id.org/italia.</owl:versionInfo>
+        <dct:title xml:lang="it">Ontologia dei Parcheggi</dct:title>
+        <admsapit:prefix>parkapit</admsapit:prefix>
+        <dcat:keyword xml:lang="it">Parcheggio di scambio</dcat:keyword>
+        <dcat:keyword xml:lang="it">Posti parcheggio</dcat:keyword>
+        <rdfs:comment xml:lang="it">Questa è l&apos;ontologia del profilo applicativo italiano sui parcheggi)</rdfs:comment>
+        <admsapit:status>catalogued</admsapit:status>
+        <dct:identifier>https://w3id.org/italia/onto/PARK</dct:identifier>
+        <dct:title xml:lang="en">Parking ontology</dct:title>
+        <dct:description xml:lang="en">This is the ontology of the Italian application profile for Parking data</dct:description>
+        <dct:description xml:lang="it">Questa è l&apos;ontologia del profilo applicativo italiano sui parcheggi)</dct:description>
         <owl:versionInfo xml:lang="it">Versione 0.2 - 13 Marzo 2018 - Migrazione del namespace a w3id.org/italia.</owl:versionInfo>
-        <owl:versionIRI rdf:resource="http://dati.gov.it/onto/PARK/0.2"/>
-        <dct:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <admsapit:status>published</admsapit:status>
+        <dcat:keyword xml:lang="it">Parcheggio</dcat:keyword>
+        <owl:versionIRI rdf:resource="https://w3id.org/italia/onto/PARK/0.3"/>
+        <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/TRAN"/>
+        <dct:accrualPeriodicity rdf:resource="http://publications.europa.eu/resource/authority/frequency/IRREG"/>
+        <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+        <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ITA"/>
+        <dct:rightsHolder rdf:resource="http://spcdata.digitpa.gov.it/browse/page/Amministrazione/agid"/>
+        <dct:publisher rdf:resource="http://spcdata.digitpa.gov.it/browse/page/Amministrazione/agid"/>
+        <dct:creator rdf:resource="http://spcdata.digitpa.gov.it/browse/page/Amministrazione/agid"/>
+        <admsapit:hasSemanticAssetDistribution rdf:resource="https://w3id.org/italia/data/distribution/PARKAPIT-JSON-LD"/>
+        <admsapit:hasSemanticAssetDistribution rdf:resource="https://w3id.org/italia/data/distribution/PARKAPIT-RDF-TURTLE"/>
+        <admsapit:hasSemanticAssetDistribution rdf:resource="https://w3id.org/italia/data/distribution/PARKAPIT-RDF-XML"/>
+        <dcat:contactPoint rdf:resource="https://w3id.org/italia/data/contact-point/onto-agid"/>
+        <admsapit:hasContributor rdf:resource="https://w3id.org/italia/data/organization/public-organization/td"/>
+        <admsapit:hasContributor rdf:resource="https://w3id.org/italia/data/organization/support-unit/cnr-Z6HZEH/stlab"/>
+        <admsapit:semanticAssetInUse rdf:resource="https://w3id.org/italia/data/project/DAF"/>
+        <admsapit:semanticAssetInUse rdf:resource="https://w3id.org/italia/data/project/OntoPiA"/>
+        <owl:imports rdf:resource="https://w3id.org/italia/onto/AccessCondition"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/italia/onto/PARK"/>
         <owl:imports rdf:resource="https://w3id.org/italia/onto/POI"/>
         <owl:imports rdf:resource="https://w3id.org/italia/onto/POT"/>
         <owl:imports rdf:resource="https://w3id.org/italia/onto/SM"/>
         <owl:imports rdf:resource="https://w3id.org/italia/onto/TI"/>
         <owl:imports rdf:resource="https://w3id.org/italia/onto/l0"/>
+        <admsapit:hasTask rdf:resource="&admsapit;AnnotationTask"/>
+        <admsapit:type rdf:resource="&admsapit;DomainOntology"/>
+        <admsapit:hasFormalityLevel rdf:resource="&admsapit;Formal"/>
+        <admsapit:hasOntologyLanguage rdf:resource="&admsapit;OWL"/>
+        <admsapit:hasTask rdf:resource="&admsapit;QueryFormulationTask"/>
+        <admsapit:hasTask rdf:resource="&admsapit;SearchTask"/>
+        <admsapit:hasKeyClass rdf:resource="https://w3id.org/italia/onto/PARK/CarPark"/>
+        <admsapit:hasKeyClass rdf:resource="https://w3id.org/italia/onto/PARK/CarParkTypology"/>
     </owl:Ontology>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Annotation properties
@@ -65,34 +98,94 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:AnnotationProperty rdf:about="&dct;description"/>
+
+
+
+    <!-- http://purl.org/dc/terms/format -->
+
+    <owl:AnnotationProperty rdf:about="&dct;format"/>
+
+
+
+    <!-- http://purl.org/dc/terms/identifier -->
+
+    <owl:AnnotationProperty rdf:about="&dct;identifier"/>
+
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="&dct;license"/>
+
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:AnnotationProperty rdf:about="&dct;title"/>
+
 
 
     <!-- http://www.w3.org/2002/07/owl#maxQualifiedCardinality -->
 
     <owl:AnnotationProperty rdf:about="&owl;maxQualifiedCardinality"/>
-    
+
+
+
+    <!-- http://www.w3.org/2006/vcard/ns#fn -->
+
+    <owl:AnnotationProperty rdf:about="&vcard;fn"/>
+
+
+
+    <!-- http://www.w3.org/2006/vcard/ns#hasEmail -->
+
+    <owl:AnnotationProperty rdf:about="&vcard;hasEmail"/>
+
+
+
+    <!-- http://www.w3.org/ns/dcat#accessURL -->
+
+    <owl:AnnotationProperty rdf:about="&dcat;accessURL"/>
+
+
+
+    <!-- http://www.w3.org/ns/dcat#downloadURL -->
+
+    <owl:AnnotationProperty rdf:about="&dcat;downloadURL"/>
+
 
 
     <!-- http://www.w3.org/ns/prov#wasDerivedFrom -->
 
     <owl:AnnotationProperty rdf:about="&prov;wasDerivedFrom"/>
-    
+
 
 
     <!-- http://www.w3.org/ns/prov#wasInfluencedBy -->
 
     <owl:AnnotationProperty rdf:about="&prov;wasInfluencedBy"/>
-    
+
+
+
+    <!-- http://xmlns.com/foaf/0.1/name -->
+
+    <owl:AnnotationProperty rdf:about="&foaf;name"/>
+
 
 
     <!-- https://w3id.org/italia/onto/l0/controlledVocabulary -->
 
     <owl:AnnotationProperty rdf:about="&l0;controlledVocabulary"/>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Object Properties
@@ -100,7 +193,13 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
+
+
+    <!-- https://w3id.org/italia/onto/AccessCondition/hasAccessCondition -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/AccessCondition/hasAccessCondition"/>
+
 
 
     <!-- https://w3id.org/italia/onto/PARK/hasCarParkTypology -->
@@ -112,12 +211,12 @@
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <rdfs:comment xml:lang="it">Proprietà che collega un parcheggio alla sua tipologia, come definita nel relativo vocabolario controllato.</rdfs:comment>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <rdfs:isDefinedBy rdf:resource="http://dati.gov.it/onto/parkingapit"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/italia/onto/PARK"/>
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/PARK/CarPark"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/PARK/CarParkTypology"/>
         <owl:inverseOf rdf:resource="https://w3id.org/italia/onto/PARK/isCarParkTypologyOf"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/italia/onto/PARK/isCarParkTypologyOf -->
@@ -129,30 +228,36 @@
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <rdfs:comment xml:lang="it">Proprietà inversa di &quot;ha tipologia di parcheggio&quot; che lega la tipologia di al parcheggio stesso</rdfs:comment>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <rdfs:isDefinedBy rdf:resource="http://dati.gov.it/onto/parkingapit"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/italia/onto/PARK"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/onto/PARK/CarPark"/>
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/PARK/CarParkTypology"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/italia/onto/POT/hasOffer -->
 
-    <owl:ObjectProperty rdf:about="&potapit;hasOffer">
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/italia/onto/POT/"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/POT/hasOffer">
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/italia/onto/POT"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- https://w3id.org/italia/onto/SM/hasOnlineContactPoint -->
 
-    <owl:ObjectProperty rdf:about="&smapit;hasOnlineContactPoint">
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/italia/onto/SM/"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/SM/hasOnlineContactPoint">
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/italia/onto/SM"/>
     </owl:ObjectProperty>
-    
 
 
-    <!-- 
+
+    <!-- https://w3id.org/italia/onto/SM/hasReview -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/SM/hasReview"/>
+
+
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Data properties
@@ -160,7 +265,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- https://w3id.org/italia/onto/PARK/carParkDescription -->
@@ -172,12 +277,12 @@
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <rdfs:comment xml:lang="it">Proprietà che rappresenta una descrizione testuale generica del parcheggio</rdfs:comment>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <rdfs:isDefinedBy rdf:resource="http://dati.gov.it/onto/parkingapit"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/italia/onto/PARK"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/PARK/CarPark"/>
         <rdfs:subPropertyOf rdf:resource="&l0;description"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- https://w3id.org/italia/onto/PARK/carParkID -->
@@ -190,12 +295,12 @@
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <rdfs:comment xml:lang="it">Proprietà che rappresenta l&apos;identificativo univoco del parcheggio</rdfs:comment>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <rdfs:isDefinedBy rdf:resource="http://dati.gov.it/onto/parkingapit"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/italia/onto/PARK"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/PARK/CarPark"/>
         <rdfs:subPropertyOf rdf:resource="&l0;identifier"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- https://w3id.org/italia/onto/PARK/carParkName -->
@@ -207,12 +312,12 @@
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <rdfs:comment xml:lang="it">Il nome del parcheggio</rdfs:comment>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <rdfs:isDefinedBy rdf:resource="http://dati.gov.it/onto/parkingapit"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/italia/onto/PARK"/>
         <rdfs:range rdf:resource="&rdfs;Literal"/>
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/PARK/CarPark"/>
         <rdfs:subPropertyOf rdf:resource="&l0;name"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- https://w3id.org/italia/onto/PARK/numAvailableParkingSpaces -->
@@ -224,11 +329,11 @@
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <rdfs:comment xml:lang="it">il numero di posti auto disponibili del parcheggio</rdfs:comment>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <rdfs:isDefinedBy rdf:resource="http://dati.gov.it/onto/parkingapit"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/italia/onto/PARK"/>
         <rdfs:range rdf:resource="&xsd;int"/>
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/PARK/CarPark"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- https://w3id.org/italia/onto/PARK/numPayingParkingSpaces -->
@@ -240,11 +345,11 @@
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <rdfs:comment xml:lang="it">Il numero di posti auto paganti</rdfs:comment>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <rdfs:isDefinedBy rdf:resource="http://dati.gov.it/onto/parkingapit"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/italia/onto/PARK"/>
         <rdfs:range rdf:resource="&xsd;int"/>
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/PARK/CarPark"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- https://w3id.org/italia/onto/PARK/numSoldCarParkSpaces -->
@@ -256,11 +361,11 @@
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <rdfs:comment xml:lang="it">Numero di posti auto venduti</rdfs:comment>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <rdfs:isDefinedBy rdf:resource="http://dati.gov.it/onto/parkingapit"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/italia/onto/PARK"/>
         <rdfs:range rdf:resource="&xsd;int"/>
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/PARK/CarPark"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- https://w3id.org/italia/onto/PARK/numSpacesForDisabled -->
@@ -272,11 +377,11 @@
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <rdfs:comment xml:lang="it">Il numero di posti auto del parcheggio risarvati ai disabili</rdfs:comment>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <rdfs:isDefinedBy rdf:resource="http://dati.gov.it/onto/parkingapit"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/italia/onto/PARK"/>
         <rdfs:range rdf:resource="&xsd;int"/>
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/PARK/CarPark"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- https://w3id.org/italia/onto/PARK/totalNumCarParkSpaces -->
@@ -288,34 +393,34 @@
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <rdfs:comment xml:lang="it">Il numero totale di posto auto del parcheggio</rdfs:comment>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <rdfs:isDefinedBy rdf:resource="http://dati.gov.it/onto/parkingapit"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/italia/onto/PARK"/>
         <rdfs:range rdf:resource="&xsd;int"/>
         <rdfs:domain rdf:resource="https://w3id.org/italia/onto/PARK/CarPark"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- https://w3id.org/italia/onto/l0/description -->
 
     <owl:DatatypeProperty rdf:about="&l0;description"/>
-    
+
 
 
     <!-- https://w3id.org/italia/onto/l0/identifier -->
 
     <owl:DatatypeProperty rdf:about="&l0;identifier">
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/italia/onto/l0/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/italia/onto/l0"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- https://w3id.org/italia/onto/l0/name -->
 
     <owl:DatatypeProperty rdf:about="&l0;name"/>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Classes
@@ -323,7 +428,61 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
+
+
+    <!-- http://dati.gov.it/onto/dcatapit#Agent -->
+
+    <owl:Class rdf:about="http://dati.gov.it/onto/dcatapit#Agent"/>
+
+
+
+    <!-- http://dati.gov.it/onto/dcatapit#Organization -->
+
+    <owl:Class rdf:about="http://dati.gov.it/onto/dcatapit#Organization"/>
+
+
+
+    <!-- http://www.w3.org/2006/vcard/ns#Kind -->
+
+    <owl:Class rdf:about="&vcard;Kind"/>
+
+
+
+    <!-- http://www.w3.org/2006/vcard/ns#Organization -->
+
+    <owl:Class rdf:about="&vcard;Organization"/>
+
+
+
+    <!-- http://xmlns.com/foaf/0.1/Agent -->
+
+    <owl:Class rdf:about="&foaf;Agent"/>
+
+
+
+    <!-- https://w3id.org/italia/onto/ADMS/Project -->
+
+    <owl:Class rdf:about="&admsapit;Project"/>
+
+
+
+    <!-- https://w3id.org/italia/onto/ADMS/SemanticAsset -->
+
+    <owl:Class rdf:about="&admsapit;SemanticAsset"/>
+
+
+
+    <!-- https://w3id.org/italia/onto/ADMS/SemanticAssetDistribution -->
+
+    <owl:Class rdf:about="&admsapit;SemanticAssetDistribution"/>
+
+
+
+    <!-- https://w3id.org/italia/onto/AccessCondition/AccessCondition -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/AccessCondition/AccessCondition"/>
+
 
 
     <!-- https://w3id.org/italia/onto/PARK/CarPark -->
@@ -331,24 +490,23 @@
     <owl:Class rdf:about="https://w3id.org/italia/onto/PARK/CarPark">
         <rdfs:label xml:lang="en">Car Park</rdfs:label>
         <rdfs:label xml:lang="it">Parcheggio</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&poiapit;PointOfInterest"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/POI/PointOfInterest"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/PARK/hasCarParkTypology"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/PARK/CarParkTypology"/>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/POT/hasOffer"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/POT/Offer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/PARK/carParkName"/>
+                <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/italia/onto/PARK/carParkDescription"/>
                 <owl:allValuesFrom rdf:resource="&rdfs;Literal"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/PARK/totalNumCarParkSpaces"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;int"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -360,34 +518,8 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&smapit;hasOnlineContactPoint"/>
-                <owl:someValuesFrom rdf:resource="&smapit;OnlineContactPoint"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/PARK/carParkName"/>
-                <owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/PARK/carParkID"/>
-                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/PARK/numAvailableParkingSpaces"/>
-                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;int"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/PARK/numSoldCarParkSpaces"/>
-                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;int"/>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/SM/hasOnlineContactPoint"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/SM/OnlineContactPoint"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -399,19 +531,58 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&potapit;hasOffer"/>
-                <owl:allValuesFrom rdf:resource="&potapit;Offer"/>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/PARK/numAvailableParkingSpaces"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/SM/hasReview"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/SM/Review"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/PARK/numSoldCarParkSpaces"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/PARK/hasCarParkTypology"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/PARK/CarParkTypology"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/PARK/totalNumCarParkSpaces"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/AccessCondition/hasAccessCondition"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/italia/onto/AccessCondition/AccessCondition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/PARK/carParkID"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">This is the principal class of the ontology and it represents the car park.</rdfs:comment>
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <rdfs:comment xml:lang="it">E&apos; la classe principale dell&apos;ontologia e rappresenta il parcheggio.</rdfs:comment>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <rdfs:isDefinedBy rdf:resource="http://dati.gov.it/onto/parkingapit"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/italia/onto/PARK"/>
         <prov:wasInfluencedBy rdf:resource="http://schema.org/ParkingFacility"/>
         <prov:wasInfluencedBy rdf:resource="http://www.productontology.org/id/Parking_lot"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/italia/onto/PARK/CarParkTypology -->
@@ -430,9 +601,9 @@
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <rdfs:comment xml:lang="it">La classe rappresenta la tipologia di parcheggio. Gli individui di questa classe sono le istanze del relativo vocabolario controllato. In particolare, si possono distinguire tra parcheggi a sviluppo orizzontale (parcheggi in superficie e parcheggi a raso o a livello), parcheggi a sviluppo verticalere (parcheggi interrati, in elevazione, misti).</rdfs:comment>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <rdfs:isDefinedBy rdf:resource="http://dati.gov.it/onto/parkingapit"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/italia/onto/PARK"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/italia/onto/PARK/CarSharingCarPark -->
@@ -445,9 +616,9 @@
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un tipo specifico di parcheggio, ovvero il parcheggio per il car sharing.</rdfs:comment>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <rdfs:isDefinedBy rdf:resource="http://dati.gov.it/onto/parkingapit"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/italia/onto/PARK"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/italia/onto/PARK/ParkAndRide -->
@@ -460,9 +631,9 @@
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <rdfs:comment xml:lang="it">Questa classe rappresenta uno specifico tipo di parcheggio, ovvero il parcheggio di scambio. I parcheggi di scambio sono tipicamente collocati ai margini del centro urbano o storico e sono usati per scambiare mezzo di trasporto e incentivare l’uso di mezzi pubblici.</rdfs:comment>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <rdfs:isDefinedBy rdf:resource="http://dati.gov.it/onto/parkingapit"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/italia/onto/PARK"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/italia/onto/PARK/RotatingCarPark -->
@@ -475,9 +646,9 @@
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <rdfs:comment xml:lang="it">Questa classe rappresenta un tipo di parcheggio, ovvero il parcheggio a rotazione. Il parcheggio a rotazioneè di solito un tipo di parcheggio destinato agli utenti che compiono brevi soste</rdfs:comment>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <rdfs:isDefinedBy rdf:resource="http://dati.gov.it/onto/parkingapit"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/italia/onto/PARK"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/italia/onto/PARK/TerminalCarPark -->
@@ -490,33 +661,45 @@
         <owl:versionInfo xml:lang="en">stable</owl:versionInfo>
         <rdfs:comment xml:lang="it">Questa classe rappresenta uno specifico tipo di parcheggio, ovvero il parcheggio terminale, di solito utilizzato per lunghe soste.</rdfs:comment>
         <owl:versionInfo xml:lang="it">stabile</owl:versionInfo>
-        <rdfs:isDefinedBy rdf:resource="http://dati.gov.it/onto/parkingapit"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/italia/onto/PARK"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/italia/onto/POI/PointOfInterest -->
 
-    <owl:Class rdf:about="&poiapit;PointOfInterest">
-        <rdfs:isDefinedBy rdf:resource="http://dati.gov.it/onto/poiapit"/>
+    <owl:Class rdf:about="https://w3id.org/italia/onto/POI/PointOfInterest">
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/italia/onto/POI"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/italia/onto/POT/Offer -->
 
-    <owl:Class rdf:about="&potapit;Offer">
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/italia/onto/POT/"/>
+    <owl:Class rdf:about="https://w3id.org/italia/onto/POT/Offer">
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/italia/onto/POT"/>
     </owl:Class>
-    
+
 
 
     <!-- https://w3id.org/italia/onto/SM/OnlineContactPoint -->
 
-    <owl:Class rdf:about="&smapit;OnlineContactPoint">
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/italia/onto/SM/"/>
+    <owl:Class rdf:about="https://w3id.org/italia/onto/SM/OnlineContactPoint">
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/italia/onto/SM"/>
     </owl:Class>
-    
+
+
+
+    <!-- https://w3id.org/italia/onto/SM/Review -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/SM/Review"/>
+
+
+
+    <!-- https://w3id.org/italia/onto/l0/Agent -->
+
+    <owl:Class rdf:about="&l0;Agent"/>
+
 
 
     <!-- https://w3id.org/italia/onto/l0/Topic -->
@@ -524,9 +707,140 @@
     <owl:Class rdf:about="&l0;Topic">
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/italia/onto/l0/"/>
     </owl:Class>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+    <!-- http://spcdata.digitpa.gov.it/browse/page/Amministrazione/agid -->
+
+    <owl:NamedIndividual rdf:about="http://spcdata.digitpa.gov.it/browse/page/Amministrazione/agid">
+        <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Agent"/>
+        <rdf:type rdf:resource="&foaf;Agent"/>
+        <foaf:name xml:lang="en">Italian Digital Agency</foaf:name>
+        <dct:identifier>agid</dct:identifier>
+        <foaf:name xml:lang="it">Agenzia per l&apos;Italia Digitale</foaf:name>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://w3id.org/italia/data/distribution/PARKAPIT-JSON-LD -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/italia/data/distribution/PARKAPIT-JSON-LD">
+        <rdf:type rdf:resource="&admsapit;SemanticAssetDistribution"/>
+        <dct:title xml:lang="en">JSON-LD distribution of PARK-AP_IT Ontology</dct:title>
+        <dct:description xml:lang="en">This is the distribution in JSON-LD of the Car Park ontology</dct:description>
+        <dct:title xml:lang="it">Distribuzione JSON-LD ontologia PARK-AP_IT</dct:title>
+        <dct:description xml:lang="it">Questa è la distribuzione JSON-LD dell&apos;ontologia dei Parcheggi</dct:description>
+        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON_LD"/>
+        <dcat:accessURL rdf:resource="https://raw.githubusercontent.com/italia/daf-ontologie-vocabolari-controllati/master/Ontologie/PARK/latest"/>
+        <dcat:downloadURL rdf:resource="https://raw.githubusercontent.com/italia/daf-ontologie-vocabolari-controllati/master/Ontologie/PARK/latest/PARK-AP_IT.jsonld"/>
+        <dct:license rdf:resource="https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://w3id.org/italia/data/distribution/PARKAPIT-RDF-TURTLE -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/italia/data/distribution/PARKAPIT-RDF-TURTLE">
+        <rdf:type rdf:resource="&admsapit;SemanticAssetDistribution"/>
+        <dct:title xml:lang="en">RDF/Turtle distribution of PARK-AP_IT Ontology</dct:title>
+        <dct:description xml:lang="en">This is the distribution in RDF/turtle of the Car Park ontology</dct:description>
+        <dct:title xml:lang="it">Distribuzione RDF/Turtle ontologia PARK-AP_IT</dct:title>
+        <dct:description xml:lang="it">Questa è la distribuzione RDF/Turtle dell&apos;ontologia dei Parcheggi</dct:description>
+        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE"/>
+        <dcat:accessURL rdf:resource="https://raw.githubusercontent.com/italia/daf-ontologie-vocabolari-controllati/master/Ontologie/PARK/latest"/>
+        <dcat:downloadURL rdf:resource="https://raw.githubusercontent.com/italia/daf-ontologie-vocabolari-controllati/master/Ontologie/PARK/latest/PARK-AP_IT.ttl"/>
+        <dct:license rdf:resource="https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://w3id.org/italia/data/distribution/PARKAPIT-RDF-XML -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/italia/data/distribution/PARKAPIT-RDF-XML">
+        <rdf:type rdf:resource="&admsapit;SemanticAssetDistribution"/>
+        <dct:title xml:lang="en">RDF/XML distribution of PARK-AP_IT Ontology</dct:title>
+        <dct:description xml:lang="en">This is the distribution in RDF/XML of the Car Park ontology</dct:description>
+        <dct:title xml:lang="it">Distribuzione RDF/XML ontologia PARK-AP_IT</dct:title>
+        <dct:description xml:lang="it">Questa è la distribuzione RDF/XML dell&apos;ontologia dei Parcheggi</dct:description>
+        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+        <dcat:accessURL rdf:resource="https://raw.githubusercontent.com/italia/daf-ontologie-vocabolari-controllati/master/Ontologie/PARK/latest"/>
+        <dcat:downloadURL rdf:resource="https://raw.githubusercontent.com/italia/daf-ontologie-vocabolari-controllati/master/Ontologie/PARK/latest/PARK-AP_IT.rdf"/>
+        <dct:license rdf:resource="https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://w3id.org/italia/data/contact-point/onto-agid -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/italia/data/contact-point/onto-agid">
+        <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Organization"/>
+        <rdf:type rdf:resource="&vcard;Kind"/>
+        <rdf:type rdf:resource="&vcard;Organization"/>
+        <vcard:fn>banche dati e open data</vcard:fn>
+        <vcard:hasEmail rdf:resource="mailto:info@dati.gov.it"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://w3id.org/italia/data/organization/public-organization/td -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/italia/data/organization/public-organization/td">
+        <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Agent"/>
+        <rdf:type rdf:resource="&foaf;Agent"/>
+        <foaf:name xml:lang="en">Digital Transformation Team</foaf:name>
+        <dct:identifier>TD</dct:identifier>
+        <foaf:name xml:lang="it">Team per la Trasformazione Digitale</foaf:name>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://w3id.org/italia/data/organization/support-unit/cnr-Z6HZEH/stlab -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/italia/data/organization/support-unit/cnr-Z6HZEH/stlab">
+        <rdf:type rdf:resource="&l0;Agent"/>
+        <dct:identifier>cnr - Z6HZEH - STLab</dct:identifier>
+        <l0:name xml:lang="en">Institute of Cognitive Sciences and Technologies of the Italian Research Council (CNR) - Semantic Technology Laboratory (STLab)</l0:name>
+        <l0:name xml:lang="it">Istituto di Scienze e Tecnologie della Cognizione del CNR - Semantic Technology Lab (STLab)</l0:name>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://w3id.org/italia/data/project/DAF -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/italia/data/project/DAF">
+        <rdf:type rdf:resource="&admsapit;Project"/>
+        <l0:name xml:lang="it">Data &amp; Analytics Framework</l0:name>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://w3id.org/italia/data/project/OntoPiA -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/italia/data/project/OntoPiA">
+        <rdf:type rdf:resource="&admsapit;Project"/>
+        <l0:name xml:lang="it">OntoPiA - la rete di ontologie della pubblica amministrazione italiana</l0:name>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://w3id.org/italia/onto/PARK -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/italia/onto/PARK">
+        <rdf:type rdf:resource="&admsapit;SemanticAsset"/>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 
 
 <!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
-
