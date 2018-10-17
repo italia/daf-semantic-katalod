@@ -21,6 +21,8 @@ spec:
       labels:
         app: daf-semantic-katalod
     spec:
+      imagePullSecrets:
+        - name: regsecret
       containers:
         - name: daf-semantic-katalod
           image: nexus.teamdigitale.test/daf-semantic-katalod:0.0.9
