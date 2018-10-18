@@ -1,0 +1,261 @@
+package it.almawave.daf.standardization
+
+import java.nio.file.Paths
+import com.typesafe.config.ConfigFactory
+import it.almawave.linkeddata.kb.catalog.SPARQL
+import it.almawave.linkeddata.kb.catalog.CatalogBox
+import it.almawave.linkeddata.kb.catalog.VocabularyBox
+import it.almawave.linkeddata.kb.utils.JSONHelper
+import org.junit.Before
+import org.junit.After
+import org.junit.Test
+import org.junit.Assert
+import java.net.URL
+import java.io.File
+
+class TestSTD2 {
+
+  val conf = ConfigFactory.parseFile(Paths.get("./conf/catalog.conf").normalize().toFile())
+
+  val catalog = new CatalogBox(conf)
+  var std: StandardizationProcess = null
+
+  var vbox: VocabularyBox = null
+
+  @Before
+  def start() {
+
+    catalog.start()
+    std = new StandardizationProcess(catalog) // TODO: is it possibile to avoid catalog?
+
+    var vboxR = VocabularyBox
+      .parse(new File("ontologie-vocabolari-controllati/VocabolariControllati/licences/licences.ttl").toURI().toURL())
+
+    vbox = std.vocabularyWithDependency(vboxR.id).get
+
+  }
+
+  @After
+  def stop() {
+
+    //    std = null
+    catalog.stop()
+
+  }
+
+  @Test
+  def test_hierarchies() {
+
+    val std = new STD(vbox)
+
+    val hs = std.hierarchies("uri", "parent_uri", "hierarchy")
+
+    //    println("\n\nHIERARCHIES")
+    //    println(hs.mkString("\n"))
+
+  }
+
+  //  @Test
+  def testing_elements() {
+
+    val std = new STD(vbox)
+
+    val elements = std.elements()
+
+    println("\n\nELEMENTS:\n" + JSONHelper.writeToString(elements))
+
+  }
+
+  //  @Test
+  def testing_hierarchy() {
+
+    val std = new STD(vbox)
+
+    //    val hierarchies =  std.extract_hierarchies(vbox).get
+
+    val hierarchies = std.hierarchies_in_vocabulary()
+    println("hierarchies: " + JSONHelper.writeToString(hierarchies))
+
+    hierarchies.foreach { h =>
+
+      val hierarchy = h.path
+      val uri = h.uri
+
+      val details: Map[String, Any] = std.expand_details(uri)
+
+      val doc = details + ("hierarchy" -> hierarchy)
+
+      println(s"\n\nURI: ${uri}")
+      println(JSONHelper.writeToString(doc))
+
+    }
+
+  }
+
+  //  @Test
+  def testing() {
+    val vocID = "licences"
+    val vboxD = std.vocabularyWithDependency(vocID).get
+    println(vboxD)
+    Assert.assertEquals("http://w3id.org/italia/controlled-vocabulary/licences", vboxD.context)
+  }
+
+}
+
+class STD(vbox: VocabularyBox) {
+
+  def query_elements = s"""
+  
+    PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+     
+    SELECT DISTINCT *
+    
+    WHERE {
+    
+      ?uri a ?concept .
+      
+      FILTER(?concept IN (skos:Concept)) . BIND("SKOS.Concept" AS ?__meta_concept) .
+      
+      OPTIONAL { ?uri skos:broader ?parent_uri . }
+      
+      OPTIONAL { 
+        ?uri skos:notation ?notation .
+        BIND("SKOS.Concept.notation" AS ?__meta_notation) .
+        BIND(DATATYPE(?notation) AS ?__type_notation)
+      }
+      OPTIONAL { 
+        ?uri skos:prefLabel ?prefLabel . FILTER(LANG(?prefLabel)='it') .
+        BIND("SKOS.Concept.prefLabel" AS ?__meta_prefLabel) .
+        BIND(DATATYPE(?prefLabel) AS ?__type_prefLabel)
+      } 
+      OPTIONAL { 
+        ?uri skos:altLabel ?altLabel . FILTER(LANG(?altLabel)='it')
+        BIND("SKOS.Concept.altLabel" AS ?__meta_altLabel) .
+        BIND(DATATYPE(?altLabel) AS ?__type_altLabel)
+      }
+      
+    }
+    ORDER BY ?uri
+    
+  """
+
+  def elements(): Seq[Map[String, Any]] = {
+    SPARQL(vbox.repo).query(query_elements).toStream
+  }
+
+  def hierarchies(element_name: String, parent_name: String, hierarchy_name: String): Seq[Any] = {
+
+    case class ElementWithParent(uri: String, parent_uri: String)
+
+    val elements_with_parents = elements()
+      .zipWithIndex
+      .map {
+        case (tuple, i) => ElementWithParent(
+          tuple.getOrElse(element_name, "").asInstanceOf[String],
+          tuple.getOrElse(parent_name, "").asInstanceOf[String])
+      }
+
+    // dato un elemento, costruiamo la lista dei suoi padri, se possibile
+    def construct_hierarchy_for_element(element_uri: String, h_buffer: Seq[String]): Seq[String] = {
+
+      // 1) element_uri <- elements[K].parent
+      // 2) buffer + K
+
+      // trovo elementi figli e li lego!
+      // k.parent_uri -> element_uri
+      val parentO = elements_with_parents.filter(_.uri.equals(element_uri)).map(_.parent_uri).toList.headOption
+
+      if (parentO.isEmpty) {
+
+        Stream(element_uri)
+
+      } else {
+
+        // trovato parent!
+
+        construct_hierarchy_for_element(parentO.get, Nil) ++ Stream(element_uri)
+
+        //        println("ELEMENT -> " + element_uri)
+        //        println("PARENT -> " + parent)
+
+      }
+
+    }
+
+    elements_with_parents.foreach { ewp =>
+
+      val h = construct_hierarchy_for_element(ewp.uri, Nil)
+      println("H: " + h.toList.mkString("|"))
+
+    }
+
+    //    println(elements_with_parents.mkString("\n"))
+
+    null
+  }
+
+  def hierarchies_in_vocabulary() = {
+
+    val q_hierarchy = s"""
+      PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+      SELECT DISTINCT * 
+      WHERE {
+        ?uri a skos:Concept .
+        OPTIONAL { ?uri skos:broader* ?ancestor_uri . }
+      }
+    """
+
+    SPARQL(vbox.repo).query(q_hierarchy)
+      .groupBy(_.getOrElse("uri", "").asInstanceOf[String]).toList
+      .sortBy(_._1)
+      .map { el =>
+        Hierarchy(el._1, el._2.map(_.getOrElse("ancestor_uri", "").asInstanceOf[String]))
+      }
+
+  }
+
+  // CHECK: value from RDF4J datatype (no string + binding)
+  def query_details_for_uri(uri: String) = s"""
+  
+    PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+     
+    SELECT DISTINCT *
+    
+    WHERE {
+    
+      ?uri a ?concept . FILTER(?uri=<${uri}>) .
+      
+      FILTER(?concept IN (skos:Concept)) . BIND("SKOS.Concept" AS ?__meta_concept) .
+      
+      OPTIONAL { ?uri skos:broader ?parent_uri . }
+      
+      OPTIONAL { 
+        ?uri skos:notation ?notation .
+        BIND("SKOS.Concept.notation" AS ?__meta_notation) .
+        BIND(DATATYPE(?notation) AS ?__type_notation)
+      }
+      OPTIONAL { 
+        ?uri skos:prefLabel ?prefLabel . FILTER(LANG(?prefLabel)='it') .
+        BIND("SKOS.Concept.prefLabel" AS ?__meta_prefLabel) .
+        BIND(DATATYPE(?prefLabel) AS ?__type_prefLabel)
+      } 
+      OPTIONAL { 
+        ?uri skos:altLabel ?altLabel . FILTER(LANG(?altLabel)='it')
+        BIND("SKOS.Concept.altLabel" AS ?__meta_altLabel) .
+        BIND(DATATYPE(?altLabel) AS ?__type_altLabel)
+      }
+      
+    }
+    ORDER BY ?uri
+    
+  """
+
+  def expand_details(uri: String) = {
+
+    SPARQL(vbox.repo).query(query_details_for_uri(uri))(0)
+
+  }
+
+}
+
+//case class Hierarchy(uri: String, path: Seq[String])

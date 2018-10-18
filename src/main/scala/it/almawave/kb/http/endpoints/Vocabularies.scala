@@ -139,7 +139,7 @@ class Vocabularies {
 
     def setHierarchy(vMeta: VocabularyMeta) = {
 
-        logger.debug(s"getting the details for vocabulary bis with id: ${vMeta.id} and lang: ${vMeta.langs.headOption.get}")
+        logger.debug(s"getting the details for vocabulary bis with id: ${vMeta.id} and lang: ${vMeta.langs.headOption.getOrElse("")}")
 
         val vbox = loader.catalog.getVocabularyByID(vMeta.id).get
         val vboxid = vbox.meta.source

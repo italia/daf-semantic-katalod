@@ -1,0 +1,21 @@
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+select ?uri
+
+  where {
+  
+    #?s ?p ?o
+  
+    ?uri a skos:Concept .
+  
+    #BIND(replace(?uri,"_","") AS ?output) .
+    #BIND(REPLACE(STR(?uri),"[. -]","_") AS ?output) .
+    #BIND(REPLACE(STR(?uri),"_","&") AS ?output)
+               
+    #OPTIONAL{ ?uri skos:Concept ?parent_uri . }             
+               
+  } 
+
+  ORDER BY ?uri DESC(?uri)
+
+  limit 20
