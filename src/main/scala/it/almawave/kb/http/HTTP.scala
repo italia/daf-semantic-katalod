@@ -41,7 +41,7 @@ object HTTP {
 }
 
 /**
- * this is an object designed to simplify the creation of JAX-RS endpoints, using jetty
+ * This is an object designed to simplify the creation of JAX-RS endpoints, using jetty
  * TODO: refactoring using conf?
  */
 class HTTP(host: String, port: Int, base: String) {
