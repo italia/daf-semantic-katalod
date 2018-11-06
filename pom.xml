@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>it.almawave.linkeddata.kb</groupId>
 	<artifactId>kataLOD</artifactId>
-	<version>0.0.9</version>
+	<version>0.0.10</version>
 
 	<name>kataLOD</name>
 	<description>kataLOD</description>
@@ -185,9 +185,9 @@
 		<dependency>
 			<groupId>it.almawave.linkeddata.kb</groupId>
 			<artifactId>kbaselib</artifactId> <!-- {artifact}-scala_2.11 -->
-			<version>0.1.6</version>
+			<version>0.1.7</version>
 			<scope>system</scope>
-			<systemPath>${project.basedir}/lib/kbaselib-0.1.6.jar</systemPath>
+			<systemPath>${project.basedir}/lib/kbaselib-0.1.7.jar</systemPath>
 		</dependency>
 
 		<!-- temporary -->
