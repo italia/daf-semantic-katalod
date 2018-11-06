@@ -10,12 +10,13 @@ WHERE {
   		?uri skos:notation ?codice .
 
   		?uri skos:prefLabel ?label .
+		
+		FILTER(LANG(?label) = 'it')
 
-        BIND (xsd:long(REPLACE(SUBSTR(?codice,2),"\\.","")) AS ?_codice)
+		BIND (xsd:long(REPLACE(SUBSTR(?codice,2),"\\.","")) AS ?_codice)
 
   		OPTIONAL{ ?uri skos:broader ?parent_uri . }
 
-  		FILTER(LANG(?label) = 'it')
 
 }
 
