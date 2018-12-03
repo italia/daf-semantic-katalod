@@ -25,10 +25,10 @@ in order to run the application locally after a mvan build, for easy testing, we
 mvn clean package
 
 # WIN
-java -cp "target/kataLOD-0.0.10.jar;target/libs/*" it.almawave.kb.http.MainHTTP
+java -cp "target/kataLOD-0.0.11.jar;target/libs/*" it.almawave.kb.http.MainHTTP
 
 # linux
-java -cp "target/kataLOD-0.0.10.jar:target/libs/*" it.almawave.kb.http.MainHTTP
+java -cp "target/kataLOD-0.0.11.jar:target/libs/*" it.almawave.kb.http.MainHTTP
 ```
 
 ----
@@ -44,14 +44,14 @@ mvn clean package
 
 It's possible to create a docker image directly using the drafted [`Dockefile`](http://10.121.172.7:10080/public-od/daf/katalod/blob/master/Dockerfile) .
 ```bash
-sudo docker build . -t katalod:0.0.10
+sudo docker build . -t katalod:0.0.11
 ```
 
 
 
 In order to run a new container from the generated build, we can use the following command:
 ```bash
-sudo docker run -p 7777:7777 katalod:0.0.10
+sudo docker run -p 7777:7777 katalod:0.0.11
 ```
 
 **NOTE**: currently the port `7777` is used as the default port

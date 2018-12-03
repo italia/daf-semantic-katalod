@@ -190,8 +190,7 @@ class Vocabularies {
       while (children) {
 
         //lista di collection temporanea
-        tmp_hierarchy_child
-          .toList.foreach { item_hierarchy =>
+        for(item_hierarchy <- tmp_hierarchy_child) {
             var tmp_hierarchy_child_sub = ListBuffer[Hierarchy]()
             _concepts
               .toList.foreach {
@@ -206,7 +205,7 @@ class Vocabularies {
 
             // cocludendo la lettura di tutti i concetti aggiungo alla lista tmp gli elementi che hanno soddifatto la condizione
             if (tmp_hierarchy_child_sub != null && tmp_hierarchy_child_sub.size > 0) {
-              tmp_hierarchy_child.clear()
+              tmp_hierarchy_child == ListBuffer[Hierarchy]()
               tmp_hierarchy_child_sub.copyToBuffer(tmp_hierarchy_child)
               addBroaderToList(item_hierarchy, tmp_hierarchy_child_sub)
             } else

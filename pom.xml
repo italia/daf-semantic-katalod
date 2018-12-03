@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>it.almawave.linkeddata.kb</groupId>
 	<artifactId>kataLOD</artifactId>
-	<version>0.0.10</version>
+	<version>0.0.11</version>
 
 	<name>kataLOD</name>
 	<description>kataLOD</description>

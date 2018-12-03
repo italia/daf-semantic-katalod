@@ -15,7 +15,8 @@ object TestSPARQL {
 
   def main(args: Array[String]): Unit = {
 
-    val fileRdf = Paths.get("C:/Users/a.mauro/IdeaProjects/katalod/ontologie-vocabolari-controllati/VocabolariControllati/licences/licences.rdf").toString
+    //val fileRdf = Paths.get("C:/Users/a.mauro/IdeaProjects/katalod/ontologie-vocabolari-controllati/VocabolariControllati/licences/licences.rdf").toString
+    val fileRdf = Paths.get("C:/Users/a.mauro/IdeaProjects/katalod/ontologie-vocabolari-controllati/VocabolariControllati/classifications-for-accommodation-facilities/accommodation-typology/accommodation-typology.ttl").toString
     val fileQuerySparql = Paths.get("C:/Users/a.mauro/IdeaProjects/katalod/conf/query/skos/hierarchyOneLevel.sparql").toFile
     val skos_url = new URL(s"file:///$fileRdf")
     val lines: List[String] = Source.fromFile(fileQuerySparql).getLines.toList
@@ -55,7 +56,7 @@ object TestSPARQL {
   def read_concepts(key_item : scala.collection.mutable.Map[String,Any],
             _concepts : Seq[Map[String,Any]] ) : ListBuffer[Hierarchy] = {
 
-      var tmp_hierarchy_child = ListBuffer[Hierarchy]()
+      val tmp_hierarchy_child = ListBuffer[Hierarchy]()
       val hierarchy_child = ListBuffer[Hierarchy]()
 //      val hierarchy = Hierarchy(key_item.get("codice").get.toString, key_item.get("label").get.toString, key_item.get("uri").get.toString, key_item.getOrElse("parent_uri", "").toString, new ListBuffer[Hierarchy]())
       hierarchy_child += convert_mutable_map_to_model(key_item)
@@ -67,11 +68,9 @@ object TestSPARQL {
       while(children) {
 
         //lista di collection temporanea
-        tmp_hierarchy_child
-          .toList.foreach { item_hierarchy =>
 
-//          hierarchy = Hierarchy(item_hierarchy.codice, item_hierarchy.label, item_hierarchy.uri, item_hierarchy.parent_uri, ListBuffer[Hierarchy]())
-  //          var tmp_hierarchy_child_sub = ListBuffer[scala.collection.mutable.Map[String,Any]]()
+        for(item_hierarchy <- tmp_hierarchy_child) {
+
             var tmp_hierarchy_child_sub = ListBuffer[Hierarchy]()
             _concepts
               .toList.foreach {
@@ -87,16 +86,11 @@ object TestSPARQL {
             // cocludendo la lettura di tutti i concetti aggiungo alla lista tmp gli elementi che hanno soddifatto la condizione
             if(tmp_hierarchy_child_sub != null && tmp_hierarchy_child_sub.size > 0) {
 
-              tmp_hierarchy_child.clear()
+              tmp_hierarchy_child == ListBuffer[Hierarchy]()
               tmp_hierarchy_child_sub.copyToBuffer(tmp_hierarchy_child)
-    //          hierarchy = Hierarchy(key_item.get("codice").get.toString, key_item.get("label").get.toString, key_item.get("uri").get.toString, key_item.getOrElse("parent_uri", "").toString, tmp_hierarchy_child_sub)
-
-//              hierarchy = Hierarchy(item_hierarchy.codice, item_hierarchy.label, item_hierarchy.uri, item_hierarchy.parent_uri, tmp_hierarchy_child_sub)
-
-//                hierarchy_child += hierarchy
-//                addBroaderToList(hierarchy_child, tmp_hierarchy_child_sub)
 
               addBroaderToList(item_hierarchy, tmp_hierarchy_child_sub)
+              tmp_hierarchy_child_sub == ListBuffer[Hierarchy]()
 
             }else
               children = false
