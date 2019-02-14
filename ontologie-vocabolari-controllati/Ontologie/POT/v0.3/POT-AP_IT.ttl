@@ -52,7 +52,7 @@
                                   	admsapit:semanticAssetInUse <https://w3id.org/italia/data/project/DAF> ,
                                   															<https://w3id.org/italia/data/project/OntoPiA> ;
                                   	dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
-                                  	rdfs:label "Ontologia del profilo italiano dei prezzi, offerte e biglietti"@it ;
+                                  	rdfs:label "Ontologia dei prezzi, offerte e biglietti"@it ;
                                   	admsapit:hasSemanticAssetDistribution <https://w3id.org/italia/data/distribution/POT-RDF-XML> ;
                                   	dcat:theme <http://publications.europa.eu/resource/authority/data-theme/EDUC> , <http://publications.europa.eu/resource/authority/data-theme/SOCI> , <http://publications.europa.eu/resource/authority/data-theme/TRAN> ;
                                   	admsapit:acronym "POT-AP_IT" ;
@@ -661,8 +661,8 @@ It is associated to a currency (e.g., Euro) and a currency value (i.e., a quanti
 ## Metadata individuals
 ###
 ###
-###  http://spcdata.digitpa.gov.it/browse/page/Amministrazione/agid
-<http://spcdata.digitpa.gov.it/browse/page/Amministrazione/agid> rdf:type owl:NamedIndividual ,
+###  http://spcdata.digitpa.gov.it/Amministrazione/agid
+<http://spcdata.digitpa.gov.it/Amministrazione/agid> rdf:type owl:NamedIndividual ,
                                                                           dcatapit:Agent ,
                                                                           foaf:Agent ;
                                                                  dct:identifier "agid" ;

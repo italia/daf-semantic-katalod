@@ -1,7 +1,7 @@
 # JAVA
 FROM openjdk:8-jre-alpine
 
-ENV VERS=0.0.11
+ENV VERS=0.0.12
 RUN apk update && apk add maven git
 
 # maven build
