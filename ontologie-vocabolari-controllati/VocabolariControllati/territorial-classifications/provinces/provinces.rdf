@@ -114,11 +114,11 @@
     <dcterms:title xml:lang="it">Distribuzione RDF/Turtle del vocabolario controllato sulle province d'Italia</dcterms:title>
     <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Distribution"/>
     <dcterms:title xml:lang="en">RDF/Turtle distribution of the Italian provinces controlled vocabulary</dcterms:title>
-    <dcat:accessURL rdf:resource="https://raw.githubusercontent.com/italia/daf-ontologie-vocabolari-controllati/master/VocabolariControllati/territorial-classifications/provinces"/>
+    <dcat:accessURL rdf:resource="https://raw.githubusercontent.com/italia/dati-semantic-assets/master/VocabolariControllati/territorial-classifications/provinces"/>
     <dcterms:description xml:lang="it">Questa è la distribuzione RDF/Turtle del dataset Linked Open Data del vocabolario controllato sulle province d'Italia</dcterms:description>
     <dcterms:description xml:lang="en">This is the distribution in RDF/turtle of the Linked Open Dataset of the Italian Provinces controlled vocabulary </dcterms:description>
     <dcterms:license rdf:resource="https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40"/>
-    <dcat:downloadURL rdf:resource="https://raw.githubusercontent.com/italia/daf-ontologie-vocabolari-controllati/master/VocabolariControllati/territorial-classifications/provinces/provinces.ttl"/>
+    <dcat:downloadURL rdf:resource="https://raw.githubusercontent.com/italia/dati-semantic-assets/master/VocabolariControllati/territorial-classifications/provinces/provinces.ttl"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/provinces">
     <skos:hasTopConcept rdf:resource="https://w3id.org/italia/controlled-vocabulary/territorial-classifications/provinces/088"/>
@@ -1175,12 +1175,12 @@
     <ns2:identifierType>Sigla Automobilistica</ns2:identifierType>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/italia/data/resource/Distribution/provinces_RDF_XML">
-    <dcat:downloadURL rdf:resource="https://raw.githubusercontent.com/italia/daf-ontologie-vocabolari-controllati/master/VocabolariControllati/territorial-classifications/provinces/provinces.rdf"/>
+    <dcat:downloadURL rdf:resource="https://raw.githubusercontent.com/italia/dati-semantic-assets/master/VocabolariControllati/territorial-classifications/provinces/provinces.rdf"/>
     <dcterms:description xml:lang="en">This is the distribution in RDF/XML of the Linked Open Dataset of the Italian Provinces controlled vocabulary </dcterms:description>
     <dcterms:title xml:lang="it">Distribuzione RDF/XML del vocabolario controllato sulle regioni d'Italia</dcterms:title>
     <dcterms:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
     <dcterms:description xml:lang="it">Questa è la distribuzione RDF/XML del dataset Linked Open Data del vocabolario controllato sulle province d'Italia</dcterms:description>
-    <dcat:accessURL rdf:resource="https://raw.githubusercontent.com/italia/daf-ontologie-vocabolari-controllati/master/VocabolariControllati/territorial-classifications/provinces"/>
+    <dcat:accessURL rdf:resource="https://raw.githubusercontent.com/italia/dati-semantic-assets/master/VocabolariControllati/territorial-classifications/provinces"/>
     <dcterms:license rdf:resource="https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40"/>
     <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Distribution"/>
     <dcterms:title xml:lang="en">RDF/XML distribution of the Italian provinces controlled vocabulary</dcterms:title>
@@ -1245,13 +1245,13 @@
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/italia/data/resource/Distribution/provinces_JSON_LD">
-    <dcat:accessURL rdf:resource="https://raw.githubusercontent.com/italia/daf-ontologie-vocabolari-controllati/master/VocabolariControllati/territorial-classifications/provinces"/>
+    <dcat:accessURL rdf:resource="https://raw.githubusercontent.com/italia/dati-semantic-assets/master/VocabolariControllati/territorial-classifications/provinces"/>
     <dcterms:title xml:lang="en">JSON-LD distribution of the Italian provinces controlled vocabulary</dcterms:title>
     <dcterms:description xml:lang="en">This is the distribution in JSON-LD of the Linked Open Dataset of the Italian Provinces controlled vocabulary </dcterms:description>
     <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Distribution"/>
     <dcterms:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON_LD"/>
     <dcterms:title xml:lang="it">Distribuzione JSON-LD del vocabolario controllato sulle regioni d'Italia</dcterms:title>
-    <dcat:downloadURL rdf:resource="https://raw.githubusercontent.com/italia/daf-ontologie-vocabolari-controllati/master/VocabolariControllati/territorial-classifications/provinces/provinces.jsonld"/>
+    <dcat:downloadURL rdf:resource="https://raw.githubusercontent.com/italia/dati-semantic-assets/master/VocabolariControllati/territorial-classifications/provinces/provinces.jsonld"/>
     <dcterms:license rdf:resource="https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40"/>
     <dcterms:description xml:lang="it">Questa è la distribuzione JSON-LD del dataset Linked Open Data del vocabolario controllato sulle province d'Italia</dcterms:description>
   </rdf:Description>

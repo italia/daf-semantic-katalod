@@ -28,7 +28,7 @@ RUN cp /mvn_src/target/kataLOD-${VERS}.jar /usr/share/katalod/kataLOD-${VERS}.ja
 ENTRYPOINT ["/usr/bin/java", "-cp", "/usr/share/katalod/lib/*:/usr/share/katalod/kataLOD-${VERS}.jar", "it.almawave.kb.http.MainHTTP"]
 # TODO: disable ADD of local files, enable git clone of remote files
 ADD ontologie-vocabolari-controllati/ ontologie-vocabolari-controllati/
-# RUN git clone https://github.com/italia/daf-ontologie-vocabolari-controllati.git
+# RUN git clone https://github.com/italia/dati-semantic-assets.git
 
 ENTRYPOINT /usr/bin/java -cp /usr/share/katalod/lib/*:/usr/share/katalod/kataLOD-${VERS}.jar it.almawave.kb.http.MainHTTP
 

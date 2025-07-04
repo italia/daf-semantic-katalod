@@ -1960,8 +1960,8 @@ N.B. Un asset semantico può avere più di una valutazione.</rdfs:comment>
         <dct:description xml:lang="it">Questa è la distribuzione JSON-LD dell&apos;ontologia della metadatazione delle ontologie</dct:description>
         <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON_LD"/>
         <dct:license rdf:resource="http://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40"/>
-        <dcat:accessURL rdf:resource="https://raw.githubusercontent.com/italia/daf-ontologie-vocabolari-controllati/master/Ontologie/ADMS/latest"/>
-        <dcat:downloadURL rdf:resource="https://raw.githubusercontent.com/italia/daf-ontologie-vocabolari-controllati/master/Ontologie/ADMS/latest/ADMS-AP_IT.jsonld"/>
+        <dcat:accessURL rdf:resource="https://raw.githubusercontent.com/italia/dati-semantic-assets/master/Ontologie/ADMS/latest"/>
+        <dcat:downloadURL rdf:resource="https://raw.githubusercontent.com/italia/dati-semantic-assets/master/Ontologie/ADMS/latest/ADMS-AP_IT.jsonld"/>
     </owl:NamedIndividual>
 
 
@@ -1976,8 +1976,8 @@ N.B. Un asset semantico può avere più di una valutazione.</rdfs:comment>
         <dct:description xml:lang="it">Questa è la distribuzione RDF/Turtle dell&apos;ontologia della metadatazione delle ontologie</dct:description>
         <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE"/>
         <dct:license rdf:resource="http://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40"/>
-        <dcat:accessURL rdf:resource="https://raw.githubusercontent.com/italia/daf-ontologie-vocabolari-controllati/master/Ontologie/ADMS/latest"/>
-        <dcat:downloadURL rdf:resource="https://raw.githubusercontent.com/italia/daf-ontologie-vocabolari-controllati/master/Ontologie/ADMS/latest/ADMS-AP_IT.ttl"/>
+        <dcat:accessURL rdf:resource="https://raw.githubusercontent.com/italia/dati-semantic-assets/master/Ontologie/ADMS/latest"/>
+        <dcat:downloadURL rdf:resource="https://raw.githubusercontent.com/italia/dati-semantic-assets/master/Ontologie/ADMS/latest/ADMS-AP_IT.ttl"/>
     </owl:NamedIndividual>
 
 
@@ -1992,8 +1992,8 @@ N.B. Un asset semantico può avere più di una valutazione.</rdfs:comment>
         <dct:description xml:lang="it">Questa è la distribuzione RDF/XML dell&apos;ontologia della metadatazione delle ontologie</dct:description>
         <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
         <dct:license rdf:resource="http://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40"/>
-        <dcat:accessURL rdf:resource="https://raw.githubusercontent.com/italia/daf-ontologie-vocabolari-controllati/master/Ontologie/ADMS/latest"/>
-        <dcat:downloadURL rdf:resource="https://raw.githubusercontent.com/italia/daf-ontologie-vocabolari-controllati/master/Ontologie/ADMS/latest/ADMS-AP_IT.rdf"/>
+        <dcat:accessURL rdf:resource="https://raw.githubusercontent.com/italia/dati-semantic-assets/master/Ontologie/ADMS/latest"/>
+        <dcat:downloadURL rdf:resource="https://raw.githubusercontent.com/italia/dati-semantic-assets/master/Ontologie/ADMS/latest/ADMS-AP_IT.rdf"/>
     </owl:NamedIndividual>
 
 
