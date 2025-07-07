@@ -5,7 +5,7 @@ import java.net.URL
 
 object MainVowlConversion extends App {
 
-//  val clvapit_src = "https://raw.githubusercontent.com/italia/daf-ontologie-vocabolari-controllati/master/Ontologie/IndirizziLuoghi/latest/CLV-AP_IT.ttl"
+//  val clvapit_src = "https://raw.githubusercontent.com/italia/dati-semantic-assets/master/Ontologie/IndirizziLuoghi/latest/CLV-AP_IT.ttl"
 //
 //  val url = new URL(clvapit_src)
 //
